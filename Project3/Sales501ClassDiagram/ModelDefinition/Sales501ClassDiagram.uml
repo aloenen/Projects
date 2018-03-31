@@ -3558,79 +3558,13 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="7818d07c-659f-46ac-9a1e-9cdc9ff62ec5"
-            name="generateRebate"
+            Id="bec122d7-cbcb-4429-b819-4c1b52ae8861"
+            name="handle"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="f85fefeb-c5b3-43e2-b7f9-0213ec38ad2d"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7155678d-6b33-497b-92b8-704dbde01b32">
-                    <propertyInstance
-                      Id="62a25ff5-f800-4125-a93f-8eb5a9ca4cb4"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9343fdac-aaba-4ef6-902e-a2e8102d5fdb">
-                    <propertyInstance
-                      Id="fcba5c15-c63e-4cd6-94a4-09fe68de8f32"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="67131708-9d23-4994-ae60-e42787fdd606">
-                    <propertyInstance
-                      Id="2ea1f7dd-6080-4f99-bf60-a9de10af116f"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3060a354-ff48-4917-a74f-19916cbf9a32">
-                    <propertyInstance
-                      Id="872b7e2f-a483-43f5-b0b4-6fc3ccfdd39f"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="355e9d22-8722-4b81-a20e-b95412d8b0f9">
-                    <propertyInstance
-                      Id="b4f45be0-e2ed-4ce8-895b-74560345324a"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="424b1b00-16e5-493f-82de-dffda2dcde75">
-                    <propertyInstance
-                      Id="83d80901-96b0-4ab1-a31b-45d4f4b9e275"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2b2c2667-f780-43b0-a8e5-bf696d17dfb8"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="3b7bdd6c-8873-496d-8b00-aabc6a181690"
-                      LastKnownName="string"
-                      LastKnownLocation="Sales501ClassDiagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4192,6 +4126,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="dd063b9f-f5bc-479f-808f-07c6c7d98585"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4366,87 +4308,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="bf0be52a-d68f-45ed-814e-2ab2a88fa0ee"
-            name="addTransaction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="87e5ddfa-8ae6-4ed5-aac0-5f8e6f2bb1bf"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="381d3e69-e417-49ed-9b1b-2d75b279d1f2">
-                    <propertyInstance
-                      Id="cc75b2a8-12e9-4ff1-ac57-682f68200cac"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b02d9be7-c7de-41c9-aa21-c728dc193c99">
-                    <propertyInstance
-                      Id="163ed124-910f-43b4-815b-a9160d3b7b5c"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f9af070f-7d53-4a1f-8db3-78d9d69361e0">
-                    <propertyInstance
-                      Id="10649fb6-912f-40b8-a929-67769b644236"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a6beee9f-deaa-4789-9345-e4efa072e842">
-                    <propertyInstance
-                      Id="8e95ece3-3f42-44f2-b10f-e0991bf3447b"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="311ca416-706c-478b-a849-6597e50995cf">
-                    <propertyInstance
-                      Id="4f432745-8f67-4ce3-be5d-0e0957a3be4b"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="718da32a-d877-4b98-8699-3ab3760278d2">
-                    <propertyInstance
-                      Id="5a670449-174a-4adf-a4f4-14093a68381c"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7d02fa88-5fa5-451c-8c71-0f8fc5244f08"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e40a668d-ac3a-4a4e-83e8-4e7769edb592"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="96d82c9b-eb06-48c1-aef5-d7e8a1c90526"
-                      LastKnownName="void"
-                      LastKnownLocation="Sales501ClassDiagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="7772298f-e3c8-43b6-b1d4-fe56af163bd1"
             name="getTransaction"
             isLeaf="false"
@@ -4521,6 +4382,80 @@
                     <classMoniker
                       Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
                       LastKnownName="Transaction"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="03e9116a-e2da-439b-b964-36a1f3d67296"
+            name="generateRebate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="473e2fb3-cb5b-4e35-ba0e-4e50c3d9f2bb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa4c8a98-1448-4d44-b916-68bfd26523ea">
+                    <propertyInstance
+                      Id="9dfa4bcc-b4c0-4e63-a38a-b836e7955fcf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd97640-23ae-4b88-8a52-b8c0d6ea9fb6">
+                    <propertyInstance
+                      Id="d14cb148-5f12-4d68-a492-614118109859"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7dac626-0d81-4d5d-9098-e4e56c137490">
+                    <propertyInstance
+                      Id="06c74e86-4431-4f21-8eea-2c897994afef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21cf6d12-2161-45af-b99e-6a7a6954eae4">
+                    <propertyInstance
+                      Id="6bb60b33-6bde-4868-a201-6233d11cd151"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8789a37b-9d19-4bf9-a4aa-b04417a6e666">
+                    <propertyInstance
+                      Id="b6f24aef-e454-4cad-9ed0-01fed6a13614"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59214bc5-c631-442d-a5da-01846a1aa08d">
+                    <propertyInstance
+                      Id="95f9f5ff-da6b-48da-893e-1a2e9cf9068d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="951ed02c-da8b-4d7e-a599-28d458933ba6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3b7bdd6c-8873-496d-8b00-aabc6a181690"
+                      LastKnownName="string"
                       LastKnownLocation="Sales501ClassDiagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5613,14 +5548,36 @@
         Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc"
         name="Observer"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="6c965cd3-59d1-4462-a4e1-c5965d598161"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
         Id="f0f1c362-5d1a-4bdf-8527-57eb89b78239"
         name="InputHandler"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="12fef168-b83c-4bb1-888f-8f5843441310"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -5670,6 +5627,58 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="ed4eb813-c658-440a-940b-3ebb76733db5"
+            name="InputView"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c4a0903a-fa2a-4026-9a28-a90b2e582ff5"
+                  name="InputHandler h"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f72bc4dd-e1d1-4094-9b32-949caf8048e1"
+            name="Transation_Onlick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0239a403-d435-45ae-a129-c32d0e835669"
+            name="Return_Onclick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="27427c6d-69cb-4122-af4f-d1d3fe4f208e"
+            name="EnterRebate_Onlick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4c3a7d6e-2e9f-4b08-8579-e7fb169655cb"
+            name="GenRebate_Onlick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>
