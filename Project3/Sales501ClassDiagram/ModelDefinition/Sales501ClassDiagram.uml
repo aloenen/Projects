@@ -3,6 +3,79 @@
   dslVersion="1.0.0.0"
   Id="e203747d-e4ce-4c4d-9dfd-da1df6093fa8"
   name="Sales501ClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="6bae96ee-7299-4fa5-a59f-2ba99ba9cb2a">
+      <body>Violates OCP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="99420095-2eaf-471f-b225-85d9376c19c7"
+          LastKnownName="Manager"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="38b2318c-7ccd-46ba-badf-058c40b1ee7d">
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
+          LastKnownName="Transaction"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="de403ad3-f253-4854-8f3a-e7db418122e1">
+      <body>Manager violates SRP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="99420095-2eaf-471f-b225-85d9376c19c7"
+          LastKnownName="Manager"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="56a2f2f4-16e9-465b-81dd-f2455de16b9c">
+      <body>ISP and LSP were not violated in this
+</body>
+    </comment>
+    <comment
+      Id="83d26018-eda9-4e6b-a45a-e2aa3a97fe25">
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d1f13441-6a09-42ca-9836-e6a1b318e49b"
+          LastKnownName="Item"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="3b4c0a8f-a723-476a-8c77-602bce146a8d">
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="9edc9a46-bc74-41fa-b383-68b4911b3554"
+          LastKnownName="TransactionDB"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a5d07cd2-b7dc-4fcd-9379-08cc5506a371">
+      <body>violates OCP
+</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d0394a49-f945-4bee-9879-39aa8d4ce310"
+          LastKnownName="UI"
+          LastKnownLocation="Sales501ClassDiagram.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
       Id="45b21598-58c3-4ce1-904e-bae0a27ce02c"

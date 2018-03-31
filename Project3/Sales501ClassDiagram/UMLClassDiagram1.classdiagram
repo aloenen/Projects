@@ -1,5 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7729945f-2299-44a8-a6f5-caea7a9801b8" name="UMLClassDiagram1" linkedPackageId="ea021890-b88c-4da3-ab3a-a9446295dd83" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="dcfb2635-eff9-40cb-b6c4-95b02c8b8b97">
+      <elementDefinition Id="6bae96ee-7299-4fa5-a59f-2ba99ba9cb2a" />
+      <body>Violates OCP
+</body>
+      <annotatedElements>
+        <classMoniker Id="5877165e-e59d-4d3b-b0bb-3479c818b79d" LastKnownName="Manager" />
+      </annotatedElements>
+    </comment>
+    <comment Id="3fea2e3d-3352-4a8b-a53b-e4c7933c5329">
+      <elementDefinition Id="38b2318c-7ccd-46ba-badf-058c40b1ee7d" />
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker Id="0e6ad69c-8743-4721-aa43-dcf5e0dc365b" LastKnownName="Transaction" />
+      </annotatedElements>
+    </comment>
+    <comment Id="f6c53ec0-1907-41fb-8978-85037e118903">
+      <elementDefinition Id="de403ad3-f253-4854-8f3a-e7db418122e1" />
+      <body>Manager violates SRP
+</body>
+      <annotatedElements>
+        <classMoniker Id="5877165e-e59d-4d3b-b0bb-3479c818b79d" LastKnownName="Manager" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d3e54a64-d5f9-483d-8216-426fea2b76b1">
+      <elementDefinition Id="56a2f2f4-16e9-465b-81dd-f2455de16b9c" />
+      <body>ISP and LSP were not violated in this
+</body>
+    </comment>
+    <comment Id="3c5999a5-2bbb-4607-96bd-4bf7920bd880">
+      <elementDefinition Id="83d26018-eda9-4e6b-a45a-e2aa3a97fe25" />
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker Id="780b0322-ad4c-41b4-b5ba-6768dab11f2e" LastKnownName="Item" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c7a43995-a02e-4e83-8f66-8fc04907d2e1">
+      <elementDefinition Id="3b4c0a8f-a723-476a-8c77-602bce146a8d" />
+      <body>Violates DIP
+</body>
+      <annotatedElements>
+        <classMoniker Id="1d405cab-1b7b-4c81-877a-b18a5bc57769" LastKnownName="TransactionDB" />
+      </annotatedElements>
+    </comment>
+    <comment Id="94fa1ecb-3291-4cf9-9774-4e0f8cace486">
+      <elementDefinition Id="a5d07cd2-b7dc-4fcd-9379-08cc5506a371" />
+      <body>violates OCP
+</body>
+      <annotatedElements>
+        <classMoniker Id="1baa2d8b-7448-48d4-85d0-ef3cbcbfe513" LastKnownName="UI" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="3caf3e77-9fb2-4c21-9e3e-5e4f7afc729a" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="45b21598-58c3-4ce1-904e-bae0a27ce02c" />
