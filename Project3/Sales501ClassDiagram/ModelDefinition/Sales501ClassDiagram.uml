@@ -3462,36 +3462,6 @@ SRP Compliant</body>
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <interfaceRealization
-            Id="f0ca1bea-b73a-46ce-8a76-9a7b4ceb6d30">
-            <interfaceMoniker
-              Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc"
-              LastKnownName="enterRebateObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="b0a0d30d-bd22-420a-99b4-c87e8325bdac">
-            <interfaceMoniker
-              Id="d93af165-e646-4e32-b34f-73042de012f0"
-              LastKnownName="genRebateObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="44e454f0-c5ae-4e5f-8580-d74bf9746ff9">
-            <interfaceMoniker
-              Id="b4ebdfc0-fe16-4cfe-a481-eae4b0252079"
-              LastKnownName="transactionObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="3339a368-712f-428a-8e96-5210e5b8f967">
-            <interfaceMoniker
-              Id="c64b7887-fa31-4afc-865d-7d689651930f"
-              LastKnownName="returnObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="a612e427-0edd-4ede-89cc-30fa1ce7c713"
@@ -4054,31 +4024,31 @@ SRP Compliant</body>
         </appliedStereotypesInternal>
         <suppliersInternal>
           <interfaceRealization
-            Id="a793be84-58f0-45ed-bfe4-0b1fb4b9e903">
+            Id="824df058-f62c-4789-89e9-2f526533f0ba">
             <interfaceMoniker
-              Id="7274836b-24d8-4118-8363-fdeac33e17e8"
-              LastKnownName="ReturnI"
+              Id="2bc5a327-414b-4186-9410-8f7a420f303e"
+              LastKnownName="RScreenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
           </interfaceRealization>
           <interfaceRealization
-            Id="ea72357a-216e-4886-b75d-8d8d630e8be2">
+            Id="96eaa4da-856e-408e-aa26-ab27c3036d78">
             <interfaceMoniker
-              Id="dd6f270c-85d7-4144-a125-4affd88f92c8"
-              LastKnownName="TransI"
+              Id="d1504edd-97c4-4e76-929d-1694fc3e350d"
+              LastKnownName="TransScrenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
           </interfaceRealization>
           <interfaceRealization
-            Id="10677041-5e52-483b-b612-0ee135431732">
+            Id="87d5169f-bf75-4aff-a6b5-4588c87739ee">
             <interfaceMoniker
-              Id="7e519c4f-2582-4cd9-b104-37f6e22d67ad"
-              LastKnownName="GenerateRI"
+              Id="ef4e6ffc-ceb0-40eb-b9e3-39cf55c6acec"
+              LastKnownName="GenSceenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
           </interfaceRealization>
           <interfaceRealization
-            Id="0a290621-8e2c-4164-9ff7-3570e10323d5">
+            Id="8b02a68d-49a6-4993-b1dd-f0b7ed2ec6f6">
             <interfaceMoniker
-              Id="8b172d06-cb08-4bb4-ad02-472f60cf0177"
-              LastKnownName="RebateI"
+              Id="c8f5526d-ba9a-4039-ba42-bb01e0b76b8d"
+              LastKnownName="RebScreenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -6295,14 +6265,22 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="8e99246d-1332-4aba-97a5-f867cf877290"
-        name="Return"
+        Id="e8ca475e-f2ba-404e-ad35-e93bbaa0233b"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ef9759f7-f262-4683-8d76-0cd7423b6c55"
+        name="ReturnScreen"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="f75ee750-cfa6-4a64-bac7-c59b99067cea">
+            Id="945660a3-8e2b-481d-84fa-b248d19e7d72">
             <interfaceMoniker
               Id="c64b7887-fa31-4afc-865d-7d689651930f"
               LastKnownName="returnObs"
@@ -6311,21 +6289,21 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="35aa9a0a-44e3-43a9-acb2-49d4542b10f1"
+            Id="f04310e1-c78e-4a20-967f-b42aaa320425"
             isDerived="false"
-            sourceEndRoleName="Return"
-            targetEndRoleName="ReturnI"
+            sourceEndRoleName="ReturnScreen"
+            targetEndRoleName="RScreenI"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
-              Id="7274836b-24d8-4118-8363-fdeac33e17e8"
-              LastKnownName="ReturnI"
+              Id="2bc5a327-414b-4186-9410-8f7a420f303e"
+              LastKnownName="RScreenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="968e3319-068f-40bf-b600-da79d355a587"
-                  name="Return"
+                  Id="99b248a3-b4d4-4d91-a98f-60c09810d1aa"
+                  name="ReturnScreen"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6337,8 +6315,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a41ca51e-bdb0-4da2-8fc9-9a079964abc9"
-                  name="ReturnI"
+                  Id="436711d5-8827-4bb1-bd02-c19499a1276a"
+                  name="RScreenI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6352,7 +6330,7 @@ SRP Compliant</body>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
-            Id="6e4c1377-ffc3-413e-a992-8900eab35a4e"
+            Id="3afbdeff-f7d3-4c63-bdbd-3f231d0d3102"
             name="update"
             isLeaf="false"
             isStatic="false"
@@ -6364,14 +6342,14 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="8fc3584c-976d-47c1-a127-9c683a116cac"
-        name="Transaction"
+        Id="f920fbd0-d256-46dc-8243-46f64dc257d9"
+        name="TransactionScreen"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="8f64cbfd-3b6c-4a2a-b87a-dce79c1c4c84">
+            Id="edff22f0-6bf1-42bb-9656-b8c86e18a542">
             <interfaceMoniker
               Id="b4ebdfc0-fe16-4cfe-a481-eae4b0252079"
               LastKnownName="transactionObs"
@@ -6380,21 +6358,21 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="145a4cbf-c9cc-4a3b-92a8-5a069e7d3b65"
+            Id="afd60ea9-6095-4324-a307-00d459cd2c69"
             isDerived="false"
-            sourceEndRoleName="Transaction"
-            targetEndRoleName="TransI"
+            sourceEndRoleName="TransactionScreen"
+            targetEndRoleName="TransScrenI"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
-              Id="dd6f270c-85d7-4144-a125-4affd88f92c8"
-              LastKnownName="TransI"
+              Id="d1504edd-97c4-4e76-929d-1694fc3e350d"
+              LastKnownName="TransScrenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="ae3a247f-672f-47fe-9c72-08e004d8c906"
-                  name="Transaction"
+                  Id="791781d2-37c1-4a6e-8af8-030d467717ba"
+                  name="TransactionScreen"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6406,8 +6384,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="f6217b85-e525-44ec-86a5-932213284757"
-                  name="TransI"
+                  Id="e4279de5-b952-409a-a0b3-5702e3b82793"
+                  name="TransScrenI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6421,7 +6399,7 @@ SRP Compliant</body>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
-            Id="56cadaf8-b654-443d-b4a1-6ddc4a2d2b87"
+            Id="f710f911-8b82-414e-aff2-0792c6457241"
             name="update"
             isLeaf="false"
             isStatic="false"
@@ -6433,76 +6411,37 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="a18e9dd7-ab3f-42b6-a14f-ad8773cd8771"
-        name="GenerateRebate"
+        Id="c372ca07-ba99-4bab-8f1b-4f467a7dbee2"
+        name="GenScreen"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
-          <dependency
-            Id="06d655f8-4c98-447c-b9b2-77589f0d55e5">
+          <interfaceRealization
+            Id="74fd49e2-9e94-4fe9-a942-9aec2c073cbf">
             <interfaceMoniker
               Id="d93af165-e646-4e32-b34f-73042de012f0"
               LastKnownName="genRebateObs"
               LastKnownLocation="Sales501ClassDiagram.uml" />
-          </dependency>
+          </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="c4d63324-b513-4f10-be5c-34e3b3f6b608"
+            Id="c43ada39-3c3a-4ec2-81b8-be492cd93008"
             isDerived="false"
-            sourceEndRoleName="GenerateRebate"
-            targetEndRoleName="TransactionDB"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3fdafef9-4fd9-4d17-833b-6537c4e7d0b2"
-                  name="GenerateRebate"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="5f003356-98f6-4728-b816-80682d9dd4bc"
-                  name="TransactionDB"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="65de2708-476a-4c0c-84e0-af4c899d687c"
-            isDerived="false"
-            sourceEndRoleName="GenerateRebate"
-            targetEndRoleName="GenerateRI"
+            sourceEndRoleName="GenScreen"
+            targetEndRoleName="GenSceenI"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
-              Id="7e519c4f-2582-4cd9-b104-37f6e22d67ad"
-              LastKnownName="GenerateRI"
+              Id="ef4e6ffc-ceb0-40eb-b9e3-39cf55c6acec"
+              LastKnownName="GenSceenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="72eec915-d301-4125-ba2d-3ca9ab69e044"
-                  name="GenerateRebate"
+                  Id="44d69b49-32cd-45af-a66c-cedb005b96bd"
+                  name="GenScreen"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6514,8 +6453,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2d94806b-176d-47fe-84c6-ac1bee36e2fa"
-                  name="GenerateRI"
+                  Id="9fb674cd-af92-4932-8d3d-9a55af3dd02a"
+                  name="GenSceenI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6529,77 +6468,26 @@ SRP Compliant</body>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
-            Id="77ed1dca-de9d-40fc-81fe-b4817faabea2"
+            Id="fa512d70-7abf-4602-8483-b24c2994139f"
             name="update"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="a886f523-0887-41d3-bdd6-22e2eb8cdb81"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="feecefde-691c-4627-aaa4-0f446990a203">
-                    <propertyInstance
-                      Id="d26c1846-d330-4b92-8d74-6b36fccbc18d"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1a1684e8-1227-4061-8dec-840526b36b55">
-                    <propertyInstance
-                      Id="105dab4e-932d-4f65-8f59-344db20355cc"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="75480d6a-9fca-4570-a0fd-80482578fe73">
-                    <propertyInstance
-                      Id="9dff9487-d0ed-4744-be8a-6f6dd685bdfb"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9fcd637d-f0ff-4f36-b69b-d4f6d2daba84">
-                    <propertyInstance
-                      Id="a8523d02-bdd8-4412-97dc-02cf22fe0b8f"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="52539d3f-0058-4b1a-a843-790d528a04bd">
-                    <propertyInstance
-                      Id="7ca0bf62-0596-40c2-883d-35c9b7ba203e"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="0af832e9-b535-4f75-9bee-0311d4ac78ee">
-                    <propertyInstance
-                      Id="90669951-37a4-4f3b-b1a4-1142faaf2aba"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="4b8ca541-3ec9-473e-8145-aeff3386a79e"
-        name="Rebate"
+        Id="d5d70b9b-ffb2-4001-b91e-093e494cd371"
+        name="RebateScreen"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="5ea12669-e5f9-4aae-b4ad-f81912c7b391">
+            Id="286b818e-abba-4ea1-93b1-c851ab7feb14">
             <interfaceMoniker
               Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc"
               LastKnownName="enterRebateObs"
@@ -6608,21 +6496,21 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="7bd0c163-c23d-4685-987f-94c1f39064d3"
+            Id="e0117db2-13d3-4aee-b9bc-3bebfe13e16d"
             isDerived="false"
-            sourceEndRoleName="Rebate"
-            targetEndRoleName="RebateI"
+            sourceEndRoleName="RebateScreen"
+            targetEndRoleName="RebScreenI"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
-              Id="8b172d06-cb08-4bb4-ad02-472f60cf0177"
-              LastKnownName="RebateI"
+              Id="c8f5526d-ba9a-4039-ba42-bb01e0b76b8d"
+              LastKnownName="RebScreenI"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c61d02d5-78ce-44b4-936b-2fa11a0f4fad"
-                  name="Rebate"
+                  Id="c692387b-f406-43d8-beac-f1bf795740a2"
+                  name="RebateScreen"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6634,8 +6522,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="fdbbb392-3667-4f45-b06a-290468013df5"
-                  name="RebateI"
+                  Id="2119bac5-3970-4fde-a376-60d48d2b9353"
+                  name="RebScreenI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6649,7 +6537,7 @@ SRP Compliant</body>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
-            Id="94f6e4e2-6abe-4742-9ca7-18fc3f933f57"
+            Id="e4d8e7c1-21bb-46b4-a033-d6c4b9e1367e"
             name="update"
             isLeaf="false"
             isStatic="false"
@@ -6661,14 +6549,14 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="dd6f270c-85d7-4144-a125-4affd88f92c8"
-        name="TransI"
+        Id="2bc5a327-414b-4186-9410-8f7a420f303e"
+        name="RScreenI"
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
           <operation
-            Id="ed34aced-3d91-4765-a4c5-63025c31c565"
-            name="addItem"
+            Id="b31a333f-638c-4ef3-9357-b42b9ea9c3a5"
+            name="getTransaction"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
@@ -6676,48 +6564,48 @@ SRP Compliant</body>
             isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="76a5f194-79a8-4f47-9e75-1c4743de399e"
+                Id="79b5fc37-f46e-49f7-b265-672819a003ef"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8ffbb464-fe01-4610-8dff-6a07d1569f53">
+                    Id="b5a58b87-3356-43de-9599-e297d0757d8d">
                     <propertyInstance
-                      Id="d987635e-dbdf-4b15-8f6f-d2c163aefeb5"
+                      Id="3278a204-190e-44f8-8ecb-cc0025a6bd2f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d27c0dbf-1c5a-48ea-b784-2b566cf7831b">
+                    Id="d6595e03-793c-4f4b-a6ab-15c5cb679ec8">
                     <propertyInstance
-                      Id="404b95f8-647b-4dc3-b635-cf0f097996df"
+                      Id="8acc3195-5828-4d7b-aa56-134084df94d3"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d17b11b7-d5a1-4fa7-94d3-59f4e6b6a383">
+                    Id="d602a123-8bd1-4e70-b464-9a03e8e76f95">
                     <propertyInstance
-                      Id="e0e1dd71-bec3-46a3-85e0-e5c45ae06848"
+                      Id="1664a38e-7b4d-48ff-862b-bd767cfa7692"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="87ced41b-8043-471b-982d-5b9d11e594ba">
+                    Id="ab8ea118-6910-4314-977c-3286af7f5dda">
                     <propertyInstance
-                      Id="bc185b37-b66a-46ad-8a04-9af4f8971362"
+                      Id="45f76c44-cf07-4975-a7dc-9b888da0ed5e"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="49693aa8-3dcd-4c35-92cb-91ad7f4bb78a">
+                    Id="38354842-e934-4198-937d-64bd19933ed4">
                     <propertyInstance
-                      Id="1b0a654b-2612-4ba6-9e7e-dfc04e8979f2"
+                      Id="167e916b-7406-465e-b1b7-8b39f7c7c690"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="21702666-a7fc-43d6-86d8-74e7fdbbaaf6">
+                    Id="cbd1b7ea-81b1-41d1-b5f0-752a4842a99f">
                     <propertyInstance
-                      Id="91c42434-c0b2-48d9-944b-54bc74e7586d"
+                      Id="6f47b6e9-a280-4991-8f59-7746b580c90b"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6727,35 +6615,126 @@ SRP Compliant</body>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="0e0a5ea9-3a2d-4206-9231-4b2dbc1cc663"
+                  Id="0f086a9c-83a8-4e1a-bd8c-e33272d569fc"
                   name="int id"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="19da774e-9b2f-4ac6-ab26-b8decf8542b9"
+                  Id="2ef6dbe1-7142-42e4-a37e-257674efa881"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
+                      LastKnownName="Transaction"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d1504edd-97c4-4e76-929d-1694fc3e350d"
+        name="TransScrenI"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="0c524f4f-d97a-4b92-b200-fb7fd905cdad"
+            name="addItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1efcea78-5ec5-4930-8860-22217dc5184b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f7f950b-9a78-447b-b512-2f15c2210d04">
+                    <propertyInstance
+                      Id="5d08f32e-bc2d-4df4-9461-c3d96be46fc1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ca83c67-c952-46dd-82bf-03e4767b853a">
+                    <propertyInstance
+                      Id="1e0519f2-21b1-440f-8399-409c3612de47"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61992337-5e54-4165-b727-92fccaefea0a">
+                    <propertyInstance
+                      Id="8cfe81e9-4058-476e-8ead-747aa4c7cf82"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b06cadb-bc60-4da5-bece-e471ceaf4b6d">
+                    <propertyInstance
+                      Id="2a383a59-2ce7-41bc-874c-84130dacd1f2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0747199a-9915-41d9-bb5d-749f28817e43">
+                    <propertyInstance
+                      Id="96bc82aa-26d9-4574-bfbb-de4015297ba4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a85a2960-be67-4c8d-b06e-1d522d18f11d">
+                    <propertyInstance
+                      Id="4e8182e1-b183-4e6f-8355-42a3736b86b1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1319bbae-c880-42fe-abef-313140cef25f"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d84377c4-2851-4a26-8784-065633e64d7e"
                   name="string name"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e8b28e05-f8ee-4a3d-a03c-9bff6d5da7ac"
+                  Id="35b98382-284f-4293-8220-a4d4f8f34b72"
                   name="float price"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="16a71f4f-238b-4d78-8d98-dab5ae34da01"
+                  Id="5a2e933b-6e95-4c3b-8cc4-30b1b0fb1664"
                   name="int amount"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="0e5de1cb-5257-48aa-bec0-5ba88424b2f3"
+                  Id="8ec9ebea-4f02-4ab1-b4f5-84a620e3903e"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -6769,7 +6748,7 @@ SRP Compliant</body>
             </ownedParameters>
           </operation>
           <operation
-            Id="e2d907f0-cab1-4264-9b77-435c4a437da0"
+            Id="974e3057-369c-4a4a-b325-1ed3e2db55f2"
             name="addTransaction"
             isLeaf="false"
             isStatic="false"
@@ -6778,48 +6757,48 @@ SRP Compliant</body>
             isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="88665b67-9f4c-4b62-8fa1-d8fc29929d9e"
+                Id="935f08fe-8e9d-407b-88a1-4059e484c28c"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5788f647-025f-4d77-8ab1-f0a95f080f4d">
+                    Id="80e1a51a-e3d9-4b93-92e5-b6726896c108">
                     <propertyInstance
-                      Id="5528c4b7-98c3-4f4f-886e-e9f114ad4aa0"
+                      Id="6ec92047-8d72-4e3a-ac4e-9d2c68a2d0be"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="29378a84-0499-4821-9331-d23a7074c055">
+                    Id="ce76ca94-a6f9-464d-a7d0-c2009a2ad580">
                     <propertyInstance
-                      Id="97458139-a945-4b3c-a421-65d7433e3438"
+                      Id="8408429a-fff9-4140-8b34-e223eae6c926"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="acd03a54-9975-4735-9a14-080374c27a49">
+                    Id="383fcb05-0390-410e-a6fc-b65b5b8f5b74">
                     <propertyInstance
-                      Id="844f1429-e326-4246-9700-1a11d8ce2ce8"
+                      Id="cace815f-94a1-4ec4-ba6a-d9163be99768"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7d86c40e-8e5f-4ff7-a90b-e60b4fa143ea">
+                    Id="eff2124b-2ab8-49f4-af13-5b01773b7c00">
                     <propertyInstance
-                      Id="2fff54e2-df95-46f9-827b-3207510dc06f"
+                      Id="97d13ec7-8452-471f-86f5-2248de5d89c4"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0ed8516e-88b2-418e-bd50-adbec68ea3b9">
+                    Id="d048262c-8139-4619-8fa3-2dea05868f8c">
                     <propertyInstance
-                      Id="179e91e5-cdea-4b57-ae8a-851f6d668f21"
+                      Id="d0dc8a6c-1e8b-4431-8ebf-0c563ce3c88c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="09238c65-b405-4a1c-bb52-eb61507e6683">
+                    Id="f3087f8e-0414-44b8-9b1b-75080c94bad7">
                     <propertyInstance
-                      Id="9633dc56-bd43-4bb3-aac7-7410ad9b727c"
+                      Id="f4eecfbb-f234-41a7-a2b7-9f901666828a"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6829,14 +6808,14 @@ SRP Compliant</body>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6818264f-41b4-436d-9ea7-0d508bf845dd"
+                  Id="dc1a273f-327a-4257-b65f-58fe0b878355"
                   name="int id"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f5d76806-fc2b-46ad-bc79-2f61074a8996"
+                  Id="b0fc8dea-5ad9-4978-93f7-75ec18359661"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -6854,13 +6833,13 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="7e519c4f-2582-4cd9-b104-37f6e22d67ad"
-        name="GenerateRI"
+        Id="ef4e6ffc-ceb0-40eb-b9e3-39cf55c6acec"
+        name="GenSceenI"
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
           <operation
-            Id="1fd420ef-f0c0-48f4-9a61-d7adc91b4a42"
+            Id="3a83bc2a-d964-4f7f-a731-c45e04564d57"
             name="generateRebate"
             isLeaf="false"
             isStatic="false"
@@ -6869,48 +6848,48 @@ SRP Compliant</body>
             isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="646ce491-c9ea-458d-adbb-3a5d45189771"
+                Id="0fe4a739-e81a-4e6f-9a37-0cc34e18a1ff"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="55af81bd-401f-49bd-a10a-943995103d36">
+                    Id="63d4f0c3-84ba-4724-80e8-86a94ef44a0a">
                     <propertyInstance
-                      Id="44f2518d-6aa9-4981-a216-7425f6486f0d"
+                      Id="02314a92-347f-402f-a91b-fac6594533fa"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b18ff4b0-22fd-4276-b4dd-e6902b7efe1a">
+                    Id="6d064337-c186-43fe-bb5b-928e5f65f11a">
                     <propertyInstance
-                      Id="9c3929bf-b3e6-4885-a8c1-0f56174bb739"
+                      Id="cee64917-8965-4cc4-9fe6-9b742c8b5d21"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5d237960-77d2-494c-b1c2-fa22ed64080b">
+                    Id="97646008-7b97-4c0a-b056-3bd474476c87">
                     <propertyInstance
-                      Id="585dda3a-1547-4619-af0b-26bd4839f7f6"
+                      Id="7c52a984-4521-4076-bff9-204e4edd57f9"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0d6067f8-4b97-4f3d-a3f2-be9e6e89b250">
+                    Id="9137eb91-0d7e-47d0-9b53-508ce3fdb093">
                     <propertyInstance
-                      Id="d354e53a-273e-4df2-b349-754b5f322f93"
+                      Id="e929cd74-7368-43c7-8857-140e9195d347"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ea503ff6-b265-4ead-861f-6d1457bc7caa">
+                    Id="8875d834-bcac-45f2-a19e-413b396cf0d6">
                     <propertyInstance
-                      Id="02ea1d31-73fa-4300-8d6d-ad6d28fbcd48"
+                      Id="f22b4a76-e860-4d18-8fe9-77a1544f82ab"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="21fe64ce-f838-4a4d-826b-53c8737208e0">
+                    Id="8eb04e10-9cb0-4cab-b347-8eb032537365">
                     <propertyInstance
-                      Id="1f63f495-ebff-46e0-af98-e0ec121c9a15"
+                      Id="e3c1e526-c334-441d-b269-20648fc484ac"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6920,7 +6899,7 @@ SRP Compliant</body>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cce26f5e-da17-49d7-b5d1-e06004e4dbb6"
+                  Id="5ce4a80c-bb12-4cb5-acb9-62f0c90d833d"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -6938,101 +6917,10 @@ SRP Compliant</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="8b172d06-cb08-4bb4-ad02-472f60cf0177"
-        name="RebateI"
+        Id="c8f5526d-ba9a-4039-ba42-bb01e0b76b8d"
+        name="RebScreenI"
         isAbstract="false"
         isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="7274836b-24d8-4118-8363-fdeac33e17e8"
-        name="ReturnI"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedOperations>
-          <operation
-            Id="bbcdf3c1-bc39-4a62-b060-f519828a0c4a"
-            name="getTransaction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="d1f5bcd2-11f6-4ae6-bfba-0247470ec1f6"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="efcce7f1-176f-46fa-b8f6-6ba8e5abfec3">
-                    <propertyInstance
-                      Id="d2e3d9ff-f458-417b-838e-c8ef2a6eb0e6"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="afcdbc31-cff0-49c5-a4e5-d5bc44701586">
-                    <propertyInstance
-                      Id="7b01489c-f730-4166-ac6e-21a5bfad4a1d"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="67cb3ac7-6111-4767-b9a7-f88d6cc2c8e1">
-                    <propertyInstance
-                      Id="dec0e573-0505-4ac9-95f8-3654d47c7611"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="efe57a46-667c-463b-a14a-cf48650c7548">
-                    <propertyInstance
-                      Id="6c0fb419-8076-4585-aa08-2c8c63e8b2d3"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="09c9c42d-8ab5-4a56-b20b-91bf7c32942a">
-                    <propertyInstance
-                      Id="97e3235a-d5e3-4873-a161-d0c55929251f"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="304dbbde-9b67-4c47-aa3e-3626eb4f24dd">
-                    <propertyInstance
-                      Id="997a48f1-b8cf-4dd1-9237-fa3734550066"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="0802f003-5dd6-43e8-9bd4-86b60b8b03fb"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="076160b4-e933-4b14-9969-e4062b3f6b7b"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
-                      LastKnownName="Transaction"
-                      LastKnownLocation="Sales501ClassDiagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperations>
-      </Interface>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
