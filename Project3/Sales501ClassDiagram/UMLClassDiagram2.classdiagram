@@ -91,32 +91,6 @@ SRP Compliant</body>
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="ebcd467d-10c4-46de-a027-63d60eb3b1d9">
-      <profileInstance Id="569e3c3e-ead6-462a-93b7-81a17233ef7b" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="843d4f70-f21e-4695-bb14-b0e9cfd5e8f4">
-      <profileInstance Id="8c9e4553-1ed4-490b-a208-9fc4d3d64bff" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="06e5f84a-5bdf-44d9-a339-4f1776118d7b">
-      <profileInstance Id="4bdf555e-fac6-44b4-b863-fea1188ecb4a" name="CSharpProfile">
-        <elementDefinition Id="3d782e02-6c79-41af-9de9-d649e6af91a9" />
-      </profileInstance>
-      <elementDefinition Id="45912df6-f0cb-4bd3-a348-2abd4a8a29e5" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="79dd447c-a660-4b49-8c08-7ee645aaf27f">
-      <profileInstance Id="898923b5-4d4d-4edd-8e4b-cfb5cd6325fc" name="TextTemplateBindings">
-        <elementDefinition Id="5feecaf2-bda5-4bc7-85e5-f1edde5af427" />
-      </profileInstance>
-      <elementDefinition Id="2b54e354-a6a7-4b40-9b7e-5704c9eda833" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="ff2ed713-0062-4dcc-8cee-e882549c940d" name="Manager" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -178,7 +152,7 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association Id="cb288edd-83b5-4bb5-8d63-7bb9b7f34e97" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="Observer" isLeaf="false" isAbstract="false">
-            <interfaceMoniker Id="00c7e7cb-3183-4674-a359-8e5810efacca" LastKnownName="Observer" />
+            <interfaceMoniker Id="00c7e7cb-3183-4674-a359-8e5810efacca" LastKnownName="enterRebateObs" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="8ec22d62-cc44-436e-9bb7-5617ac06abd3" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -208,6 +182,54 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="565ff343-7cb9-4cbc-8691-4e6decae2fa8" />
+          </association>
+          <association Id="a242c2a2-7ace-4dd3-b8f2-e747530c8494" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="genRebateObs" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="fba8c030-ade0-4b64-89b7-af91cd43f60f" LastKnownName="genRebateObs" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3046d8f-b185-4357-b480-45d1f9349654" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="58345e63-566c-4016-8b4a-5f2d1b3141d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbdd55ec-3a0e-4411-8060-b5f9b59a129f" name="genRebateObs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="abd75c64-7e6d-4471-b5a7-4f0f105bcf1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf8c60cd-0db2-4550-b4d9-e70a094e1d0b" />
+          </association>
+          <association Id="71afdae6-0c47-46f0-a079-89615ae07420" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="transactionObs" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="3cf5e3e8-db77-4d78-8fe4-d51f8e49902a" LastKnownName="transactionObs" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f40054ee-5b56-411b-956f-874288175362" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8784a8a2-c292-4e78-87f7-430cc87e9740" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a798a66-7da3-4017-84c0-ee445bdb8f78" name="transactionObs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6205a928-1a3b-4dfc-8a3b-4ca35c8b5e0f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1ba46593-9ace-48da-a526-506949d7a28b" />
+          </association>
+          <association Id="74eec867-1723-4502-a778-66703f42c2a9" isDerived="false" sourceEndRoleName="Manager" targetEndRoleName="returnObs" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="e8607370-5cca-447d-89af-a5af78589285" LastKnownName="returnObs" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de84e289-901e-47fc-ab0b-0e848842c5ef" name="Manager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8374b588-379d-4c25-9439-c62946f50c30" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb8f06b3-3f7f-49bd-a4e9-4f1f88a4d388" name="returnObs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="136b70fc-7016-43cb-9411-d9dd51e8f047" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f5050140-4444-477a-9a27-c82de53904bf" />
           </association>
         </targetEnds>
         <ownedOperationsInternal>
@@ -278,8 +300,20 @@ SRP Compliant</body>
         <elementDefinition Id="3b286fd2-a26e-4d6b-927c-7a8a8e43c045" />
         <suppliersInternal>
           <interfaceRealization Id="d134ea82-3b9d-4c2d-b6c2-b31a95c00638">
-            <interfaceMoniker Id="00c7e7cb-3183-4674-a359-8e5810efacca" LastKnownName="Observer" />
+            <interfaceMoniker Id="00c7e7cb-3183-4674-a359-8e5810efacca" LastKnownName="enterRebateObs" />
             <elementDefinition Id="f0ca1bea-b73a-46ce-8a76-9a7b4ceb6d30" />
+          </interfaceRealization>
+          <interfaceRealization Id="7c11cb5a-7d53-4f0f-9414-d0763bd49c28">
+            <interfaceMoniker Id="fba8c030-ade0-4b64-89b7-af91cd43f60f" LastKnownName="genRebateObs" />
+            <elementDefinition Id="b0a0d30d-bd22-420a-99b4-c87e8325bdac" />
+          </interfaceRealization>
+          <interfaceRealization Id="02f1d87e-db44-47fc-a9a0-4d8848b7c53a">
+            <interfaceMoniker Id="3cf5e3e8-db77-4d78-8fe4-d51f8e49902a" LastKnownName="transactionObs" />
+            <elementDefinition Id="44e454f0-c5ae-4e5f-8580-d74bf9746ff9" />
+          </interfaceRealization>
+          <interfaceRealization Id="793d5404-fae4-4d54-a6c0-42120b2b8aa7">
+            <interfaceMoniker Id="e8607370-5cca-447d-89af-a5af78589285" LastKnownName="returnObs" />
+            <elementDefinition Id="3339a368-712f-428a-8e96-5210e5b8f967" />
           </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
@@ -1883,7 +1917,7 @@ SRP Compliant</body>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="00c7e7cb-3183-4674-a359-8e5810efacca" name="Observer" isAbstract="false" isLeaf="false">
+      <Interface Id="00c7e7cb-3183-4674-a359-8e5810efacca" name="enterRebateObs" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc" />
         <ownedOperations>
           <operation Id="40190eda-163d-4d1a-9b3d-f6bfaef90fb2" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
@@ -2264,8 +2298,64 @@ SRP Compliant</body>
         <elementDefinition Id="3b7bdd6c-8873-496d-8b00-aabc6a181690" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e8607370-5cca-447d-89af-a5af78589285" name="returnObs" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c64b7887-fa31-4afc-865d-7d689651930f" />
+        <ownedOperations>
+          <operation Id="124ae98b-cca7-4bd5-ae92-e5aa75d70d87" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55137bd5-f87e-4ba6-81c8-565cc8a1823e" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="fba8c030-ade0-4b64-89b7-af91cd43f60f" name="genRebateObs" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d93af165-e646-4e32-b34f-73042de012f0" />
+        <ownedOperations>
+          <operation Id="0f6cece3-006c-44d1-bbeb-842ce6a31b11" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c624b5b-5e72-498d-af69-8aa8a629f8c8" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3cf5e3e8-db77-4d78-8fe4-d51f8e49902a" name="transactionObs" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b4ebdfc0-fe16-4cfe-a481-eae4b0252079" />
+        <ownedOperations>
+          <operation Id="8c6b3f8f-21d7-4f9c-9158-b3d634b3c997" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31ae66c5-ddb1-4914-857d-f789017d672b" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="bd076061-901e-4c76-831f-62c0a50d6466" name="Sales501ClassDiagram">
     <elementDefinition Id="e203747d-e4ce-4c4d-9dfd-da1df6093fa8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ebcd467d-10c4-46de-a027-63d60eb3b1d9">
+        <profileInstance Id="569e3c3e-ead6-462a-93b7-81a17233ef7b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="843d4f70-f21e-4695-bb14-b0e9cfd5e8f4">
+        <profileInstance Id="8c9e4553-1ed4-490b-a208-9fc4d3d64bff" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="06e5f84a-5bdf-44d9-a339-4f1776118d7b">
+        <profileInstance Id="4bdf555e-fac6-44b4-b863-fea1188ecb4a" name="CSharpProfile">
+          <elementDefinition Id="3d782e02-6c79-41af-9de9-d649e6af91a9" />
+        </profileInstance>
+        <elementDefinition Id="45912df6-f0cb-4bd3-a348-2abd4a8a29e5" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="79dd447c-a660-4b49-8c08-7ee645aaf27f">
+        <profileInstance Id="898923b5-4d4d-4edd-8e4b-cfb5cd6325fc" name="TextTemplateBindings">
+          <elementDefinition Id="5feecaf2-bda5-4bc7-85e5-f1edde5af427" />
+        </profileInstance>
+        <elementDefinition Id="2b54e354-a6a7-4b40-9b7e-5704c9eda833" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
