@@ -18,6 +18,15 @@
       <body>OCP Compliant
 SRP Compliant</body>
     </comment>
+    <comment Id="248f7c45-e7b9-4c55-899a-96b0802c6d52">
+      <elementDefinition Id="06b6b67d-97e1-437f-a8e6-7eb5aef28d5d" />
+      <body>Split to rebate manager and sales manager
+</body>
+    </comment>
+    <comment Id="510606c1-d641-4488-bec9-2ce924c93dc2">
+      <elementDefinition Id="ea8bd855-d48d-462c-a10e-159d9847e3a1" />
+      <body>Fix all of these 4 arrows so that the controller(manager) deals with the database and not the views.</body>
+    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="8151c359-832c-49f2-a968-b1300de8543f" name="namespace" profile="CSharpProfile">

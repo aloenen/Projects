@@ -92,6 +92,15 @@
       <body>OCP Compliant
 SRP Compliant</body>
     </comment>
+    <comment
+      Id="06b6b67d-97e1-437f-a8e6-7eb5aef28d5d">
+      <body>Split to rebate manager and sales manager
+</body>
+    </comment>
+    <comment
+      Id="ea8bd855-d48d-462c-a10e-159d9847e3a1">
+      <body>Fix all of these 4 arrows so that the controller(manager) deals with the database and not the views.</body>
+    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
