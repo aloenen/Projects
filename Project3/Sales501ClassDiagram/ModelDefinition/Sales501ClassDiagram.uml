@@ -94,11 +94,12 @@ SRP Compliant</body>
     </comment>
     <comment
       Id="ea8bd855-d48d-462c-a10e-159d9847e3a1">
-      <body>Fix all of these 4 arrows so that the controller(manager) deals with the database and not the views.</body>
+      <body>Not sure if we actually need these...</body>
     </comment>
     <comment
       Id="51100b03-a760-4168-85a5-d9224f540eed">
-      <body>Can I point to classes to the same Database like that?? Or do we have to use an interface?</body>
+      <body>SRP Compliant
+</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -3844,36 +3845,6 @@ SRP Compliant</body>
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <interfaceRealization
-            Id="824df058-f62c-4789-89e9-2f526533f0ba">
-            <interfaceMoniker
-              Id="2bc5a327-414b-4186-9410-8f7a420f303e"
-              LastKnownName="RScreenI"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="96eaa4da-856e-408e-aa26-ab27c3036d78">
-            <interfaceMoniker
-              Id="d1504edd-97c4-4e76-929d-1694fc3e350d"
-              LastKnownName="TransScrenI"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="87d5169f-bf75-4aff-a6b5-4588c87739ee">
-            <interfaceMoniker
-              Id="ef4e6ffc-ceb0-40eb-b9e3-39cf55c6acec"
-              LastKnownName="GenSceenI"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="8b02a68d-49a6-4993-b1dd-f0b7ed2ec6f6">
-            <interfaceMoniker
-              Id="c8f5526d-ba9a-4039-ba42-bb01e0b76b8d"
-              LastKnownName="RebScreenI"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="7f812735-e667-441a-a6b5-3aa4f0fd5648"
@@ -6111,20 +6082,20 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="f04310e1-c78e-4a20-967f-b42aaa320425"
+            Id="13314ae7-ace7-43b7-a8b5-d220bd544cf2"
             isDerived="false"
             sourceEndRoleName="ReturnScreen"
-            targetEndRoleName="RScreenI"
+            targetEndRoleName="TransactionDB"
             isLeaf="false"
             isAbstract="false">
-            <interfaceMoniker
-              Id="2bc5a327-414b-4186-9410-8f7a420f303e"
-              LastKnownName="RScreenI"
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="99b248a3-b4d4-4d91-a98f-60c09810d1aa"
+                  Id="35948ccc-7696-483b-b196-f0c785124fd9"
                   name="ReturnScreen"
                   isLeaf="false"
                   isStatic="false"
@@ -6137,8 +6108,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="436711d5-8827-4bb1-bd02-c19499a1276a"
-                  name="RScreenI"
+                  Id="d8f655e1-33cb-4162-94f6-913a5ac0070f"
+                  name="TransactionDB"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6180,20 +6151,20 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="afd60ea9-6095-4324-a307-00d459cd2c69"
+            Id="267cee3a-c2be-4658-96ee-67bbdea96d40"
             isDerived="false"
             sourceEndRoleName="TransactionScreen"
-            targetEndRoleName="TransScrenI"
+            targetEndRoleName="TransactionDB"
             isLeaf="false"
             isAbstract="false">
-            <interfaceMoniker
-              Id="d1504edd-97c4-4e76-929d-1694fc3e350d"
-              LastKnownName="TransScrenI"
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="791781d2-37c1-4a6e-8af8-030d467717ba"
+                  Id="ea9dbbef-819d-4924-9084-a5c00fc91002"
                   name="TransactionScreen"
                   isLeaf="false"
                   isStatic="false"
@@ -6206,8 +6177,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e4279de5-b952-409a-a0b3-5702e3b82793"
-                  name="TransScrenI"
+                  Id="7a324f2b-ec68-415e-9fbc-b97131475096"
+                  name="TransactionDB"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6249,20 +6220,20 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="c43ada39-3c3a-4ec2-81b8-be492cd93008"
+            Id="4c5678f4-5a3d-4db4-989a-14d6c1ffca28"
             isDerived="false"
             sourceEndRoleName="GenScreen"
-            targetEndRoleName="GenSceenI"
+            targetEndRoleName="TransactionDB"
             isLeaf="false"
             isAbstract="false">
-            <interfaceMoniker
-              Id="ef4e6ffc-ceb0-40eb-b9e3-39cf55c6acec"
-              LastKnownName="GenSceenI"
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="44d69b49-32cd-45af-a66c-cedb005b96bd"
+                  Id="e46c31c4-0cee-40aa-a9c1-567fe8cf7025"
                   name="GenScreen"
                   isLeaf="false"
                   isStatic="false"
@@ -6275,8 +6246,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="9fb674cd-af92-4932-8d3d-9a55af3dd02a"
-                  name="GenSceenI"
+                  Id="0e8b164c-6a48-475c-a8cd-fc1c902d4ae2"
+                  name="TransactionDB"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6318,20 +6289,20 @@ SRP Compliant</body>
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="e0117db2-13d3-4aee-b9bc-3bebfe13e16d"
+            Id="689759a4-d27e-4cc2-8321-35bca1ded2c0"
             isDerived="false"
             sourceEndRoleName="RebateScreen"
-            targetEndRoleName="RebScreenI"
+            targetEndRoleName="TransactionDB"
             isLeaf="false"
             isAbstract="false">
-            <interfaceMoniker
-              Id="c8f5526d-ba9a-4039-ba42-bb01e0b76b8d"
-              LastKnownName="RebScreenI"
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c692387b-f406-43d8-beac-f1bf795740a2"
+                  Id="5d716877-487e-4902-8014-28e7c8ba4739"
                   name="RebateScreen"
                   isLeaf="false"
                   isStatic="false"
@@ -6344,8 +6315,8 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2119bac5-3970-4fde-a376-60d48d2b9353"
-                  name="RebScreenI"
+                  Id="56ed12e2-a2ed-4bdd-9d96-465b85137811"
+                  name="TransactionDB"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6898,14 +6869,6 @@ SRP Compliant</body>
           <operation
             Id="724bbe15-e554-45b5-afd6-278b31203fc1"
             name="returnItems"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="24119a9b-3be9-496a-a9b1-59246ef42edf"
-            name="returnItem"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
