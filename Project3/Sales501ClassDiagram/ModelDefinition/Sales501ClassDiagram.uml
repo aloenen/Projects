@@ -93,13 +93,12 @@
 SRP Compliant</body>
     </comment>
     <comment
-      Id="06b6b67d-97e1-437f-a8e6-7eb5aef28d5d">
-      <body>Split to rebate manager and sales manager
-</body>
-    </comment>
-    <comment
       Id="ea8bd855-d48d-462c-a10e-159d9847e3a1">
       <body>Fix all of these 4 arrows so that the controller(manager) deals with the database and not the views.</body>
+    </comment>
+    <comment
+      Id="51100b03-a760-4168-85a5-d9224f540eed">
+      <body>Can I point to classes to the same Database like that?? Or do we have to use an interface?</body>
     </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
@@ -3158,76 +3157,7 @@ SRP Compliant</body>
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <interfaceRealization
-            Id="86e2a2dd-d97b-473e-a446-2b21074ad23a">
-            <interfaceMoniker
-              Id="f0f1c362-5d1a-4bdf-8527-57eb89b78239"
-              LastKnownName="EnterRebateHandler"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="08dcedd1-b892-4640-90ae-5712d2bb0577">
-            <interfaceMoniker
-              Id="31499cf0-c7a9-4ca7-a801-5df110cd6513"
-              LastKnownName="TransactionHandler"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="2fded693-a77b-458c-b2c0-c36685a92eac">
-            <interfaceMoniker
-              Id="5e55baf0-943a-4f9b-9a94-79cea83db1d4"
-              LastKnownName="GenRebateHandler"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-          <interfaceRealization
-            Id="4d7676e4-3dc6-40e0-b381-1ec276fc4830">
-            <interfaceMoniker
-              Id="1ed4fb27-e38f-469f-99f0-f4cefcd925c4"
-              LastKnownName="RetunHandler"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
         <targetEnds>
-          <association
-            Id="5f8bd9d6-a9b6-4310-8658-d390c1eee730"
-            isDerived="false"
-            sourceEndRoleName="Manager"
-            targetEndRoleName="Observer"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc"
-              LastKnownName="enterRebateObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8aadcd46-4235-431c-abc9-f892a2bc34d2"
-                  name="Manager"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="62b825da-fbcb-4e2a-baf3-66f7875b78dc"
-                  name="Observer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="565ff343-7cb9-4cbc-8691-4e6decae2fa8"
             isDerived="false"
@@ -3257,123 +3187,6 @@ SRP Compliant</body>
                 <memberEnd
                   Id="3434db6b-6673-4112-b6e6-f343388da70a"
                   name="TransactionDB"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="bf8c60cd-0db2-4550-b4d9-e70a094e1d0b"
-            isDerived="false"
-            sourceEndRoleName="Manager"
-            targetEndRoleName="genRebateObs"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="d93af165-e646-4e32-b34f-73042de012f0"
-              LastKnownName="genRebateObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="58345e63-566c-4016-8b4a-5f2d1b3141d4"
-                  name="Manager"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="abd75c64-7e6d-4471-b5a7-4f0f105bcf1b"
-                  name="genRebateObs"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="1ba46593-9ace-48da-a526-506949d7a28b"
-            isDerived="false"
-            sourceEndRoleName="Manager"
-            targetEndRoleName="transactionObs"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="b4ebdfc0-fe16-4cfe-a481-eae4b0252079"
-              LastKnownName="transactionObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8784a8a2-c292-4e78-87f7-430cc87e9740"
-                  name="Manager"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6205a928-1a3b-4dfc-8a3b-4ca35c8b5e0f"
-                  name="transactionObs"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="f5050140-4444-477a-9a27-c82de53904bf"
-            isDerived="false"
-            sourceEndRoleName="Manager"
-            targetEndRoleName="returnObs"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="c64b7887-fa31-4afc-865d-7d689651930f"
-              LastKnownName="returnObs"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8374b588-379d-4c25-9439-c62946f50c30"
-                  name="Manager"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="136b70fc-7016-43cb-9411-d9dd51e8f047"
-                  name="returnObs"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6930,6 +6743,338 @@ SRP Compliant</body>
         name="RebScreenI"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a151ef77-8de2-474a-9405-628bac673032"
+        name="SalesManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="16cbb1e7-ff02-4673-a310-f3e8f41bb566">
+            <interfaceMoniker
+              Id="31499cf0-c7a9-4ca7-a801-5df110cd6513"
+              LastKnownName="TransactionHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="b4a1c4c9-f933-4055-9227-6d4dbc291ce8">
+            <interfaceMoniker
+              Id="1ed4fb27-e38f-469f-99f0-f4cefcd925c4"
+              LastKnownName="RetunHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="ea1cfea8-c28c-413c-9dcc-6426a8f9aa63"
+            isDerived="false"
+            sourceEndRoleName="SalesManager"
+            targetEndRoleName="transactionObs"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="b4ebdfc0-fe16-4cfe-a481-eae4b0252079"
+              LastKnownName="transactionObs"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="564fc0e4-9440-4f1f-b439-e6b8b7d25594"
+                  name="SalesManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c08b61d-b67c-462c-b853-7f1e807c8ed0"
+                  name="transactionObs"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="176c7636-b793-47dd-a759-5df9df8a585e"
+            isDerived="false"
+            sourceEndRoleName="SalesManager"
+            targetEndRoleName="returnObs"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="c64b7887-fa31-4afc-865d-7d689651930f"
+              LastKnownName="returnObs"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36888378-ac3e-47d2-b12d-a1bb0eb552b2"
+                  name="SalesManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb4a23be-2b6d-40df-8a1d-9789a0b5e621"
+                  name="returnObs"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3b431da7-bf0c-4d08-85f1-32291a32a414"
+            isDerived="false"
+            sourceEndRoleName="SalesManager"
+            targetEndRoleName="TransactionDB"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67d86c08-49a4-47e1-bc27-723f480eac0f"
+                  name="SalesManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5bf63a44-eb99-47aa-8160-65932a809a2f"
+                  name="TransactionDB"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="7c363248-bb5f-4984-9946-a89eee5892c6"
+            name="createTransaction"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="724bbe15-e554-45b5-afd6-278b31203fc1"
+            name="returnItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="24119a9b-3be9-496a-a9b1-59246ef42edf"
+            name="returnItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c99a947b-d6c4-474c-814f-686c432410b5"
+        name="RebateManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d335f289-f4b8-47d8-9b30-d76e812eef45">
+            <interfaceMoniker
+              Id="f0f1c362-5d1a-4bdf-8527-57eb89b78239"
+              LastKnownName="EnterRebateHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="f5090b90-65cc-402a-9a2d-1bf2f6e2cfcc">
+            <interfaceMoniker
+              Id="5e55baf0-943a-4f9b-9a94-79cea83db1d4"
+              LastKnownName="GenRebateHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="612015e5-2030-452f-af81-63f2f8dcefc3"
+            isDerived="false"
+            sourceEndRoleName="RebateManager"
+            targetEndRoleName="enterRebateObs"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="8ebd6da7-88f9-4216-9ee5-5006346de2dc"
+              LastKnownName="enterRebateObs"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6614b012-a82d-4850-bd2c-b9b0583f2cee"
+                  name="RebateManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a8196fdd-2a22-4c6e-b889-09426131d30c"
+                  name="enterRebateObs"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="36c34e69-bb1a-492d-b1ed-f0301f5760df"
+            isDerived="false"
+            sourceEndRoleName="RebateManager"
+            targetEndRoleName="genRebateObs"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="d93af165-e646-4e32-b34f-73042de012f0"
+              LastKnownName="genRebateObs"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b177970-d9a6-4723-8074-5725ea65e74a"
+                  name="RebateManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7bb2367-d037-4792-8ec5-9cb910e3bf47"
+                  name="genRebateObs"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fc7f1e7b-44a3-4b09-bcfd-f8770720f482"
+            isDerived="false"
+            sourceEndRoleName="RebateManager"
+            targetEndRoleName="TransactionDB"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
+              LastKnownName="TransactionDB"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82c788cd-3676-493e-a719-55b9a46dc5f7"
+                  name="RebateManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d3d2c80-0591-4610-9f92-e9a78c302433"
+                  name="TransactionDB"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="9271525e-974d-413b-9a55-065dd5086b26"
+            name="enterRebate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c5eb9c66-eba2-4c0d-8290-ab4a3562050a"
+            name="genRebate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
