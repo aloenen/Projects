@@ -3136,6 +3136,24 @@ SRP Compliant</body>
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <elementDefinition Id="aac3bc9f-b347-49d1-9010-04431c0346c5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="81c085ca-6926-4cc4-a6e0-928fabfdeef0" name="newT" direction="In" isUnique="false">
+                  <elementDefinition Id="d6fef266-2876-4088-a48b-fff29f6ef9fc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="57d74e54-fa31-4819-b708-91b05dd9b7c5" LastKnownName="Transaction" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d83d5284-37c8-4a83-8eba-9f0d407941ce" direction="Return" isUnique="false">
+                  <elementDefinition Id="c783d55d-c7e3-4490-b6e1-2171ff51ee35" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="02aeecd8-dc42-490a-9488-0cc856107d5d" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperations>
       </Interface>
