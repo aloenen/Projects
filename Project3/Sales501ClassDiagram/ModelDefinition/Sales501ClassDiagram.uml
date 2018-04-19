@@ -84,16 +84,6 @@
       <body>OCP Compliant
 SRP Compliant</body>
     </comment>
-    <comment
-      Id="51100b03-a760-4168-85a5-d9224f540eed">
-      <body>Split into SalesManager and ReturnsManager
-</body>
-    </comment>
-    <comment
-      Id="f75ae571-99b5-47fe-89a8-b5ca9c4a8f16">
-      <body>SalesManager &amp; Transcation/Item interaction
-</body>
-    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
@@ -3161,7 +3151,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3288,7 +3278,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -3791,7 +3781,7 @@ SRP Compliant</body>
     <packageHasNamedElement>
       <class
         Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-        name="TransactionDB"
+        name="Database"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3887,44 +3877,6 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="66a00522-081c-493e-90dd-5863423f672c"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName="Transaction"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="3840ed24-7f51-4704-a2a4-0bed5d8d5cc2"
-              LastKnownName="Transaction"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f298a61f-6893-4b43-8b63-21e77254b5fd"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ada116a4-04a9-4d42-9b81-2f3782f0958c"
-                  name="Transaction"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -4000,6 +3952,25 @@ SRP Compliant</body>
               <undefinedTypeMoniker
                 Id="7f52cc00-b225-4394-beeb-9ad58277b7d8"
                 LastKnownName="Dictionary&lt;int,Transaction&gt;"
+                LastKnownLocation="Sales501ClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="58f804aa-338a-45bc-8b80-9f9a80bee3df"
+            name="rebate"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="94dab9af-dd38-41dd-892d-148765885004"
+                LastKnownName="Dictionary&lt;int, Rebate&gt;"
                 LastKnownLocation="Sales501ClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -4161,191 +4132,24 @@ SRP Compliant</body>
             </ownedParameters>
           </operation>
           <operation
-            Id="bae49a3b-e983-4051-ae2d-e0250e0b378a"
-            name="addItem"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="fad1c1b4-babc-4da9-838e-89923269da42"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2edf92ee-6c8b-480a-9868-1e54cc02926d">
-                    <propertyInstance
-                      Id="9d3ff415-3635-4e3b-b38c-e298620ffbc2"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fc570082-73df-4b81-98f5-f20322cce8b2">
-                    <propertyInstance
-                      Id="27d7fb0c-3ae4-44f8-a94d-071181896d1b"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="991a4adf-339f-48ff-a9d5-98635da9de86">
-                    <propertyInstance
-                      Id="3d04d4b9-1553-4ee4-b3f4-6d88a9630c95"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9bb59855-13f2-4083-b36d-ae2b9b89670c">
-                    <propertyInstance
-                      Id="fe3db501-72a7-4bc1-b965-0f6b28234288"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bd98279d-be15-4b01-9e83-f4a21cdc30cd">
-                    <propertyInstance
-                      Id="da6badf5-383f-4196-8da8-a81651272b1c"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c9899b79-25d1-416e-b4f8-9d4391ccb321">
-                    <propertyInstance
-                      Id="a47288cc-5ceb-4ef3-bea7-81b151769392"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="745a6759-b0b3-4ac9-a114-22a3eed67a77"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4b11984c-f9a6-428e-b595-7162dcfd1242"
-                  name="string name"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="92f46af9-7b83-4066-a935-c4de83c63ba5"
-                  name="float price"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f5826b93-faec-40b7-8496-696cf18dfef6"
-                  name="int amount"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="932499ad-1775-43d4-90c6-0926407ed22b"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="96d82c9b-eb06-48c1-aef5-d7e8a1c90526"
-                      LastKnownName="void"
-                      LastKnownLocation="Sales501ClassDiagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="614d3ec7-cd7c-44c1-9c27-d7203aa9f045"
-            name="addTransaction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="e0d9100b-a4d5-4f22-87a9-ebfcf25b80b2"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9ba87439-665d-4732-9fdb-677b33dc3fda">
-                    <propertyInstance
-                      Id="cd485fd7-efe1-4913-9b0e-6edd8de8c14e"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3157904e-7f3e-4426-b6e2-29130b555b47">
-                    <propertyInstance
-                      Id="245054a4-f6f9-4de6-8060-482a7477361d"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="570ddfea-f141-4a0c-b00e-6f3eda0a3052">
-                    <propertyInstance
-                      Id="825f5d5c-4aaa-4cd0-bf35-f782274eca80"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="604a78f5-52e1-46c0-a9d3-3e01e62c3d40">
-                    <propertyInstance
-                      Id="f0ad4500-ea5a-4201-abe2-f7c9c1a5a720"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6dd2836c-ba25-40f9-8c66-5a9e1a53f52c">
-                    <propertyInstance
-                      Id="b818fcba-9a73-46d5-9755-8c80d4dbce65"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="94e64aea-9e54-4171-8595-7a58ff00740f">
-                    <propertyInstance
-                      Id="29311dfa-95d3-4c57-a766-22ea96362aec"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e32cb263-63ed-42eb-8802-144ec61dbf89"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2999307d-cecf-4e76-8b0f-227478f7cf0c"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="96d82c9b-eb06-48c1-aef5-d7e8a1c90526"
-                      LastKnownName="void"
-                      LastKnownLocation="Sales501ClassDiagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="db43e5fb-f975-4eff-b0e2-ae77712a9bd9"
-            name="retrieveInfo"
+            name="getTransaction"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5f9b9d6e-c9b9-48ca-9b43-bf6f597ce2f1"
+            name="getRebate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b2002770-263b-43d3-b634-b9b0bd9add6c"
+            name="addTransaction"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -6183,7 +5987,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -6259,7 +6063,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -6335,7 +6139,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -6411,7 +6215,7 @@ SRP Compliant</body>
             isAbstract="false">
             <classMoniker
               Id="6659e787-e76b-4ec8-97c5-a14c3d09761e"
-              LastKnownName="TransactionDB"
+              LastKnownName="Database"
               LastKnownLocation="Sales501ClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -6844,13 +6648,6 @@ SRP Compliant</body>
               LastKnownName="TransactionHandler"
               LastKnownLocation="Sales501ClassDiagram.uml" />
           </interfaceRealization>
-          <interfaceRealization
-            Id="b4a1c4c9-f933-4055-9227-6d4dbc291ce8">
-            <interfaceMoniker
-              Id="1ed4fb27-e38f-469f-99f0-f4cefcd925c4"
-              LastKnownName="RetunHandler"
-              LastKnownLocation="Sales501ClassDiagram.uml" />
-          </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
           <association
@@ -7007,6 +6804,43 @@ SRP Compliant</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="de27ce24-e14c-440c-a591-93ccdd09f46c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3840ed24-7f51-4704-a2a4-0bed5d8d5cc2"
+              LastKnownName="Transaction"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c48621b9-5c4f-48c5-83dc-9760109c4402"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2de8c67-4851-426d-ad96-5e0b30b79c99"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -7033,14 +6867,6 @@ SRP Compliant</body>
           <operation
             Id="7c363248-bb5f-4984-9946-a89eee5892c6"
             name="createTransaction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="724bbe15-e554-45b5-afd6-278b31203fc1"
-            name="returnItems"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -7154,7 +6980,7 @@ SRP Compliant</body>
           <association
             Id="3f79ace5-35c7-4e8c-a313-1c20eb44ec58"
             isDerived="false"
-            sourceEndRoleName="RebateManager"
+            sourceEndRoleName=""
             targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
@@ -7166,7 +6992,6 @@ SRP Compliant</body>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="410827ab-aec8-4889-8d5a-590ac9b0ec39"
-                  name="RebateManager"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -7192,7 +7017,7 @@ SRP Compliant</body>
           <association
             Id="b819a610-e216-4195-960b-0022a60099e2"
             isDerived="false"
-            sourceEndRoleName="RebateManager"
+            sourceEndRoleName=""
             targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
@@ -7204,7 +7029,6 @@ SRP Compliant</body>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="a5128267-edbf-46d5-9692-a0871004dd4c"
-                  name="RebateManager"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -7217,6 +7041,43 @@ SRP Compliant</body>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="7e06d483-50c5-4557-98b3-8252b9e82465"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="102b7002-942c-48d0-8409-7fdd43dfa265"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="df3622d8-023f-47a4-974a-76230abb458b"
+              LastKnownName="Rebate"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d21bd49a-e99f-4201-8358-78689ca86a7c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ceac9ea5-fc3b-47ea-af9c-aeda88c1f503"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -7275,7 +7136,23 @@ SRP Compliant</body>
         <ownedOperations>
           <operation
             Id="f21e551f-aa09-47d6-b3d5-e4585d2bbe14"
-            name="retrieveInfo"
+            name="getTransaction"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0075191-74a7-41c1-9e78-a6208c19d658"
+            name="getRebate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="aac3bc9f-b347-49d1-9010-04431c0346c5"
+            name="addTransaction"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
@@ -7467,6 +7344,197 @@ SRP Compliant</body>
           </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="19e07bb6-33a4-4974-a930-cb641a5e1a37"
+        name="ReturnsManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e890b1b9-3d16-4c5b-b533-b6438cff81b4">
+            <interfaceMoniker
+              Id="1ed4fb27-e38f-469f-99f0-f4cefcd925c4"
+              LastKnownName="RetunHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="9ad6a9cd-d18c-4097-987e-c25087d9f748"
+            isDerived="false"
+            sourceEndRoleName="ReturnsManager"
+            targetEndRoleName="Observer"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="373972cf-a1c9-413a-983f-c44c5730df62"
+              LastKnownName="Observer"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="025d90d4-1e5e-4fc4-a62f-3cdd55e6f869"
+                  name="ReturnsManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91a2d803-c170-45ba-93aa-71634cff90c3"
+                  name="Observer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b8b63afb-508b-42b0-9381-90d63d76aa61"
+            isDerived="false"
+            sourceEndRoleName="ReturnsManager"
+            targetEndRoleName="Manager"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="92c3abdc-ac46-4385-8728-948617a12a2e"
+              LastKnownName="Manager"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b3dc58f-98f5-46b2-ab50-441f08e66538"
+                  name="ReturnsManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ec043af-125b-470c-9ad3-ff224668cd67"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="c92d4c72-6e3d-4b5c-b2c6-7c6e81b2d164"
+            name="returnItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="94dab9af-dd38-41dd-892d-148765885004"
+        name="Dictionary&lt;int, Rebate&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="df3622d8-023f-47a4-974a-76230abb458b"
+        name="Rebate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="247dfd94-c601-4aab-88af-b80ef91f69ea"
+            name="rebateID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2cf5d37b-0c24-489a-b4c5-c8f3b2b4f1bd"
+                LastKnownName="int"
+                LastKnownLocation="Sales501ClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cc7ee17f-d50c-49ce-8073-d82899cd46ad"
+            name="bool"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="24e2a7e5-d54c-4ec0-a5e2-3c788f652fb2"
+                LastKnownName="returned"
+                LastKnownLocation="Sales501ClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0562a19c-9232-4ee3-a2b8-306885cd268e"
+            name="string"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1c62fa97-d56f-469a-838b-a6614f653956"
+                LastKnownName="date"
+                LastKnownLocation="Sales501ClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="24e2a7e5-d54c-4ec0-a5e2-3c788f652fb2"
+        name="returned" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1c62fa97-d56f-469a-838b-a6614f653956"
+        name="date" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
