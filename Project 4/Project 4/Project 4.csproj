@@ -46,23 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="GeneratedCode\CashierView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GeneratedCode\CashierView.Designer.cs">
+      <DependentUpon>CashierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\CustomerServiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\CustomerServiceView.Designer.cs">
+      <DependentUpon>CustomerServiceView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Database.cs" />
     <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
     <Compile Include="GeneratedCode\GenRebateHandler.cs" />
     <Compile Include="GeneratedCode\GenScreen.cs" />
-    <Compile Include="GeneratedCode\InputView.cs" />
     <Compile Include="GeneratedCode\Item.cs" />
     <Compile Include="GeneratedCode\Manager.cs" />
     <Compile Include="GeneratedCode\Observer.cs" />
     <Compile Include="GeneratedCode\Rebate.cs" />
     <Compile Include="GeneratedCode\RebateManager.cs" />
     <Compile Include="GeneratedCode\RebateScreen.cs" />
+    <Compile Include="GeneratedCode\RebateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\RebateView.Designer.cs">
+      <DependentUpon>RebateView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneratedCode\RetunHandler.cs" />
     <Compile Include="GeneratedCode\ReturnScreen.cs" />
     <Compile Include="GeneratedCode\ReturnsManager.cs" />

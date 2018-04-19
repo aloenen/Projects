@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_4
+namespace Project_4.GeneratedCode
 {
-    public partial class Form1 : Form
+    public partial class RebateView : Form
     {
-        public Form1()
+        public RebateView()
         {
             InitializeComponent();
         }

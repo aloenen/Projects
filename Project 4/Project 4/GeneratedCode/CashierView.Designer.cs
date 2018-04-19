@@ -1,6 +1,6 @@
-﻿namespace Project_4
+﻿namespace Project_4.GeneratedCode
 {
-    partial class Form1
+    partial class CashierView
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.Text = "CashierView";
         }
 
         #endregion
     }
 }
-
