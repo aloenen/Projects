@@ -8930,6 +8930,35 @@ SRP Compliant</body>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d6fef266-2876-4088-a48b-fff29f6ef9fc"
+                  name="newT"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
+                      LastKnownName="Transaction"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c783d55d-c7e3-4490-b6e1-2171ff51ee35"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="96d82c9b-eb06-48c1-aef5-d7e8a1c90526"
+                      LastKnownName="void"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperations>
       </Interface>
