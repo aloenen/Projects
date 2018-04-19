@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\CashierView.cs">
+    <Compile Include="CashierView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneratedCode\CashierView.Designer.cs">
+    <Compile Include="CashierView.Designer.cs">
       <DependentUpon>CashierView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\CustomerServiceView.cs">
@@ -83,6 +83,9 @@
     <Compile Include="GeneratedCode\TransactionScreen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CashierView.resx">
+      <DependentUpon>CashierView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -10,44 +10,10 @@ using System.Linq;
 using System.Text;
 
 public class SalesManager : TransactionHandler
-{
-	private int transactionID
+{	
+	public void createTransaction(object sender, EventArgs e)
 	{
-		get;
-		set;
+		
 	}
-
-	public virtual transactionObs transactionObs
-	{
-		get;
-		set;
-	}
-
-	public virtual returnObs returnObs
-	{
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual void createTransaction()
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 
