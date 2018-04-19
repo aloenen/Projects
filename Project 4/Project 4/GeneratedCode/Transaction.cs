@@ -53,6 +53,11 @@ public class Transaction
         id = i;
     }
 
+    public int getID()
+    {
+        return id;
+    }
+
     public void addItem(string n, float p, int a)
     {
         if (items.ContainsKey(n))

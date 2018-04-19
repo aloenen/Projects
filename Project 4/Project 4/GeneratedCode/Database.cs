@@ -11,48 +11,32 @@ using System.Text;
 
 public class Database : Manager
 {
-	private Dictionary<int,Transaction> transactions
-	{
-		get;
-		set;
-	}
+    private Dictionary<int, Transaction> transactionDB = new Dictionary<int, Transaction>();
+    private Dictionary<int, Rebate> rebateDB = new Dictionary<int, Rebate>();
 
-	private Dictionary<int, Rebate> rebate
-	{
-		get;
-		set;
-	}
+    public void addTransaction(Transaction newT)
+    {
+        transactionDB.Add(newT.getID(), newT);
+    }
 
-	public virtual TransactionI TransactionI
-	{
-		get;
-		set;
-	}
+    public Transaction getTransaction(int id)
+    {
+        Transaction current;
+        if(transactionDB.TryGetValue(id, out current))
+        {
+            return current;
+        } else
+        {
+            return null;
+        }
+    }
 
-	public virtual Transaction getTransaction(object int id)
-	{
-		throw new System.NotImplementedException();
-	}
+    public void addRebate(Rebate newR)
+    {
+        rebateDB.Add(newR.getID(), newR);
+    }
 
-	public virtual string generateRebate()
-	{
-		throw new System.NotImplementedException();
-	}
 
-	public virtual void getTransaction()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void getRebate()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void addTransaction()
-	{
-		throw new System.NotImplementedException();
-	}
 
 }
 

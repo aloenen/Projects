@@ -4189,65 +4189,6 @@ SRP Compliant</body>
             </ownedParameters>
           </operation>
           <operation
-            Id="db43e5fb-f975-4eff-b0e2-ae77712a9bd9"
-            name="getTransaction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="aa48b949-547f-44fd-8b22-a9fa48a80dc8"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="15a6fbbd-ca76-4ca3-9a67-697a63761bcd">
-                    <propertyInstance
-                      Id="0f18cb25-1cee-453d-8011-650a100cc5e2"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e02a8166-a07c-4bb0-8983-2e16d7ddd192">
-                    <propertyInstance
-                      Id="75bb4a94-7bc8-404c-aa2c-535339583aec"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="32db8226-e9c2-4b6f-bcbc-3886c24e3bf7">
-                    <propertyInstance
-                      Id="14a83ac2-7e94-41f4-8454-c7e8d90c3415"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b7e2babd-4b28-462e-be21-21e1f2b657b2">
-                    <propertyInstance
-                      Id="09f897e5-024e-40a9-b878-4fe0b52e5eb7"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="60af0309-5289-4b70-9d69-a9f15bef485c">
-                    <propertyInstance
-                      Id="ef4708c4-2bce-4f5c-aca8-08474a2fd8e2"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="497d87ac-23e4-45ec-9c00-5e56cc1a6a8d">
-                    <propertyInstance
-                      Id="4db58c3c-8223-4d42-8107-d7a86e8c72ba"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
-          <operation
             Id="5f9b9d6e-c9b9-48ca-9b43-bf6f597ce2f1"
             name="getRebate"
             isLeaf="false"
@@ -4364,6 +4305,35 @@ SRP Compliant</body>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f5ea487-e357-4429-821d-4018750605fb"
+                  name="newT"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fae987dc-edaf-4a86-a8f5-fe22ad1f7265"
+                      LastKnownName="Transaction"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6c04c2c5-6961-4fbb-927c-edae9abb5818"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="96d82c9b-eb06-48c1-aef5-d7e8a1c90526"
+                      LastKnownName="void"
+                      LastKnownLocation="Sales501ClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>

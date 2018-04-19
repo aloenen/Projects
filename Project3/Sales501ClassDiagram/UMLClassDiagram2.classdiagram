@@ -370,52 +370,6 @@ SRP Compliant</body>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="f1efe3b6-be27-4b2c-bdf1-ab153205a9c2" name="getTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="c0e1cff5-d13b-4ca1-92f7-e6daa790913e" name="method" profile="CSharpProfile">
-                <elementDefinition Id="aa48b949-547f-44fd-8b22-a9fa48a80dc8" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="bfef8d0b-6bde-4515-8f3f-e8e5812ea693">
-                    <propertyInstance Id="eab2bea8-5ac0-42a9-8e62-fcb8749c362a" name="ClrAttributes">
-                      <elementDefinition Id="0f18cb25-1cee-453d-8011-650a100cc5e2" />
-                    </propertyInstance>
-                    <elementDefinition Id="15a6fbbd-ca76-4ca3-9a67-697a63761bcd" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="3ceb9398-3941-4253-b058-85478c2ed244">
-                    <propertyInstance Id="7d4f3329-7a4f-4497-b409-309b221e438d" name="IsPartial" value="false">
-                      <elementDefinition Id="75bb4a94-7bc8-404c-aa2c-535339583aec" />
-                    </propertyInstance>
-                    <elementDefinition Id="e02a8166-a07c-4bb0-8983-2e16d7ddd192" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="d6fa87fa-327e-49de-9ce4-4c66f70040ba">
-                    <propertyInstance Id="f408a248-4158-4c3d-8e1d-c0b51c1d1efa" name="IsUnsafe" value="false">
-                      <elementDefinition Id="14a83ac2-7e94-41f4-8454-c7e8d90c3415" />
-                    </propertyInstance>
-                    <elementDefinition Id="32db8226-e9c2-4b6f-bcbc-3886c24e3bf7" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="11625c6a-70b2-4770-9c34-4ea203f7e313">
-                    <propertyInstance Id="84d10161-5074-46ff-b649-23c5aa673762" name="Inheritance" value="none">
-                      <elementDefinition Id="09f897e5-024e-40a9-b878-4fe0b52e5eb7" />
-                    </propertyInstance>
-                    <elementDefinition Id="b7e2babd-4b28-462e-be21-21e1f2b657b2" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="b06c5138-fc53-4502-8fbb-9995f06df8b3">
-                    <propertyInstance Id="4a8c761f-7888-419f-b5d6-104490c2ced0" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="ef4708c4-2bce-4f5c-aca8-08474a2fd8e2" />
-                    </propertyInstance>
-                    <elementDefinition Id="60af0309-5289-4b70-9d69-a9f15bef485c" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="50369efe-a793-413b-be58-6735cc00e934">
-                    <propertyInstance Id="1e458135-a852-47b8-a938-66ee297e53a0" name="params" value="false">
-                      <elementDefinition Id="4db58c3c-8223-4d42-8107-d7a86e8c72ba" />
-                    </propertyInstance>
-                    <elementDefinition Id="497d87ac-23e4-45ec-9c00-5e56cc1a6a8d" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="db43e5fb-f975-4eff-b0e2-ae77712a9bd9" />
-          </operation>
           <operation Id="6ddcce06-52bd-41c4-832e-455a51e4b53d" name="getRebate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
               <stereotypeInstance Id="1ce605c8-34f2-4b30-8617-269cb9d52531" name="method" profile="CSharpProfile">
@@ -507,6 +461,24 @@ SRP Compliant</body>
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <elementDefinition Id="b2002770-263b-43d3-b634-b9b0bd9add6c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5047c255-b62a-4911-a2dd-2716cf12e794" name="newT" direction="In" isUnique="false">
+                  <elementDefinition Id="1f5ea487-e357-4429-821d-4018750605fb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="57d74e54-fa31-4819-b708-91b05dd9b7c5" LastKnownName="Transaction" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0971a9c4-d3a9-47af-8269-59979f25867b" direction="Return" isUnique="false">
+                  <elementDefinition Id="6c04c2c5-6961-4fbb-927c-edae9abb5818" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="02aeecd8-dc42-490a-9488-0cc856107d5d" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
