@@ -40,6 +40,10 @@ public class Rebate
 
     public int TransID
     {
+        get
+        {
+            return transID;
+        }
         set
         {
             transID = value;

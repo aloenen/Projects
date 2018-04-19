@@ -33,7 +33,7 @@ public class Database : Manager
 
     public void addRebate(Rebate newR)
     {
-        rebateDB.Add(newR.getID(), newR);
+        rebateDB.Add(newR.TransID, newR);
     }
 
 
