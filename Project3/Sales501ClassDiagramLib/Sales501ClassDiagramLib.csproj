@@ -40,24 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\Database.cs" />
-    <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
-    <Compile Include="GeneratedCode\GenRebateHandler.cs" />
-    <Compile Include="GeneratedCode\GenScreen.cs" />
-    <Compile Include="GeneratedCode\InputView.cs" />
-    <Compile Include="GeneratedCode\Item.cs" />
-    <Compile Include="GeneratedCode\Manager.cs" />
-    <Compile Include="GeneratedCode\Observer.cs" />
-    <Compile Include="GeneratedCode\Rebate.cs" />
-    <Compile Include="GeneratedCode\RebateManager.cs" />
-    <Compile Include="GeneratedCode\RebateScreen.cs" />
-    <Compile Include="GeneratedCode\RetunHandler.cs" />
-    <Compile Include="GeneratedCode\ReturnScreen.cs" />
-    <Compile Include="GeneratedCode\ReturnsManager.cs" />
-    <Compile Include="GeneratedCode\SalesManager.cs" />
-    <Compile Include="GeneratedCode\Transaction.cs" />
-    <Compile Include="GeneratedCode\TransactionHandler.cs" />
-    <Compile Include="GeneratedCode\TransactionScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
