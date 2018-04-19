@@ -9,51 +9,69 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Transaction : TransactionI
+public class Transaction
 {
-	private List<Item> items
-	{
-		get;
-		set;
-	}
+    private Dictionary<string, Item> items = new Dictionary<string, Item>();
+    private int id;
+    private Random rnd = new Random();
+    private float total;
+    private string customer;
 
-	private string date
-	{
-		get;
-		set;
-	}
+    public float Total
+    {
+        get
+        {
+            return total;
+        }
+    }
 
-	private int id
-	{
-		get;
-		set;
-	}
+    public Dictionary<string, Item> Items
+    {
+        get
+        {
+            return items;
+        }
+    }
 
-	public virtual ItemI ItemI
-	{
-		get;
-		set;
-	}
+    public string genReciept()
+    {
+        int d = rnd.Next(1, 31);
+        string s = "\n************* Receipt ************\nDate: 6/" + d + "/18\nID: " + id + "\n\n";
+        float t = 0;
+        foreach (Item i in items.Values)
+        {
+            s += i.ToString() + "\n";
+            t += i.Price * i.Amount;
+        }
+        total = t;
+        s += "Total: $" + total + "\n**********************************\n";
+        return s;
+    }
 
-	public virtual Item Item
-	{
-		get;
-		set;
-	}
+    public Transaction(int i)
+    {
+        id = i;
+    }
 
-	public virtual string genReciept()
-	{
-		throw new System.NotImplementedException();
-	}
+    public void addItem(string n, float p, int a)
+    {
+        if (items.ContainsKey(n))
+        {
+            items[n].Amount++;
+        }
+        else
+        {
+            items.Add(n, new Item(n, p, a));
+        }
+    }
 
-	public Transaction(object int id)
-	{
-	}
-
-	public virtual void addItem(object int a, object string n, object int p)
-	{
-		throw new System.NotImplementedException();
-	}
+    public Item getItem(string name)
+    {
+        if (items.ContainsKey(name))
+        {
+            return items[name];
+        }
+        return null;
+    }
 
 }
-

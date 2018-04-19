@@ -9,40 +9,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Item : ItemI
+public class Item
 {
-	private float price
-	{
-		get;
-		set;
-	}
+    private float price;
+    private string name;
+    private int amount;
+    private int rAmount;
+    private bool returned;
 
-	private string name
-	{
-		get;
-		set;
-	}
+    public float Price
+    {
+        get
+        {
+            return price;
+        }
+    }
 
-	private int amount
-	{
-		get;
-		set;
-	}
+    public bool Returned
+    {
+        set
+        {
+            returned = value;
+        }
+    }
 
-	private bool returned
-	{
-		get;
-		set;
-	}
+    public int Amount
+    {
+        set
+        {
+            amount = value;
+        }
+        get
+        {
+            return amount;
+        }
+    }
 
-	public virtual string ToString()
-	{
-		throw new System.NotImplementedException();
-	}
+    public int RAmount
+    {
+        get
+        {
+            return rAmount;
+        }
+        set
+        {
+            rAmount = value;
+        }
+    }
 
-	public Item(object int a, object string name, object float price)
-	{
-	}
+    public override string ToString()
+    {
+        string s = "";
+        if (amount > 0)
+            s += ("Item: " + name + "\nPrice: $" + price + "\nQty: " + amount + "\n");
+        if (returned)
+        {
+            s += "\n*** Returned ***\nItem: " + name + "\nPrice: $" + price + "\nQty: " + rAmount + "\n****************\n";
+        }
+        return s;
+    }
+
+    public Item(string n, float p, int a)
+    {
+        name = n;
+        price = p;
+        amount = a;
+    }
 
 }
 
