@@ -86,7 +86,12 @@ SRP Compliant</body>
     </comment>
     <comment
       Id="51100b03-a760-4168-85a5-d9224f540eed">
-      <body>SRP Compliant
+      <body>Split into SalesManager and ReturnsManager
+</body>
+    </comment>
+    <comment
+      Id="f75ae571-99b5-47fe-89a8-b5ca9c4a8f16">
+      <body>SalesManager &amp; Transcation/Item interaction
 </body>
     </comment>
   </ownedCommentsInternal>
@@ -7003,6 +7008,27 @@ SRP Compliant</body>
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c6044fb3-09b4-4a2e-ab00-48b441ffd8f0"
+            name="transactionID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2cf5d37b-0c24-489a-b4c5-c8f3b2b4f1bd"
+                LastKnownName="int"
+                LastKnownLocation="Sales501ClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="7c363248-bb5f-4984-9946-a89eee5892c6"
@@ -7257,6 +7283,190 @@ SRP Compliant</body>
             isQuery="false" />
         </ownedOperations>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a75d40c-efb5-4c62-af05-085aa78e5275"
+        name="CustomerService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="438aa2cb-9994-47fe-83b0-e9e246ba72d2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="RetunHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="1ed4fb27-e38f-469f-99f0-f4cefcd925c4"
+              LastKnownName="RetunHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ee3b7fa-621f-42b8-a915-6ee0fa246762"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4155ff6b-e960-4432-9479-73a589e3ba25"
+                  name="RetunHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="53455127-50b3-4ff4-854d-dd3f863cac13"
+        name="Cashier"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d24b201e-95ae-47ed-a187-6d1908f792ca"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="31499cf0-c7a9-4ca7-a801-5df110cd6513"
+              LastKnownName="TransactionHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0790a794-6a34-4826-863c-291cf627a652"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eabf3746-2cd2-48b7-b4a2-d98083ab4605"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5815c6d3-93a1-4bf2-afd0-af2d83c39285"
+        name="RebateOffice"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="57b60913-bf8f-4ed6-a6f1-bc4fe210e900"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="f0f1c362-5d1a-4bdf-8527-57eb89b78239"
+              LastKnownName="EnterRebateHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0803adcd-0576-4e46-92e5-dc4ff1f2c943"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83530e2d-6919-49ff-bd1b-5cef7a0478b5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8a3a1a15-755f-49ca-b590-37967564ec28"
+            isDerived="false"
+            sourceEndRoleName="RebateOffice"
+            targetEndRoleName="GenRebateHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="5e55baf0-943a-4f9b-9a94-79cea83db1d4"
+              LastKnownName="GenRebateHandler"
+              LastKnownLocation="Sales501ClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e7197732-7942-48a8-9647-8b22b66982cb"
+                  name="RebateOffice"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="080c4f60-aed7-4609-a493-5810a46cc42f"
+                  name="GenRebateHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

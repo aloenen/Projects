@@ -12,7 +12,12 @@ SRP Compliant</body>
     </comment>
     <comment Id="df3516c9-55ca-40a4-aa21-5182c1517644">
       <elementDefinition Id="51100b03-a760-4168-85a5-d9224f540eed" />
-      <body>SRP Compliant
+      <body>Split into SalesManager and ReturnsManager
+</body>
+    </comment>
+    <comment Id="fc1d8e2a-ccbf-4646-87c8-24adcca51079">
+      <elementDefinition Id="f75ae571-99b5-47fe-89a8-b5ca9c4a8f16" />
+      <body>SalesManager &amp; Transcation/Item interaction
 </body>
     </comment>
   </ownedCommentsInternal>
@@ -1663,6 +1668,14 @@ SRP Compliant</body>
             <elementDefinition Id="fa21fe8b-5a66-47ad-9922-7c037eff13e2" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a0f9e108-696b-4c41-b1b4-6f00d7a73487" name="transactionID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c6044fb3-09b4-4a2e-ab00-48b441ffd8f0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a62303a6-e3b8-48ac-b793-9cb537073fa8" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="fe95c1fe-2cb6-420e-9689-b2cfc19e5695" name="createTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="7c363248-bb5f-4984-9946-a89eee5892c6" />
@@ -1749,6 +1762,91 @@ SRP Compliant</body>
           </operation>
         </ownedOperations>
       </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2093277a-2332-499a-bc44-53083f4a1a4a" name="CustomerService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a75d40c-efb5-4c62-af05-085aa78e5275" />
+        <targetEnds>
+          <association Id="15c9a46e-6dc9-4c84-955f-d9b17259d98e" isDerived="false" sourceEndRoleName="" targetEndRoleName="RetunHandler" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="49ad0530-e7a9-4e1e-8dec-231e574a7a73" LastKnownName="RetunHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94523dab-470d-4e0a-a215-cbf0af3d37f3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ee3b7fa-621f-42b8-a915-6ee0fa246762" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbdeb092-38b1-416f-9b0b-d06924be34de" name="RetunHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4155ff6b-e960-4432-9479-73a589e3ba25" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="438aa2cb-9994-47fe-83b0-e9e246ba72d2" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="990dbbd7-2b63-42b2-85b1-97a932e597d3" name="Cashier" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="53455127-50b3-4ff4-854d-dd3f863cac13" />
+        <targetEnds>
+          <association Id="7d0a7e79-28c4-4912-a686-12cc615ab377" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="1959288c-5e32-41c2-aadc-0ddc17f7d601" LastKnownName="TransactionHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b550dce0-eb92-4cd2-a09c-ae379c4b2bb2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0790a794-6a34-4826-863c-291cf627a652" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="96af756c-077c-4d82-b39b-04ba129d5f94" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eabf3746-2cd2-48b7-b4a2-d98083ab4605" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d24b201e-95ae-47ed-a187-6d1908f792ca" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7831b79-6573-4be8-a439-65685ed56ded" name="RebateOffice" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5815c6d3-93a1-4bf2-afd0-af2d83c39285" />
+        <targetEnds>
+          <association Id="e7910e79-739b-4a01-8963-b2328f68cac8" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="fc022a58-8613-46e8-97d7-9d9041bdb3ad" LastKnownName="EnterRebateHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5aa92fa-b15f-4141-a67c-a017dba0b04f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0803adcd-0576-4e46-92e5-dc4ff1f2c943" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6178db36-cf6f-4ce9-91e5-6c833e426d9b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83530e2d-6919-49ff-bd1b-5cef7a0478b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="57b60913-bf8f-4ed6-a6f1-bc4fe210e900" />
+          </association>
+          <association Id="f30c7f0e-ab08-4c9a-8efc-9dc135354541" isDerived="false" sourceEndRoleName="RebateOffice" targetEndRoleName="GenRebateHandler" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="722f9970-346b-4887-aa99-30907a72c2bc" LastKnownName="GenRebateHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db259c9d-0ea7-43b0-97fc-bf9f41add5a8" name="RebateOffice" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e7197732-7942-48a8-9647-8b22b66982cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26183c2f-80a1-4c7f-93a6-d4807fe8c83f" name="GenRebateHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="080c4f60-aed7-4609-a493-5810a46cc42f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8a3a1a15-755f-49ca-b590-37967564ec28" />
+          </association>
+        </targetEnds>
+      </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="bd076061-901e-4c76-831f-62c0a50d6466" name="Sales501ClassDiagram">
