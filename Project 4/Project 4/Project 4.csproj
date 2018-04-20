@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratedCode\CashierOutputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\CashierOutputView.Designer.cs">
+      <DependentUpon>CashierOutputView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneratedCode\CashierView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneratedCode\CashierView.Designer.cs">
       <DependentUpon>CashierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\CustomerServiceOutputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\CustomerServiceOutputView.Designer.cs">
+      <DependentUpon>CustomerServiceOutputView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\CustomerServiceView.cs">
       <SubType>Form</SubType>
@@ -61,13 +73,23 @@
     <Compile Include="GeneratedCode\Database.cs" />
     <Compile Include="GeneratedCode\GenRebateHandler.cs" />
     <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
-    <Compile Include="GeneratedCode\GenScreen.cs" />
     <Compile Include="GeneratedCode\Item.cs" />
     <Compile Include="GeneratedCode\ModelI.cs" />
     <Compile Include="GeneratedCode\Observer.cs" />
     <Compile Include="GeneratedCode\Rebate.cs" />
+    <Compile Include="GeneratedCode\RebateCheckOutputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\RebateCheckOutputView.Designer.cs">
+      <DependentUpon>RebateCheckOutputView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneratedCode\RebateManager.cs" />
-    <Compile Include="GeneratedCode\RebateScreen.cs" />
+    <Compile Include="GeneratedCode\RebateOutputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\RebateOutputView.Designer.cs">
+      <DependentUpon>RebateOutputView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneratedCode\RebateView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +97,10 @@
       <DependentUpon>RebateView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\RetunHandler.cs" />
-    <Compile Include="GeneratedCode\ReturnScreen.cs" />
     <Compile Include="GeneratedCode\ReturnsManager.cs" />
     <Compile Include="GeneratedCode\SalesManager.cs" />
     <Compile Include="GeneratedCode\Transaction.cs" />
     <Compile Include="GeneratedCode\TransactionHandler.cs" />
-    <Compile Include="GeneratedCode\TransactionScreen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GeneratedCode\CashierView.resx">

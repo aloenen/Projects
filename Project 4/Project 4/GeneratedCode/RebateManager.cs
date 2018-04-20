@@ -8,15 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Project_4.GeneratedCode;
 
 public class RebateManager : EnterRebateHandler, GenRebateHandler
 {
     public RebateManager(ModelI d)
-    {
-
-    }
-
-    public void register(Func<string> eRebate, Func<string> genRebate)
     {
 
     }
@@ -31,5 +27,9 @@ public class RebateManager : EnterRebateHandler, GenRebateHandler
 		
 	}
 
+    internal void register(RebateOutputView.Observer run1, RebateCheckOutputView.Observer run2)
+    {
+        throw new NotImplementedException();
+    }
 }
 

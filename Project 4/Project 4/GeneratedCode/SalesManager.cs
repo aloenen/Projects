@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Project_4.GeneratedCode;
 
 public class SalesManager : TransactionHandler
 {	
@@ -21,9 +22,9 @@ public class SalesManager : TransactionHandler
 		
 	}
 
-    public void register(Func<string> output)
+    internal void register(CashierOutputView.Observer o)
     {
-
+        throw new NotImplementedException();
     }
 }
 

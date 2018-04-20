@@ -11,7 +11,7 @@ namespace Project_4
     public delegate void RetunHandler();
     public delegate void EnterRebateHandler();
     public delegate void GenRebateHandler();
-    public delegate string Observer();
+    //public delegate void Observer();
 
     static class Program
     {
@@ -22,18 +22,19 @@ namespace Project_4
         static void Main()
         {
             // Set up model
-            ModelI dataBase = new Database();
+            ModelI dataBaseC = new Database();
+            Database dataBaseV = new Database();
 
             // Set up controllers
-            SalesManager transactionController = new SalesManager(dataBase);
-            ReturnsManager returnController = new ReturnsManager(dataBase);
-            RebateManager rebateController = new RebateManager(dataBase);
+            SalesManager transactionController = new SalesManager(dataBaseC);
+            ReturnsManager returnController = new ReturnsManager(dataBaseC);
+            RebateManager rebateController = new RebateManager(dataBaseC);
 
             // Set up output 
-            TransactionScreen transactionScreen = new TransactionScreen();
-            ReturnScreen returnScreen = new ReturnScreen();
-            RebateScreen rebateScreen = new RebateScreen();
-            GenScreen genScreen = new GenScreen();
+            GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBaseV);
+            GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView();
+            GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView();
+            GeneratedCode.RebateCheckOutputView checkOutput = new GeneratedCode.RebateCheckOutputView();
 
             // Set up input views
             GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionController.createTransaction);
@@ -41,9 +42,9 @@ namespace Project_4
             GeneratedCode.RebateView rebateView = new GeneratedCode.RebateView(rebateController.enterRebate, rebateController.genRebate);
 
             // Add observers
-            transactionController.register(transactionScreen.update);
-            returnController.register(returnScreen.update);
-            rebateController.register(rebateScreen.update, genScreen.update);
+            transactionController.register(cashierOutput.run);
+            returnController.register(returnsOutput.run);
+            rebateController.register(rebateOutput.run, checkOutput.run);
 
             // Set up and run application
             Application.EnableVisualStyles();

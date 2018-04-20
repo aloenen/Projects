@@ -9,9 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public interface Observer 
+public interface Observer
 {
-	string update();
-
+	void update();
 }
 
