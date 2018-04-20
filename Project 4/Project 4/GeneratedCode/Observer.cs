@@ -11,7 +11,7 @@ using System.Text;
 
 public interface Observer 
 {
-	void update();
+	string update();
 
 }
 

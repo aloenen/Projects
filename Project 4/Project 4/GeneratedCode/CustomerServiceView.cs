@@ -12,9 +12,24 @@ namespace Project_4.GeneratedCode
 {
     public partial class CustomerServiceView : Form
     {
-        public CustomerServiceView()
+        private EventHandler eventHandler;
+        private ReturnScreen output;
+
+        public CustomerServiceView(EventHandler h, ReturnScreen o)
         {
+            eventHandler = h;
+            output = o;
             InitializeComponent();
+        }
+
+        private void uxReturnButton_Click(object sender, EventArgs e)
+        {
+            uxReturnedItemsOutput.Text = output.update();
+        }
+
+        private void uxFinishReturn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

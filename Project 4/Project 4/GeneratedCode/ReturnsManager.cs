@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ReturnsManager
+public class ReturnsManager : RetunHandler
 {
 	public virtual Observer Observer
 	{
@@ -23,9 +23,9 @@ public class ReturnsManager
 		set;
 	}
 
-	public virtual void returnItems()
+	public void returnItem(object sender, EventArgs e)
 	{
-		throw new System.NotImplementedException();
+		
 	}
 
 }

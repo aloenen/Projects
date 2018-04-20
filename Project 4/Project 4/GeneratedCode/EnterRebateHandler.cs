@@ -11,7 +11,7 @@ using System.Text;
 
 public interface EnterRebateHandler 
 {
-	void enterRebate();
+	void enterRebate(object sender, EventArgs e);
 
 }
 

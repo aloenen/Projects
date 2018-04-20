@@ -11,41 +11,14 @@ using System.Text;
 
 public class RebateManager : EnterRebateHandler, GenRebateHandler
 {
-	public virtual enterRebateObs enterRebateObs
+	public void enterRebate(object sender, EventArgs e)
 	{
-		get;
-		set;
+		
 	}
 
-	public virtual genRebateObs genRebateObs
+	public void genRebate(object sender, EventArgs e)
 	{
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual {
-		get;
-		set;
-	}
-
-	public virtual void enterRebate()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void genRebate()
-	{
-		throw new System.NotImplementedException();
+		
 	}
 
 }

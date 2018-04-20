@@ -9,18 +9,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class RebateScreen : enterRebateObs, Observer
+public class RebateScreen : Observer
 {
-	public virtual Database TransactionDB
-	{
-		get;
-		set;
-	}
-
-	public virtual void update()
+	public string update()
 	{
 		throw new System.NotImplementedException();
 	}
-
 }
 
