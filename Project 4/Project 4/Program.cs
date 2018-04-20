@@ -6,7 +6,11 @@ using System.Windows.Forms;
 
 namespace Project_4
 {
-    public delegate void EventHandler(Object sender, EventArgs e);
+    public delegate void TransactionHandler(Object sender, EventArgs e);
+    public delegate void ReturnHandler(Object sender, EventArgs e);
+    public delegate void RebateHandler(Object sender, EventArgs e);
+    public delegate void Observer();
+
     static class Program
     {
         /// <summary>
@@ -15,22 +19,33 @@ namespace Project_4
         [STAThread]
         static void Main()
         {
+            // Set up model
+            ModelI dataBase = new Database();
+
             // Set up controllers
-            TransactionHandler transactionHandler = new SalesManager();
-            RetunHandler returnHandler = new ReturnsManager();
-            EnterRebateHandler enterRebateHandler = new RebateManager();
-            GenRebateHandler genRebateHandler = new RebateManager();
-            
+            SalesManager transactionHandler = new SalesManager(dataBase);
+            ReturnsManager returnHandler = new ReturnsManager(dataBase);
+            RebateManager enterRebateHandler = new RebateManager(dataBase);
+
             // Set up output 
             TransactionScreen transactionScreen = new TransactionScreen();
             ReturnScreen returnScreen = new ReturnScreen();
             RebateScreen rebateScreen = new RebateScreen();
             GenScreen genScreen = new GenScreen();
 
+            // Set up input views
+            GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionHandler.createTransaction);
+            GeneratedCode.CustomerServiceView customerView = new GeneratedCode.CustomerServiceView(returnHandler.returnItem);
+            GeneratedCode.RebateView rebateView = new GeneratedCode.RebateView(enterRebateHandler.enterRebate, enterRebateHandler.genRebate);
+
+            // Add observers
+            transactionHandler.register(transactionScreen.update);
+            returnHandler.register(returnScreen.update);
+            enterRebateHandler.register(rebateScreen.update, genScreen.update)
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Application.Run(new GeneratedCode.CashierView(transactionHandler.createTransaction, transactionScreen));
+            Application.Run(cashierView);
         }
     }
 }

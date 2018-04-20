@@ -12,26 +12,24 @@ namespace Project_4.GeneratedCode
 {
     public partial class RebateView : Form
     {
-        private EventHandler eventHandler;
-        private RebateScreen outputR;
-        private GenScreen outputG;
+        private EventHandler genRebate;
+        private EventHandler enterRebate;
 
-        public RebateView(EventHandler e, RebateScreen r, GenScreen g)
+        public RebateView(EventHandler r, EventHandler g)
         {
-            eventHandler = e;
-            outputR = r;
-            outputG = g;
+            enterRebate = r;
+            genRebate = g;
             InitializeComponent();
         }
 
         private void uxEnterRebateButton_Click(object sender, EventArgs e)
         {
-            uxValidRebate.Text = outputR.update();
+            enterRebate(sender, e); 
         }
 
         private void uxGenerateRebateButton_Click(object sender, EventArgs e)
         {
-            uxRebateReciptOutput.Text = outputG.update();
+            genRebate(sender, e);
         }
     }
 }

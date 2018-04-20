@@ -11,9 +11,19 @@ using System.Text;
 
 public class SalesManager : TransactionHandler
 {	
+    public SalesManager(ModelI m)
+    {
+
+    }
+
 	public void createTransaction(object sender, EventArgs e)
 	{
 		
 	}
+
+    public void register(Func<string> output)
+    {
+
+    }
 }
 

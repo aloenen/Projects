@@ -9,8 +9,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class RebateManager : EnterRebateHandler, GenRebateHandler
+public class RebateManager : RebateHandler
 {
+    public RebateManager(ModelI d)
+    {
+
+    }
+
+    public void register(Func<string> eRebate, Func<string> genRebate)
+    {
+
+    }
+
 	public void enterRebate(object sender, EventArgs e)
 	{
 		

@@ -13,12 +13,10 @@ namespace Project_4.GeneratedCode
     public partial class CashierView : Form
     {
         private EventHandler eventHandler;
-        private TransactionScreen output;
 
-        public CashierView(EventHandler h, TransactionScreen o)
+        public CashierView(EventHandler h)
         {
             eventHandler = h;
-            output = o;
             InitializeComponent();
         }
 
@@ -34,7 +32,7 @@ namespace Project_4.GeneratedCode
 
         private void uxAddItem_Click(object sender, EventArgs e)
         {
-            uxOutput.Text = output.update();
+
         }
     }
 }

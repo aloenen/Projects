@@ -13,18 +13,16 @@ namespace Project_4.GeneratedCode
     public partial class CustomerServiceView : Form
     {
         private EventHandler eventHandler;
-        private ReturnScreen output;
 
-        public CustomerServiceView(EventHandler h, ReturnScreen o)
+        public CustomerServiceView(EventHandler h)
         {
             eventHandler = h;
-            output = o;
             InitializeComponent();
         }
 
         private void uxReturnButton_Click(object sender, EventArgs e)
         {
-            uxReturnedItemsOutput.Text = output.update();
+            eventHandler(sender, e);
         }
 
         private void uxFinishReturn_Click(object sender, EventArgs e)

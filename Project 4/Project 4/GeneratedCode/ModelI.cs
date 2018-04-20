@@ -9,13 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public interface Manager 
+public interface ModelI 
 {
-	void getTransaction();
+    Transaction getTransaction(int id);
 
 	void getRebate();
 
-	void addTransaction();
+	void addTransaction(Transaction newT);
 
 }
 

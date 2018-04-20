@@ -11,22 +11,20 @@ using System.Text;
 
 public class ReturnsManager : RetunHandler
 {
-	public virtual Observer Observer
-	{
-		get;
-		set;
-	}
+    public ReturnsManager(ModelI m)
+    {
 
-	public virtual Manager Manager
-	{
-		get;
-		set;
-	}
+    }
 
 	public void returnItem(object sender, EventArgs e)
 	{
 		
 	}
+
+    public void register(Func<string> output)
+    {
+
+    }
 
 }
 

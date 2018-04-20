@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Database : Manager
+public class Database : ModelI
 {
     private Dictionary<int, Transaction> transactionDB = new Dictionary<int, Transaction>();
     private Dictionary<int, Rebate> rebateDB = new Dictionary<int, Rebate>();
@@ -36,7 +36,9 @@ public class Database : Manager
         rebateDB.Add(newR.TransID, newR);
     }
 
-
-
+    public void getRebate()
+    {
+        throw new NotImplementedException();
+    }
 }
 
