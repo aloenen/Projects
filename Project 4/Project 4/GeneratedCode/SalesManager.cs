@@ -16,7 +16,7 @@ public class SalesManager : TransactionHandler
 
     }
 
-	public void createTransaction(object sender, EventArgs e)
+	public void createTransaction()
 	{
 		
 	}

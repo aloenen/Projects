@@ -9,10 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public interface RebateHandler 
+public interface EnterRebateHandler 
 {
-	void enterRebate(object sender, EventArgs e);
-    void genRebate(object sender, EventArgs e);
+	void enterRebate();
 
 }
 

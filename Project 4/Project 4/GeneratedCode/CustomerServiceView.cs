@@ -12,19 +12,29 @@ namespace Project_4.GeneratedCode
 {
     public partial class CustomerServiceView : Form
     {
-        private EventHandler eventHandler;
+        private RetunHandler returnHandler;
 
-        public CustomerServiceView(EventHandler h)
+        public CustomerServiceView(RetunHandler h)
         {
-            eventHandler = h;
+            returnHandler = h;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Runs when user wants to add an item to return
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxReturnButton_Click(object sender, EventArgs e)
         {
-            eventHandler(sender, e);
+            returnHandler();
         }
 
+        /// <summary>
+        /// Completes the return transaction and resets the customer service view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxFinishReturn_Click(object sender, EventArgs e)
         {
 

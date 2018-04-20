@@ -59,7 +59,8 @@
       <DependentUpon>CustomerServiceView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Database.cs" />
-    <Compile Include="GeneratedCode\RebateHandler.cs" />
+    <Compile Include="GeneratedCode\GenRebateHandler.cs" />
+    <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
     <Compile Include="GeneratedCode\GenScreen.cs" />
     <Compile Include="GeneratedCode\Item.cs" />
     <Compile Include="GeneratedCode\ModelI.cs" />

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class RebateManager : RebateHandler
+public class RebateManager : EnterRebateHandler, GenRebateHandler
 {
     public RebateManager(ModelI d)
     {
@@ -21,12 +21,12 @@ public class RebateManager : RebateHandler
 
     }
 
-	public void enterRebate(object sender, EventArgs e)
+	public void enterRebate()
 	{
 		
 	}
 
-	public void genRebate(object sender, EventArgs e)
+	public void genRebate()
 	{
 		
 	}

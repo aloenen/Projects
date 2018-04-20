@@ -9,22 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ReturnsManager : RetunHandler
+public interface GenRebateHandler 
 {
-    public ReturnsManager(ModelI m)
-    {
-
-    }
-
-	public void returnItem()
-	{
-		
-	}
-
-    public void register(Func<string> output)
-    {
-
-    }
+    void genRebate();
 
 }
 
