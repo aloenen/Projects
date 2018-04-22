@@ -12,7 +12,7 @@ namespace Project_4.GeneratedCode
 {
     public partial class CustomerServiceOutputView : Form
     {
-        public delegate void Observer();
+        public delegate void Observer(int id);
         public Observer run;
 
         public CustomerServiceOutputView(Database d)
@@ -21,7 +21,7 @@ namespace Project_4.GeneratedCode
             run = new Observer(update);
         }
 
-        public void update()
+        public void update(int id)
         {
 
         }

@@ -22,7 +22,7 @@ namespace Project_4.GeneratedCode
 
         private void uxGenerateRebateButton_Click(object sender, EventArgs e)
         {
-            genRebateHandle();
+            genRebateHandle(3);
         }
     }
 }

@@ -22,7 +22,7 @@ public class SalesManager : TransactionHandler
 
 	public void createTransaction()
 	{
-		
+
 	}
 
     internal void register(CashierOutputView.Observer o)

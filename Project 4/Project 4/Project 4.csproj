@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratedCode\AddItemInputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\AddItemInputView.Designer.cs">
+      <DependentUpon>AddItemInputView.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneratedCode\CashierOutputView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\GenerateRebateInputView.resx">
       <DependentUpon>GenerateRebateInputView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratedCode\GenerateRebateOutputView.resx">
+      <DependentUpon>GenerateRebateOutputView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\RebateInputView.resx">
       <DependentUpon>RebateInputView.cs</DependentUpon>

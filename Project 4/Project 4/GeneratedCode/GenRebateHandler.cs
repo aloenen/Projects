@@ -11,7 +11,7 @@ using System.Text;
 
 public interface GenRebateHandler 
 {
-    void genRebate();
+    void genRebate(int id);
 
 }
 

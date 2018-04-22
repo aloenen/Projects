@@ -10,7 +10,7 @@ namespace Project_4
     public delegate void TransactionHandler();
     public delegate void RetunHandler();
     public delegate void EnterRebateHandler();
-    public delegate void GenRebateHandler();
+    public delegate void GenRebateHandler(int id);
     //public delegate void Observer();
 
     static class Program
@@ -35,7 +35,7 @@ namespace Project_4
             GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBase);
             GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView(dataBase);
             GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
-            GeneratedCode.GenerateRebateOutputView genRebateOutput = new GeneratedCode.GenerateRebateOutputView(dataBase);
+            GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
 
             // Set up input views
             GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.createTransaction);
@@ -50,8 +50,7 @@ namespace Project_4
 
             // Set up and run application
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(cashierView);
+            Application.Run(genRebateView);
         }
     }
 }

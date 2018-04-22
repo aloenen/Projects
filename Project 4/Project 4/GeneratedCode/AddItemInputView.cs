@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_4.GeneratedCode
 {
-    public partial class uxForm : Form
+    public partial class AddItemInputView : Form
     {
-        public delegate void Observer(int id);
-        public Observer run;
-
-        public uxForm(Database d)
+        public AddItemInputView()
         {
             InitializeComponent();
-            run = new Observer(update);
-        }
-
-        public void update(int id)
-        {
-            uxRebateOutput.Text = id.ToString();
-            this.Show();
         }
     }
 }

@@ -13,7 +13,7 @@ using Project_4.GeneratedCode;
 public class RebateManager : EnterRebateHandler, GenRebateHandler
 {
     RebateOutputView.Observer updateRebateOutput;
-    GenerateRebateOutputView.Observer updateGenerateRebateOutput;
+    uxForm.Observer updateGenerateRebateOutput;
     ModelI dataBase;
 
     public RebateManager(ModelI d)
@@ -26,12 +26,12 @@ public class RebateManager : EnterRebateHandler, GenRebateHandler
 		
 	}
 
-	public void genRebate()
+	public void genRebate(int id)
 	{
-		
+        updateGenerateRebateOutput(id);
 	}
 
-    internal void register(RebateOutputView.Observer run1, GenerateRebateOutputView.Observer run2)
+    internal void register(RebateOutputView.Observer run1, uxForm.Observer run2)
     {
         updateRebateOutput = run1;
         updateGenerateRebateOutput = run2;
