@@ -11,10 +11,13 @@ using System.Text;
 using Project_4.GeneratedCode;
 
 public class SalesManager : TransactionHandler
-{	
+{
+    CashierOutputView.Observer updateTransactionOutput;
+    ModelI dataBase;
+
     public SalesManager(ModelI m)
     {
-
+        dataBase = m;
     }
 
 	public void createTransaction()
@@ -24,7 +27,7 @@ public class SalesManager : TransactionHandler
 
     internal void register(CashierOutputView.Observer o)
     {
-        throw new NotImplementedException();
+        updateTransactionOutput = o;
     }
 }
 

@@ -35,7 +35,6 @@
             this.uxEnterRebateButton = new System.Windows.Forms.Button();
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDate = new System.Windows.Forms.TextBox();
-            this.uxValidRebate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.uxRebateAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNumber)).BeginInit();
             this.SuspendLayout();
@@ -98,19 +97,11 @@
             this.uxDate.Size = new System.Drawing.Size(76, 20);
             this.uxDate.TabIndex = 8;
             // 
-            // uxValidRebate
-            // 
-            this.uxValidRebate.Location = new System.Drawing.Point(12, 92);
-            this.uxValidRebate.Name = "uxValidRebate";
-            this.uxValidRebate.Size = new System.Drawing.Size(260, 20);
-            this.uxValidRebate.TabIndex = 9;
-            // 
-            // RebateView
+            // RebateInputView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 126);
-            this.Controls.Add(this.uxValidRebate);
+            this.ClientSize = new System.Drawing.Size(284, 99);
             this.Controls.Add(this.uxDate);
             this.Controls.Add(this.uxDateLabel);
             this.Controls.Add(this.uxEnterRebateButton);
@@ -118,7 +109,7 @@
             this.Controls.Add(this.uxTransactionNumber);
             this.Controls.Add(this.uxRebateAmountLabel);
             this.Controls.Add(this.uxRebateAmount);
-            this.Name = "RebateView";
+            this.Name = "RebateInputView";
             this.Text = "RebateView";
             ((System.ComponentModel.ISupportInitialize)(this.uxRebateAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNumber)).EndInit();
@@ -136,6 +127,5 @@
         private System.Windows.Forms.Button uxEnterRebateButton;
         private System.Windows.Forms.Label uxDateLabel;
         private System.Windows.Forms.TextBox uxDate;
-        private System.Windows.Forms.TextBox uxValidRebate;
     }
 }

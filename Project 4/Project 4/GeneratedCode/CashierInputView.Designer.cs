@@ -1,6 +1,6 @@
 ﻿namespace Project_4.GeneratedCode
 {
-    partial class CashierView
+    partial class CashierInputView
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,6 @@
             this.uxNewTransaction = new System.Windows.Forms.Button();
             this.uxFinishTransaction = new System.Windows.Forms.Button();
             this.uxAddItem = new System.Windows.Forms.Button();
-            this.uxReciptLabel = new System.Windows.Forms.Label();
-            this.uxOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uxNewTransaction
@@ -65,37 +63,17 @@
             this.uxAddItem.UseVisualStyleBackColor = true;
             this.uxAddItem.Click += new System.EventHandler(this.uxAddItem_Click);
             // 
-            // uxReciptLabel
-            // 
-            this.uxReciptLabel.AutoSize = true;
-            this.uxReciptLabel.Location = new System.Drawing.Point(12, 51);
-            this.uxReciptLabel.Name = "uxReciptLabel";
-            this.uxReciptLabel.Size = new System.Drawing.Size(106, 13);
-            this.uxReciptLabel.TabIndex = 3;
-            this.uxReciptLabel.Text = "Transaction Reciept:";
-            // 
-            // uxOutput
-            // 
-            this.uxOutput.Location = new System.Drawing.Point(12, 76);
-            this.uxOutput.Multiline = true;
-            this.uxOutput.Name = "uxOutput";
-            this.uxOutput.Size = new System.Drawing.Size(336, 239);
-            this.uxOutput.TabIndex = 4;
-            // 
             // CashierView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 327);
-            this.Controls.Add(this.uxOutput);
-            this.Controls.Add(this.uxReciptLabel);
+            this.ClientSize = new System.Drawing.Size(363, 48);
             this.Controls.Add(this.uxAddItem);
             this.Controls.Add(this.uxFinishTransaction);
             this.Controls.Add(this.uxNewTransaction);
             this.Name = "CashierView";
             this.Text = "CashierView";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -104,7 +82,5 @@
         private System.Windows.Forms.Button uxNewTransaction;
         private System.Windows.Forms.Button uxFinishTransaction;
         private System.Windows.Forms.Button uxAddItem;
-        private System.Windows.Forms.Label uxReciptLabel;
-        private System.Windows.Forms.TextBox uxOutput;
     }
 }

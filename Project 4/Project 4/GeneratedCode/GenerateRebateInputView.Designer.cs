@@ -28,11 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.uxGenerateRebateButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // uxGenerateRebateButton
+            // 
+            this.uxGenerateRebateButton.Location = new System.Drawing.Point(12, 12);
+            this.uxGenerateRebateButton.Name = "uxGenerateRebateButton";
+            this.uxGenerateRebateButton.Size = new System.Drawing.Size(260, 23);
+            this.uxGenerateRebateButton.TabIndex = 0;
+            this.uxGenerateRebateButton.Text = "Generate Rebate";
+            this.uxGenerateRebateButton.UseVisualStyleBackColor = true;
+            this.uxGenerateRebateButton.Click += new System.EventHandler(this.uxGenerateRebateButton_Click);
+            // 
+            // GenerateRebateInputView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 48);
+            this.Controls.Add(this.uxGenerateRebateButton);
+            this.Name = "GenerateRebateInputView";
             this.Text = "GenerateRebateOutputView";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button uxGenerateRebateButton;
     }
 }

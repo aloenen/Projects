@@ -12,9 +12,12 @@ using Project_4.GeneratedCode;
 
 public class ReturnsManager : RetunHandler
 {
+    CustomerServiceOutputView.Observer updateReturnsOutput;
+    ModelI dataBase;
+
     public ReturnsManager(ModelI m)
     {
-
+        dataBase = m;
     }
 
 	public void returnItem()
@@ -24,7 +27,7 @@ public class ReturnsManager : RetunHandler
 
     internal void register(CustomerServiceOutputView.Observer run)
     {
-        throw new NotImplementedException();
+        updateReturnsOutput = run;
     }
 }
 

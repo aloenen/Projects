@@ -38,7 +38,7 @@ namespace Project_4
             GeneratedCode.GenerateRebateOutputView genRebateOutput = new GeneratedCode.GenerateRebateOutputView(dataBase);
 
             // Set up input views
-            GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionController.createTransaction);
+            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.createTransaction);
             GeneratedCode.CustomerServiceInputView customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
             GeneratedCode.RebateInputView rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
             GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);

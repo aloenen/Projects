@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_4.GeneratedCode
 {
-    public partial class CashierView : Form
+    public partial class CashierInputView : Form
     {
         private TransactionHandler transHandler;
 
-        public CashierView(TransactionHandler h)
+        public CashierInputView(TransactionHandler h)
         {
             transHandler = h;
             InitializeComponent();

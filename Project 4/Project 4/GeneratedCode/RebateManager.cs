@@ -12,9 +12,13 @@ using Project_4.GeneratedCode;
 
 public class RebateManager : EnterRebateHandler, GenRebateHandler
 {
+    RebateOutputView.Observer updateRebateOutput;
+    GenerateRebateOutputView.Observer updateGenerateRebateOutput;
+    ModelI dataBase;
+
     public RebateManager(ModelI d)
     {
-
+        dataBase = d;
     }
 
 	public void enterRebate()
@@ -29,7 +33,8 @@ public class RebateManager : EnterRebateHandler, GenRebateHandler
 
     internal void register(RebateOutputView.Observer run1, GenerateRebateOutputView.Observer run2)
     {
-        throw new NotImplementedException();
+        updateRebateOutput = run1;
+        updateGenerateRebateOutput = run2;
     }
 }
 

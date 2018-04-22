@@ -115,6 +115,9 @@
     <EmbeddedResource Include="GeneratedCode\CustomerServiceInputView.resx">
       <DependentUpon>CustomerServiceInputView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneratedCode\GenerateRebateInputView.resx">
+      <DependentUpon>GenerateRebateInputView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\RebateInputView.resx">
       <DependentUpon>RebateInputView.cs</DependentUpon>
     </EmbeddedResource>
