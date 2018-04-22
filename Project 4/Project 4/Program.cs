@@ -41,7 +41,7 @@ namespace Project_4
             // Add observers
             transactionHandler.register(transactionScreen.update);
             returnHandler.register(returnScreen.update);
-            enterRebateHandler.register(rebateScreen.update, genScreen.update)
+            enterRebateHandler.register(rebateScreen.update, genScreen.update);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
