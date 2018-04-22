@@ -9,13 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class GenScreen :  Observer
+public interface GenRebateHandler 
 {
-
-	public string update()
-	{
-		throw new System.NotImplementedException();
-	}
+    void genRebate();
 
 }
 

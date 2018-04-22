@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ReturnScreen : Observer
+public interface EnterRebateHandler 
 {
-	public string update()
-	{
-		throw new System.NotImplementedException();
-	}
+	void enterRebate();
+
 }
 

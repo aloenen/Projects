@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Project_4.GeneratedCode;
 
 public class ReturnsManager : RetunHandler
 {
@@ -16,15 +17,14 @@ public class ReturnsManager : RetunHandler
 
     }
 
-	public void returnItem(object sender, EventArgs e)
+	public void returnItem()
 	{
 		
 	}
 
-    public void register(Func<string> output)
+    internal void register(CustomerServiceOutputView.Observer run)
     {
-
+        throw new NotImplementedException();
     }
-
 }
 

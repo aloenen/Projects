@@ -11,7 +11,7 @@ using System.Text;
 
 public interface TransactionHandler 
 {
-	void createTransaction(object sender, EventArgs e);
+	void createTransaction();
 
 }
 

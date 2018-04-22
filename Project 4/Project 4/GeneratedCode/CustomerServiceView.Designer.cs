@@ -30,7 +30,7 @@
         {
             this.uxTransactionNum = new System.Windows.Forms.NumericUpDown();
             this.uxTransactionNumLabel = new System.Windows.Forms.Label();
-            this.uxReturnButton = new System.Windows.Forms.Button();
+            this.uxAddReturnButton = new System.Windows.Forms.Button();
             this.uxFinishReturn = new System.Windows.Forms.Button();
             this.uxReturnedItemsLabel = new System.Windows.Forms.Label();
             this.uxReturnedItemsOutput = new System.Windows.Forms.TextBox();
@@ -53,15 +53,15 @@
             this.uxTransactionNumLabel.TabIndex = 1;
             this.uxTransactionNumLabel.Text = "Transaction Number:";
             // 
-            // uxReturnButton
+            // uxAddReturnButton
             // 
-            this.uxReturnButton.Location = new System.Drawing.Point(180, 7);
-            this.uxReturnButton.Name = "uxReturnButton";
-            this.uxReturnButton.Size = new System.Drawing.Size(75, 23);
-            this.uxReturnButton.TabIndex = 2;
-            this.uxReturnButton.Text = "Add Item";
-            this.uxReturnButton.UseVisualStyleBackColor = true;
-            this.uxReturnButton.Click += new System.EventHandler(this.uxReturnButton_Click);
+            this.uxAddReturnButton.Location = new System.Drawing.Point(180, 7);
+            this.uxAddReturnButton.Name = "uxAddReturnButton";
+            this.uxAddReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.uxAddReturnButton.TabIndex = 2;
+            this.uxAddReturnButton.Text = "Add Item";
+            this.uxAddReturnButton.UseVisualStyleBackColor = true;
+            this.uxAddReturnButton.Click += new System.EventHandler(this.uxReturnButton_Click);
             // 
             // uxFinishReturn
             // 
@@ -71,7 +71,6 @@
             this.uxFinishReturn.TabIndex = 3;
             this.uxFinishReturn.Text = "Finish Return";
             this.uxFinishReturn.UseVisualStyleBackColor = true;
-//            this.uxFinishReturn.Click += new System.EventHandler(this.button1_Click);
             // 
             // uxReturnedItemsLabel
             // 
@@ -98,7 +97,7 @@
             this.Controls.Add(this.uxReturnedItemsOutput);
             this.Controls.Add(this.uxReturnedItemsLabel);
             this.Controls.Add(this.uxFinishReturn);
-            this.Controls.Add(this.uxReturnButton);
+            this.Controls.Add(this.uxAddReturnButton);
             this.Controls.Add(this.uxTransactionNumLabel);
             this.Controls.Add(this.uxTransactionNum);
             this.Name = "CustomerServiceView";
@@ -113,7 +112,7 @@
 
         private System.Windows.Forms.NumericUpDown uxTransactionNum;
         private System.Windows.Forms.Label uxTransactionNumLabel;
-        private System.Windows.Forms.Button uxReturnButton;
+        private System.Windows.Forms.Button uxAddReturnButton;
         private System.Windows.Forms.Button uxFinishReturn;
         private System.Windows.Forms.Label uxReturnedItemsLabel;
         private System.Windows.Forms.TextBox uxReturnedItemsOutput;

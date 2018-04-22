@@ -12,17 +12,17 @@ namespace Project_4.GeneratedCode
 {
     public partial class CashierView : Form
     {
-        private EventHandler eventHandler;
+        private TransactionHandler transHandler;
 
-        public CashierView(EventHandler h)
+        public CashierView(TransactionHandler h)
         {
-            eventHandler = h;
+            transHandler = h;
             InitializeComponent();
         }
 
         private void uxNewTransaction_Click(object sender, EventArgs e)
         {
-            eventHandler(sender, e);
+            transHandler();
         }
 
         private void uxFinishTransaction_Click(object sender, EventArgs e)

@@ -6,10 +6,12 @@ using System.Windows.Forms;
 
 namespace Project_4
 {
-    public delegate void TransactionHandler(Object sender, EventArgs e);
-    public delegate void ReturnHandler(Object sender, EventArgs e);
-    public delegate void RebateHandler(Object sender, EventArgs e);
-    public delegate void Observer();
+    // Declare delagates
+    public delegate void TransactionHandler();
+    public delegate void RetunHandler();
+    public delegate void EnterRebateHandler();
+    public delegate void GenRebateHandler();
+    //public delegate void Observer();
 
     static class Program
     {
@@ -20,29 +22,31 @@ namespace Project_4
         static void Main()
         {
             // Set up model
-            ModelI dataBase = new Database();
+            ModelI dataBaseC = new Database();
+            Database dataBaseV = new Database();
 
             // Set up controllers
-            SalesManager transactionHandler = new SalesManager(dataBase);
-            ReturnsManager returnHandler = new ReturnsManager(dataBase);
-            RebateManager enterRebateHandler = new RebateManager(dataBase);
+            SalesManager transactionController = new SalesManager(dataBaseC);
+            ReturnsManager returnController = new ReturnsManager(dataBaseC);
+            RebateManager rebateController = new RebateManager(dataBaseC);
 
             // Set up output 
-            TransactionScreen transactionScreen = new TransactionScreen();
-            ReturnScreen returnScreen = new ReturnScreen();
-            RebateScreen rebateScreen = new RebateScreen();
-            GenScreen genScreen = new GenScreen();
+            GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBaseV);
+            GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView();
+            GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView();
+            GeneratedCode.RebateCheckOutputView checkOutput = new GeneratedCode.RebateCheckOutputView();
 
             // Set up input views
-            GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionHandler.createTransaction);
-            GeneratedCode.CustomerServiceView customerView = new GeneratedCode.CustomerServiceView(returnHandler.returnItem);
-            GeneratedCode.RebateView rebateView = new GeneratedCode.RebateView(enterRebateHandler.enterRebate, enterRebateHandler.genRebate);
+            GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionController.createTransaction);
+            GeneratedCode.CustomerServiceView customerView = new GeneratedCode.CustomerServiceView(returnController.returnItem);
+            GeneratedCode.RebateView rebateView = new GeneratedCode.RebateView(rebateController.enterRebate, rebateController.genRebate);
 
             // Add observers
-            transactionHandler.register(transactionScreen.update);
-            returnHandler.register(returnScreen.update);
-            enterRebateHandler.register(rebateScreen.update, genScreen.update);
+            transactionController.register(cashierOutput.run);
+            returnController.register(returnsOutput.run);
+            rebateController.register(rebateOutput.run, checkOutput.run);
 
+            // Set up and run application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(cashierView);
