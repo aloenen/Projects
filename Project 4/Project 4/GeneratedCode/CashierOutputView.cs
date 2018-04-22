@@ -12,15 +12,18 @@ namespace Project_4.GeneratedCode
 {
     public partial class CashierOutputView : Form
     {
-        public delegate void Observer();
+        public delegate void Observer(int id);
         public Observer run;
+
+        private Database database;
+
         public CashierOutputView(Database d)
         {
             InitializeComponent();
             run = new Observer(update);
         }
 
-        public void update()
+        public void update(int id)
         {
             
         }

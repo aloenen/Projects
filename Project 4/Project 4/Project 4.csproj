@@ -112,6 +112,9 @@
     <EmbeddedResource Include="GeneratedCode\CashierInputView.resx">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneratedCode\CashierOutputView.resx">
+      <DependentUpon>CashierOutputView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\CustomerServiceInputView.resx">
       <DependentUpon>CustomerServiceInputView.cs</DependentUpon>
     </EmbeddedResource>
