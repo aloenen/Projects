@@ -36,9 +36,16 @@ public class Database : ModelI
         rebateDB.Add(newR.TransID, newR);
     }
 
-    public void getRebate()
+    public Rebate getRebate(int id)
     {
-        throw new NotImplementedException();
+        Rebate current;
+        if(rebateDB.TryGetValue(id, out current))
+        {
+            return current;
+        } else
+        {
+            return null;
+        }
     }
 }
 

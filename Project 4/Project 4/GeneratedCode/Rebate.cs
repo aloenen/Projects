@@ -22,7 +22,7 @@ public class Rebate
         }
     }
 
-    public float TansAmount
+    public float TransAmount
     {
         set
         {
