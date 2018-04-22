@@ -22,29 +22,31 @@ namespace Project_4
         static void Main()
         {
             // Set up model
-            ModelI dataBaseC = new Database();
-            Database dataBaseV = new Database();
+            Database dataBase = new Database();
+            ModelI controllerModel = dataBase;
+            Database viewModel = dataBase;
 
             // Set up controllers
-            SalesManager transactionController = new SalesManager(dataBaseC);
-            ReturnsManager returnController = new ReturnsManager(dataBaseC);
-            RebateManager rebateController = new RebateManager(dataBaseC);
+            SalesManager transactionController = new SalesManager(controllerModel);
+            ReturnsManager returnController = new ReturnsManager(controllerModel);
+            RebateManager rebateController = new RebateManager(controllerModel);
 
             // Set up output 
-            GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBaseV);
-            GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView();
-            GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView();
-            GeneratedCode.RebateCheckOutputView checkOutput = new GeneratedCode.RebateCheckOutputView();
+            GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBase);
+            GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView(dataBase);
+            GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
+            GeneratedCode.GenerateRebateOutputView genRebateOutput = new GeneratedCode.GenerateRebateOutputView(dataBase);
 
             // Set up input views
             GeneratedCode.CashierView cashierView = new GeneratedCode.CashierView(transactionController.createTransaction);
-            GeneratedCode.CustomerServiceView customerView = new GeneratedCode.CustomerServiceView(returnController.returnItem);
-            GeneratedCode.RebateView rebateView = new GeneratedCode.RebateView(rebateController.enterRebate, rebateController.genRebate);
+            GeneratedCode.CustomerServiceInputView customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
+            GeneratedCode.RebateInputView rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
+            GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
 
             // Add observers
             transactionController.register(cashierOutput.run);
             returnController.register(returnsOutput.run);
-            rebateController.register(rebateOutput.run, checkOutput.run);
+            rebateController.register(rebateOutput.run, genRebateOutput.run);
 
             // Set up and run application
             Application.EnableVisualStyles();

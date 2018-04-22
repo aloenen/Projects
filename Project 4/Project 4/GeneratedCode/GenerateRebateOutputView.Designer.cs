@@ -1,6 +1,6 @@
 ﻿namespace Project_4.GeneratedCode
 {
-    partial class RebateCheckOutputView
+    partial class GenerateRebateOutputView
     {
         /// <summary>
         /// Required designer variable.

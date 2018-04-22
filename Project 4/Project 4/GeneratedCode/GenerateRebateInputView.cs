@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace Project_4.GeneratedCode
 {
-    public partial class RebateCheckOutputView : Form
+    public partial class GenerateRebateInputView : Form
     {
-        public delegate void Observer();
-        public Observer run;
+        private GenRebateHandler genRebateHandle;
 
-        public RebateCheckOutputView()
+        public GenerateRebateInputView(GenRebateHandler h)
         {
+            genRebateHandle = h;
             InitializeComponent();
-            run = new Observer(update);
-        }
-
-        public void update()
-        {
-
         }
     }
 }

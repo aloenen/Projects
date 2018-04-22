@@ -27,7 +27,7 @@ public class RebateManager : EnterRebateHandler, GenRebateHandler
 		
 	}
 
-    internal void register(RebateOutputView.Observer run1, RebateCheckOutputView.Observer run2)
+    internal void register(RebateOutputView.Observer run1, GenerateRebateOutputView.Observer run2)
     {
         throw new NotImplementedException();
     }

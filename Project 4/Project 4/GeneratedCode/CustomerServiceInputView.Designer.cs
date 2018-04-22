@@ -1,6 +1,6 @@
 ﻿namespace Project_4.GeneratedCode
 {
-    partial class CustomerServiceView
+    partial class CustomerServiceInputView
     {
         /// <summary>
         /// Required designer variable.

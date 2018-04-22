@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_4.GeneratedCode
 {
-    public partial class CustomerServiceView : Form
+    public partial class CustomerServiceInputView : Form
     {
         private RetunHandler returnHandler;
 
-        public CustomerServiceView(RetunHandler h)
+        public CustomerServiceInputView(RetunHandler h)
         {
             returnHandler = h;
             InitializeComponent();

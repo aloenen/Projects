@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Project_4.GeneratedCode
 {
-    public partial class CustomerServiceOutputView : Form
+    public partial class GenerateRebateOutputView : Form
     {
         public delegate void Observer();
         public Observer run;
 
-        public CustomerServiceOutputView(Database d)
+        public GenerateRebateOutputView(Database d)
         {
             InitializeComponent();
             run = new Observer(update);

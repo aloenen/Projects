@@ -14,7 +14,8 @@ namespace Project_4.GeneratedCode
     {
         public delegate void Observer();
         public Observer run;
-        public RebateOutputView()
+
+        public RebateOutputView(Database d)
         {
             InitializeComponent();
             run = new Observer(update);
