@@ -57,7 +57,7 @@ public class Item
         }
     }
 
-    public override string ToString()
+    /*public override string ToString()
     {
         string s = "";
         if (amount > 0)
@@ -67,7 +67,7 @@ public class Item
             s += "\n*** Returned ***\nItem: " + name + "\nPrice: $" + price + "\nQty: " + rAmount + "\n****************\n";
         }
         return s;
-    }
+    }*/
 
     public Item(string n, float p, int a)
     {

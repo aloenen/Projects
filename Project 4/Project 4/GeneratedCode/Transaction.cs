@@ -33,7 +33,7 @@ public class Transaction
         }
     }
 
-    public string genReciept()
+    /*public string genReciept()
     {
         int d = rnd.Next(1, 31);
         string s = "\n************* Receipt ************\nDate: 6/" + d + "/18\nID: " + id + "\n\n";
@@ -41,12 +41,12 @@ public class Transaction
         foreach (Item i in items.Values)
         {
             s += i.ToString() + "\n";
-            t += i.Price * i.Amount;
+            t += i.Price * i.Amount;s
         }
         total = t;
         s += "Total: $" + total + "\n**********************************\n";
         return s;
-    }
+    }*/
 
     public Transaction(int i)
     {

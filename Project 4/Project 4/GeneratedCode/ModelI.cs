@@ -13,9 +13,13 @@ public interface ModelI
 {
     Transaction getTransaction(int id);
 
-	void getRebate();
+	Rebate getRebate(int id);
 
 	void addTransaction(Transaction newT);
+
+    void addRebate(Rebate newR);
+
+
 
 }
 
