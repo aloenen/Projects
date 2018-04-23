@@ -20,10 +20,24 @@ public class ReturnsManager : RetunHandler
         dataBase = m;
     }
 
-	public void returnItem()
+	public void returnItem(string name, int id)
 	{
-		
-	}
+        Transaction t = dataBase.getTransaction(id);
+       if( t.Items.ContainsKey(name) && t.Rebate == false)
+        {
+            Item i = t.Items[name];
+            if(i.Amount>1)
+            {
+                i.Amount--; 
+            }
+            else
+            {
+                // t.Items.Remove(name);
+                i.Amount = 0;
+            }
+        }
+        //updateReturnsOutput
+    }
 
     internal void register(CustomerServiceOutputView.Observer run)
     {

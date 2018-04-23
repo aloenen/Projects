@@ -11,6 +11,6 @@ using System.Text;
 
 public interface RetunHandler 
 {
-	void returnItem();
+	void returnItem(string item, int tNum);
 }
 

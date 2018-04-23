@@ -86,6 +86,7 @@
     <Compile Include="GeneratedCode\GenRebateHandler.cs" />
     <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
     <Compile Include="GeneratedCode\Item.cs" />
+    <Compile Include="GeneratedCode\ItemHandler.cs" />
     <Compile Include="GeneratedCode\ModelI.cs" />
     <Compile Include="GeneratedCode\Observer.cs" />
     <Compile Include="GeneratedCode\Rebate.cs" />

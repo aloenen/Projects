@@ -10,21 +10,39 @@ using System.Linq;
 using System.Text;
 using Project_4.GeneratedCode;
 
-public class SalesManager : TransactionHandler
+public class SalesManager : TransactionHandler, ItemHandler
 {
     CashierOutputView.Observer updateTransactionOutput;
     ModelI dataBase;
-
+    Transaction currentTrans;
     public SalesManager(ModelI m)
     {
         dataBase = m;
     }
 
-	public void createTransaction()
+	public void createTransaction(int tNum)
 	{
+       currentTrans = new Transaction(tNum);
+   
+    }
 
-	}
+    public void endTransaction()
+    {
+        dataBase.addTransaction(currentTrans); //add to db once transaction has ended?
+    }
 
+    public void addItem(int quantity, float price, string name)
+    {
+        if (currentTrans.Items.ContainsKey(name))
+        {
+            currentTrans.Items[name].Amount++;
+        }
+        else
+        {
+            currentTrans.Items.Add(name, new Item(name, price, quantity));
+        }
+        //updateTransactionOutput
+    }
     internal void register(CashierOutputView.Observer o)
     {
         updateTransactionOutput = o;

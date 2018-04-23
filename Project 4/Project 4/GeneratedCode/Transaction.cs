@@ -13,14 +13,21 @@ public class Transaction
 {
     private Dictionary<string, Item> items = new Dictionary<string, Item>();
     private int id;
-    private Random rnd = new Random();
+   // private Random rnd = new Random();
     private float total;
-    private string customer;
+    //private string customer;
+    private bool rebate = false;
 
     public float Total
     {
         get
         {
+            float t = 0;
+            foreach (Item i in items.Values)
+            {
+                t += i.Price * i.Amount; 
+            }
+            total = t;
             return total;
         }
     }
@@ -33,21 +40,17 @@ public class Transaction
         }
     }
 
-    /*public string genReciept()
+    public bool Rebate
     {
-        int d = rnd.Next(1, 31);
-        string s = "\n************* Receipt ************\nDate: 6/" + d + "/18\nID: " + id + "\n\n";
-        float t = 0;
-        foreach (Item i in items.Values)
+        get
         {
-            s += i.ToString() + "\n";
-            t += i.Price * i.Amount;s
+            return rebate;
         }
-        total = t;
-        s += "Total: $" + total + "\n**********************************\n";
-        return s;
-    }*/
-
+        set
+        {
+            rebate = value;
+        }
+    }
     public Transaction(int i)
     {
         id = i;
@@ -57,7 +60,16 @@ public class Transaction
     {
         return id;
     }
+    public Item getItem(string name)
+    {
+        if (items.ContainsKey(name))
+        {
+            return items[name];
+        }
+        return null;
+    }
 
+    /*
     public void addItem(string n, float p, int a)
     {
         if (items.ContainsKey(n))
@@ -69,14 +81,24 @@ public class Transaction
             items.Add(n, new Item(n, p, a));
         }
     }
+    */
 
-    public Item getItem(string name)
-    {
-        if (items.ContainsKey(name))
-        {
-            return items[name];
-        }
-        return null;
-    }
 
 }
+
+
+
+/*public string genReciept()
+   {
+       int d = rnd.Next(1, 31);
+       string s = "\n************* Receipt ************\nDate: 6/" + d + "/18\nID: " + id + "\n\n";
+       float t = 0;
+       foreach (Item i in items.Values)
+       {
+           s += i.ToString() + "\n";
+           t += i.Price * i.Amount;s
+       }
+       total = t;
+       s += "Total: $" + total + "\n**********************************\n";
+       return s;
+   }*/
