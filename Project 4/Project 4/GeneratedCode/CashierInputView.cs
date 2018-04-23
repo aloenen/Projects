@@ -12,9 +12,9 @@ namespace Project_4.GeneratedCode
 {
     public partial class CashierInputView : Form
     {
-        private TransactionHandler transHandler;
+        private SalesManager.TransactionHandler transHandler;
 
-        public CashierInputView(TransactionHandler h)
+        public CashierInputView(SalesManager.TransactionHandler h)
         {
             transHandler = h;
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Project_4.GeneratedCode
 
         private void uxNewTransaction_Click(object sender, EventArgs e)
         {
-            transHandler();
+            transHandler(2);
         }
 
         private void uxFinishTransaction_Click(object sender, EventArgs e)

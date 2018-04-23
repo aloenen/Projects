@@ -83,12 +83,8 @@
     <Compile Include="GeneratedCode\GenerateRebateInputView.Designer.cs">
       <DependentUpon>GenerateRebateInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\GenRebateHandler.cs" />
-    <Compile Include="GeneratedCode\EnterRebateHandler.cs" />
     <Compile Include="GeneratedCode\Item.cs" />
-    <Compile Include="GeneratedCode\ItemHandler.cs" />
     <Compile Include="GeneratedCode\ModelI.cs" />
-    <Compile Include="GeneratedCode\Observer.cs" />
     <Compile Include="GeneratedCode\Rebate.cs" />
     <Compile Include="GeneratedCode\GenerateRebateOutputView.cs">
       <SubType>Form</SubType>
@@ -109,11 +105,9 @@
     <Compile Include="GeneratedCode\RebateInputView.Designer.cs">
       <DependentUpon>RebateInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\RetunHandler.cs" />
     <Compile Include="GeneratedCode\ReturnsManager.cs" />
     <Compile Include="GeneratedCode\SalesManager.cs" />
     <Compile Include="GeneratedCode\Transaction.cs" />
-    <Compile Include="GeneratedCode\TransactionHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GeneratedCode\CashierInputView.resx">

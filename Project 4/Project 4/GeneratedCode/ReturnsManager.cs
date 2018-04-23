@@ -10,14 +10,19 @@ using System.Linq;
 using System.Text;
 using Project_4.GeneratedCode;
 
-public class ReturnsManager : RetunHandler
+public class ReturnsManager
 {
+    public delegate void ReturnHandler(string n, int i);
+
+    public ReturnHandler returnHandler;
+
     CustomerServiceOutputView.Observer updateReturnsOutput;
     ModelI dataBase;
 
     public ReturnsManager(ModelI m)
     {
         dataBase = m;
+        returnHandler = new ReturnHandler(returnItem);
     }
 
 	public void returnItem(string name, int id)

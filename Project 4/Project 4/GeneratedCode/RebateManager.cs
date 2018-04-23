@@ -10,8 +10,14 @@ using System.Linq;
 using System.Text;
 using Project_4.GeneratedCode;
 
-public class RebateManager : EnterRebateHandler, GenRebateHandler
+public class RebateManager
 {
+    public delegate void EnterRebateHandler();
+    public delegate void GenRebateHandler(int id);
+
+    EnterRebateHandler enterRebateHandler;
+    GenRebateHandler genRebateHandler;
+
     RebateOutputView.Observer updateRebateOutput;
     uxForm.Observer updateGenerateRebateOutput;
     ModelI dataBase;
@@ -19,6 +25,8 @@ public class RebateManager : EnterRebateHandler, GenRebateHandler
     public RebateManager(ModelI d)
     {
         dataBase = d;
+        enterRebateHandler = new EnterRebateHandler(enterRebate);
+        genRebateHandler = new GenRebateHandler(genRebate);
     }
 
 	public void enterRebate()

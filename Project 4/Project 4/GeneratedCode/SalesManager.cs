@@ -10,14 +10,26 @@ using System.Linq;
 using System.Text;
 using Project_4.GeneratedCode;
 
-public class SalesManager : TransactionHandler, ItemHandler
+public class SalesManager
 {
+    public delegate void TransactionHandler(int id);
+    public delegate void ItemHandler(int q, float p, string n);
+    public delegate void EndTransactionHandler();
+
+    public TransactionHandler transHandler;
+    public ItemHandler itemHandler;
+    public EndTransactionHandler endHandler;
+
     CashierOutputView.Observer updateTransactionOutput;
     ModelI dataBase;
     Transaction currentTrans;
+
     public SalesManager(ModelI m)
     {
         dataBase = m;
+        transHandler = new TransactionHandler(createTransaction);
+        itemHandler = new ItemHandler(addItem);
+        endHandler = new EndTransactionHandler(endTransaction);
     }
 
 	public void createTransaction(int tNum)
@@ -43,6 +55,7 @@ public class SalesManager : TransactionHandler, ItemHandler
         }
         //updateTransactionOutput
     }
+
     internal void register(CashierOutputView.Observer o)
     {
         updateTransactionOutput = o;

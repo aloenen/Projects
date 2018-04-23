@@ -12,9 +12,9 @@ namespace Project_4.GeneratedCode
 {
     public partial class RebateInputView : Form
     {
-        private EnterRebateHandler enterRebateHandle;
+        private RebateManager.EnterRebateHandler enterRebateHandle;
 
-        public RebateInputView(EnterRebateHandler r)
+        public RebateInputView(RebateManager.EnterRebateHandler r)
         {
             enterRebateHandle = r;
             InitializeComponent();

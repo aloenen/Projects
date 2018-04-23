@@ -7,10 +7,10 @@ using System.Windows.Forms;
 namespace Project_4
 {
     // Declare delagates
-    public delegate void TransactionHandler();
-    public delegate void RetunHandler();
-    public delegate void EnterRebateHandler();
-    public delegate void GenRebateHandler(int id);
+    //public delegate void TransactionHandler();
+    //public delegate void RetunHandler();
+    //public delegate void EnterRebateHandler();
+    //public delegate void GenRebateHandler(int id);
     //public delegate void Observer();
 
     static class Program
@@ -38,7 +38,7 @@ namespace Project_4
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
 
             // Set up input views
-            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.createTransaction);
+            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler);
             GeneratedCode.CustomerServiceInputView customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
             GeneratedCode.RebateInputView rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
             GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);

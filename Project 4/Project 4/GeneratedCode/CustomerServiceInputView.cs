@@ -12,9 +12,9 @@ namespace Project_4.GeneratedCode
 {
     public partial class CustomerServiceInputView : Form
     {
-        private RetunHandler returnHandler;
+        private ReturnsManager.ReturnHandler returnHandler;
 
-        public CustomerServiceInputView(RetunHandler h)
+        public CustomerServiceInputView(ReturnsManager.ReturnHandler h)
         {
             returnHandler = h;
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Project_4.GeneratedCode
         /// <param name="e"></param>
         private void uxReturnButton_Click(object sender, EventArgs e)
         {
-            returnHandler();
+            returnHandler("", 0);
         }
 
         /// <summary>
