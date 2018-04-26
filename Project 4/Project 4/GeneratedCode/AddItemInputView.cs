@@ -16,5 +16,14 @@ namespace Project_4.GeneratedCode
         {
             InitializeComponent();
         }
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxAddItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
