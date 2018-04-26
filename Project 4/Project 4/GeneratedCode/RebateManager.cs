@@ -12,8 +12,10 @@ using Project_4.GeneratedCode;
 
 public class RebateManager
 {
-    public delegate void EnterRebateHandler();
+    public delegate void EnterRebateHandler(int id, DateTime date);
     public delegate void GenRebateHandler(int id);
+
+    Rebate rebate = new Rebate();
 
     EnterRebateHandler enterRebateHandler;
     GenRebateHandler genRebateHandler;
@@ -29,9 +31,25 @@ public class RebateManager
         genRebateHandler = new GenRebateHandler(genRebate);
     }
 
-	public void enterRebate()
+	public void enterRebate(int id, DateTime date)
 	{
-		
+        Transaction user = dataBase.getTransaction(id);
+        bool valid;
+        if (user == null)
+        {
+            valid = false;
+        }
+        else
+        {
+            valid = true;
+        }
+        if (dataBase.getRebate(id) != null && valid) 
+        {
+            float percentage = (float)11 / 100;
+            rebate.RebateAmount = user.Total * percentage;           
+        }
+
+        updateRebateOutput(valid);
 	}
 
 	public void genRebate(int id)
