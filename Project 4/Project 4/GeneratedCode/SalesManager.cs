@@ -35,7 +35,7 @@ public class SalesManager
 	public void createTransaction(int tNum)
 	{
        currentTrans = new Transaction(tNum);
-   
+       
     }
 
     public void endTransaction()
