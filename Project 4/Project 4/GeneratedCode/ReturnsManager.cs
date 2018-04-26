@@ -28,7 +28,7 @@ public class ReturnsManager
 	public void returnItem(string name, int id)
 	{
         Transaction t = dataBase.getTransaction(id);
-       if( t.Items.ContainsKey(name) && t.Rebate == false)
+       if( t.Items.ContainsKey(name) == false)
         {
             Item i = t.Items[name];
             if(i.Amount>1)
