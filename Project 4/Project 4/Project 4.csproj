@@ -52,23 +52,17 @@
     <Compile Include="GeneratedCode\AddItemInputView.Designer.cs">
       <DependentUpon>AddItemInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\CashierOutputView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GeneratedCode\CashierOutputView.Designer.cs">
-      <DependentUpon>CashierOutputView.cs</DependentUpon>
-    </Compile>
     <Compile Include="GeneratedCode\CashierInputView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneratedCode\CashierInputView.Designer.cs">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\CustomerServiceOutputView.cs">
+    <Compile Include="GeneratedCode\ReciptOutputView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneratedCode\CustomerServiceOutputView.Designer.cs">
-      <DependentUpon>CustomerServiceOutputView.cs</DependentUpon>
+    <Compile Include="GeneratedCode\ReciptOutputView.Designer.cs">
+      <DependentUpon>ReciptOutputView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\CustomerServiceInputView.cs">
       <SubType>Form</SubType>
@@ -113,9 +107,6 @@
     <EmbeddedResource Include="GeneratedCode\CashierInputView.resx">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeneratedCode\CashierOutputView.resx">
-      <DependentUpon>CashierOutputView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\CustomerServiceInputView.resx">
       <DependentUpon>CustomerServiceInputView.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +128,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

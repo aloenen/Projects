@@ -16,7 +16,7 @@ public class ReturnsManager
 
     public ReturnHandler returnHandler;
 
-    CustomerServiceOutputView.Observer updateReturnsOutput;
+    ReciptOutputView.Observer updateReturnsOutput;
     ModelI dataBase;
 
     public ReturnsManager(ModelI m)
@@ -44,7 +44,7 @@ public class ReturnsManager
         //updateReturnsOutput
     }
 
-    internal void register(CustomerServiceOutputView.Observer run)
+    internal void register(ReciptOutputView.Observer run)
     {
         updateReturnsOutput = run;
     }

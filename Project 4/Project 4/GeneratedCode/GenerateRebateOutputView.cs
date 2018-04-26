@@ -15,16 +15,23 @@ namespace Project_4.GeneratedCode
         public delegate void Observer(int id);
         public Observer run;
 
+        private Database database;
+
         public uxForm(Database d)
         {
             InitializeComponent();
             run = new Observer(update);
+            database = d;
         }
 
         public void update(int id)
         {
-            uxRebateOutput.Text = id.ToString();
-            this.Show();
+            Rebate rebate = database.getRebate(id);
+            string date = "Date: " + rebate.Date.ToString();
+            string num = "ID: " + id;
+            string amount = "Amount: $" + rebate.RebateAmount;
+
+            MessageBox.Show(num + "\n" + date + "\n" + amount);
         }
     }
 }
