@@ -27,6 +27,10 @@ public class Item
 
     public bool Returned
     {
+        get
+        {
+            return returned;
+        }
         set
         {
             returned = value;
@@ -54,6 +58,14 @@ public class Item
         set
         {
             rAmount = value;
+        }
+    }
+
+    public string Name
+    {
+        get
+        {
+            return name;
         }
     }
 

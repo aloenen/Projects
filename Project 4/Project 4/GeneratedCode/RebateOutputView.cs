@@ -12,7 +12,7 @@ namespace Project_4.GeneratedCode
 {
     public partial class RebateOutputView : Form
     {
-        public delegate void Observer(int id);
+        public delegate void Observer(bool valid);
         public Observer run;
 
         public RebateOutputView(Database d)
@@ -20,9 +20,17 @@ namespace Project_4.GeneratedCode
             InitializeComponent();
             run = new Observer(update);
         }
-        public void update(int id)
-        {
 
+        public void update(bool valid)
+        {
+            if (valid)
+            {
+                MessageBox.Show("Valid rebate entered");
+            }
+            else
+            {
+                MessageBox.Show("Invalid rebate entered");
+            }
         }
     }
 }

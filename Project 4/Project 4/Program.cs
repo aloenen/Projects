@@ -33,7 +33,7 @@ namespace Project_4
 
             // Set up output 
             GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBase);
-            GeneratedCode.CustomerServiceOutputView returnsOutput = new GeneratedCode.CustomerServiceOutputView(dataBase);
+            GeneratedCode.ReciptOutputView returnsOutput = new GeneratedCode.ReciptOutputView(dataBase);
             GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
 
