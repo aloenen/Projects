@@ -32,7 +32,6 @@ namespace Project_4
             RebateManager rebateController = new RebateManager(controllerModel);
 
             // Set up output 
-            GeneratedCode.CashierOutputView cashierOutput = new GeneratedCode.CashierOutputView(dataBase);
             GeneratedCode.ReciptOutputView returnsOutput = new GeneratedCode.ReciptOutputView(dataBase);
             GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
@@ -44,7 +43,7 @@ namespace Project_4
             GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
 
             // Add observers
-            transactionController.register(cashierOutput.run);
+            transactionController.register(returnsOutput.run);
             returnController.register(returnsOutput.run);
             rebateController.register(rebateOutput.run, genRebateOutput.run);
 

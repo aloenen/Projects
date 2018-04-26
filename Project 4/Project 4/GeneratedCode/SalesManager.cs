@@ -56,7 +56,7 @@ public class SalesManager
         //updateTransactionOutput
     }
 
-    internal void register(CashierOutputView.Observer o)
+    internal void register(ReciptOutputView.Observer o)
     {
         updateTransactionOutput = o;
     }
