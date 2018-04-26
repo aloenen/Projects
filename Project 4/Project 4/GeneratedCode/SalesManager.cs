@@ -20,7 +20,7 @@ public class SalesManager
     public ItemHandler itemHandler;
     public EndTransactionHandler endHandler;
 
-    CashierOutputView.Observer updateTransactionOutput;
+    ReciptOutputView.Observer updateTransactionOutput;
     ModelI dataBase;
     Transaction currentTrans;
 
