@@ -12,7 +12,7 @@ namespace Project_4.GeneratedCode
 {
     public partial class ReciptOutputView : Form
     {
-        public delegate void Observer(int id);
+        public delegate void Observer(int id, bool valid);
         public Observer run;
 
         private Database database;
@@ -24,21 +24,28 @@ namespace Project_4.GeneratedCode
             database = d;
         }
 
-        public void update(int id)
+        public void update(int id, bool valid)
         {
-            string i = "ID: " + id;
-            string date = "Date: " + DateTime.Today.ToString();
-            string items = "";
-            Transaction transaction = database.getTransaction(id);
-            foreach (Item item in transaction.Items.Values)
+            if (valid)
             {
-                if(item.Returned)
-                    items += "**Returned** \nName: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + item.RAmount + "\n************";
-                else
-                    items += "Name: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + (item.Amount - item.RAmount);
+                string i = "ID: " + id;
+                string date = "Date: " + DateTime.Today.ToString();
+                string items = "";
+                Transaction transaction = database.getTransaction(id);
+                foreach (Item item in transaction.Items.Values)
+                {
+                    if (item.Returned)
+                        items += "**Returned** \nName: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + item.RAmount + "\n************";
+                    else
+                        items += "Name: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + (item.Amount - item.RAmount);
+                }
+                string total = "Total: $" + transaction.Total;
+                MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n\n" + total);
             }
-            string total = "Total: $" + transaction.Total;
-            MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n\n" + total);
+            else
+            {
+                MessageBox.Show("Invalid transaction");
+            }
         }
     }
 }
