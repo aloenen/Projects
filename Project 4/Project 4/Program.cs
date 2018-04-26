@@ -49,7 +49,7 @@ namespace Project_4
 
             // Set up and run application
             Application.EnableVisualStyles();
-            Application.Run(genRebateView);
+            Application.Run(cashierView);
         }
     }
 }

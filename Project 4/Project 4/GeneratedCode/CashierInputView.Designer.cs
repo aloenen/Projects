@@ -30,7 +30,6 @@
         {
             this.uxNewTransaction = new System.Windows.Forms.Button();
             this.uxFinishTransaction = new System.Windows.Forms.Button();
-            this.uxAddItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxNewTransaction
@@ -53,25 +52,14 @@
             this.uxFinishTransaction.UseVisualStyleBackColor = true;
             this.uxFinishTransaction.Click += new System.EventHandler(this.uxFinishTransaction_Click);
             // 
-            // uxAddItem
-            // 
-            this.uxAddItem.Location = new System.Drawing.Point(240, 12);
-            this.uxAddItem.Name = "uxAddItem";
-            this.uxAddItem.Size = new System.Drawing.Size(108, 23);
-            this.uxAddItem.TabIndex = 2;
-            this.uxAddItem.Text = "Add Item";
-            this.uxAddItem.UseVisualStyleBackColor = true;
-            this.uxAddItem.Click += new System.EventHandler(this.uxAddItem_Click);
-            // 
-            // CashierView
+            // CashierInputView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 48);
-            this.Controls.Add(this.uxAddItem);
+            this.ClientSize = new System.Drawing.Size(265, 48);
             this.Controls.Add(this.uxFinishTransaction);
             this.Controls.Add(this.uxNewTransaction);
-            this.Name = "CashierView";
+            this.Name = "CashierInputView";
             this.Text = "CashierView";
             this.ResumeLayout(false);
 
@@ -81,6 +69,5 @@
 
         private System.Windows.Forms.Button uxNewTransaction;
         private System.Windows.Forms.Button uxFinishTransaction;
-        private System.Windows.Forms.Button uxAddItem;
     }
 }
