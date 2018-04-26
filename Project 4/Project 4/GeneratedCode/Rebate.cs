@@ -6,7 +6,6 @@ using System.Text;
 public class Rebate
 {
     private int transID;
-    private float transAmount;
     private DateTime date;
     private float rebateAmount;
     
@@ -22,19 +21,15 @@ public class Rebate
         }
     }
 
-    public float TransAmount
-    {
-        set
-        {
-            transAmount = value;
-        }
-    }
-
     public float RebateAmount
     {
         set
         {
             rebateAmount = value;
+        }
+        get
+        {
+            return rebateAmount;
         }
     }
 
@@ -49,11 +44,5 @@ public class Rebate
             transID = value;
         }
     }
-
-    public override string ToString()
-    {
-        return "Transaction: " + transID + "\nDate: " + date.ToString() + "\nSavings: $" + (rebateAmount * transAmount);
-    }
-
 }
 
