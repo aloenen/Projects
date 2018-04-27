@@ -34,10 +34,7 @@ namespace Project_4.GeneratedCode
                 Transaction transaction = database.getTransaction(id);
                 foreach (Item item in transaction.Items.Values)
                 {
-                    if (item.Returned)
-                        items += "**Returned** \nName: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + item.RAmount + "\n************";
-                    else
-                        items += "Name: " + item.Name + "\nPrice: $" + item.Price + "\nQty: " + (item.Amount - item.RAmount);
+                    item.ToString();
                 }
                 string total = "Total: $" + transaction.Total;
                 MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n\n" + total);

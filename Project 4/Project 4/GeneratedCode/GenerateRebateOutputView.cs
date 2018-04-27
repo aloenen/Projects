@@ -27,11 +27,7 @@ namespace Project_4.GeneratedCode
         public void update(int id)
         {
             Rebate rebate = database.getRebate(id);
-            string date = "Date: " + rebate.Date.ToString();
-            string num = "ID: " + id;
-            string amount = "Amount: $" + rebate.RebateAmount;
-
-            MessageBox.Show(num + "\n" + date + "\n" + amount);
+            MessageBox.Show(rebate.ToString());
         }
     }
 }

@@ -44,5 +44,10 @@ public class Rebate
             transID = value;
         }
     }
+
+    public override string ToString()
+    {
+        return "ID: " + transID + "\nDate: " + date.ToString() + "Amount: $" + rebateAmount;
+    }
 }
 
