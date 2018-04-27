@@ -37,7 +37,7 @@ namespace Project_4
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
 
             // Set up input views
-            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler);
+            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
             GeneratedCode.CustomerServiceInputView customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
             GeneratedCode.RebateInputView rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
             GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);

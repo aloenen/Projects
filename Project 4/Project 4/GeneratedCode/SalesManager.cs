@@ -41,6 +41,7 @@ public class SalesManager
     public void endTransaction()
     {
         dataBase.addTransaction(currentTrans); //add to db once transaction has ended?
+        updateTransactionOutput(currentTrans.getID(), true);
     }
 
     public void addItem(int quantity, float price, string name)

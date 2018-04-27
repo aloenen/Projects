@@ -14,11 +14,13 @@ namespace Project_4.GeneratedCode
     {
         private SalesManager.TransactionHandler transHandler;
         private SalesManager.ItemHandler itemHandler;
+        private SalesManager.EndTransactionHandler endTransaction;
         private int transactionID = 0;
-        public CashierInputView(SalesManager.TransactionHandler h, SalesManager.ItemHandler i)
+        public CashierInputView(SalesManager.TransactionHandler h, SalesManager.ItemHandler i, SalesManager.EndTransactionHandler e)
         {
             transHandler = h;
             itemHandler = i;
+            endTransaction = e;
             InitializeComponent();
             uxAdd.Enabled = false;
             uxFinishTransaction.Enabled = false;
@@ -48,7 +50,7 @@ namespace Project_4.GeneratedCode
             uxQuantity.Enabled = false;
             uxNewTransaction.Enabled = true;
             uxItemName.Clear();
-
+            endTransaction();
         }
 
      
@@ -60,7 +62,6 @@ namespace Project_4.GeneratedCode
 
         private void uxAdd_Click(object sender, EventArgs e)
         {
-
             itemHandler((int)uxQuantity.Value, (float)uxPrice.Value, uxItemName.Text);
             uxItemName.Clear();
             uxAdd.Enabled = false;

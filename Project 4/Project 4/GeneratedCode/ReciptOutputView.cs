@@ -28,13 +28,13 @@ namespace Project_4.GeneratedCode
         {
             if (valid)
             {
+                Transaction transaction = database.getTransaction(id);
                 string i = "ID: " + id;
                 string date = "Date: " + DateTime.Today.ToString();
                 string items = "";
-                Transaction transaction = database.getTransaction(id);
                 foreach (Item item in transaction.Items.Values)
                 {
-                    item.ToString();
+                    items += item.ToString();
                 }
                 string total = "Total: $" + transaction.Total;
                 MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n\n" + total);
