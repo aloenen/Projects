@@ -12,7 +12,7 @@ using Project_4.GeneratedCode;
 
 public class ReturnsManager
 {
-    public delegate void ReturnHandler(string n, int i);
+    public delegate string ReturnHandler(string n, int i);
 
     public ReturnHandler returnHandler;
 
@@ -23,25 +23,39 @@ public class ReturnsManager
     {
         dataBase = m;
         returnHandler = new ReturnHandler(returnItem);
+
     }
 
-	public void returnItem(string name, int id)
+	public string returnItem(string name, int id)
 	{
+        Transaction test = new Transaction(3);
+        dataBase.addTransaction(test);//testing
+        
         Transaction t = dataBase.getTransaction(id);
-       if( t.Items.ContainsKey(name) == false)
+        if(t != null)
         {
-            Item i = t.Items[name];
-            if(i.Amount>1)
+            if (t.Items.ContainsKey(name) == true)
             {
-                i.Amount--; 
+                Item i = t.Items[name];
+                if (i.Amount > 1)
+                {
+                    i.Amount--;
+                }
+                else
+                {
+                    // t.Items.Remove(name);
+                    i.Amount = 0;
+                }
+                return "Item returned.";
+
             }
-            else
-            {
-                // t.Items.Remove(name);
-                i.Amount = 0;
-            }
+            return "Item not found.";
+
         }
+        return "Transaction not found.";
+
         //updateReturnsOutput
+
     }
 
     internal void register(ReciptOutputView.Observer run)

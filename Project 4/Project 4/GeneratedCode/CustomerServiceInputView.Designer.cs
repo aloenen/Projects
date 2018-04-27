@@ -34,7 +34,12 @@
             this.uxFinishReturn = new System.Windows.Forms.Button();
             this.uxReturnedItemsLabel = new System.Windows.Forms.Label();
             this.uxReturnedItemsOutput = new System.Windows.Forms.TextBox();
+            this.uxQuantity = new System.Windows.Forms.NumericUpDown();
+            this.uxItemNameLabel = new System.Windows.Forms.Label();
+            this.uxItemName = new System.Windows.Forms.TextBox();
+            this.uxQuantityLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // uxTransactionNum
@@ -43,6 +48,7 @@
             this.uxTransactionNum.Name = "uxTransactionNum";
             this.uxTransactionNum.Size = new System.Drawing.Size(50, 20);
             this.uxTransactionNum.TabIndex = 0;
+            this.uxTransactionNum.ValueChanged += new System.EventHandler(this.uxTransactionNum_ValueChanged);
             // 
             // uxTransactionNumLabel
             // 
@@ -59,7 +65,7 @@
             this.uxAddReturnButton.Name = "uxAddReturnButton";
             this.uxAddReturnButton.Size = new System.Drawing.Size(75, 23);
             this.uxAddReturnButton.TabIndex = 2;
-            this.uxAddReturnButton.Text = "Add Item";
+            this.uxAddReturnButton.Text = "Return Item";
             this.uxAddReturnButton.UseVisualStyleBackColor = true;
             this.uxAddReturnButton.Click += new System.EventHandler(this.uxReturnButton_Click);
             // 
@@ -71,11 +77,12 @@
             this.uxFinishReturn.TabIndex = 3;
             this.uxFinishReturn.Text = "Finish Return";
             this.uxFinishReturn.UseVisualStyleBackColor = true;
+            this.uxFinishReturn.Click += new System.EventHandler(this.uxFinishReturn_Click_1);
             // 
             // uxReturnedItemsLabel
             // 
             this.uxReturnedItemsLabel.AutoSize = true;
-            this.uxReturnedItemsLabel.Location = new System.Drawing.Point(12, 33);
+            this.uxReturnedItemsLabel.Location = new System.Drawing.Point(12, 137);
             this.uxReturnedItemsLabel.Name = "uxReturnedItemsLabel";
             this.uxReturnedItemsLabel.Size = new System.Drawing.Size(85, 13);
             this.uxReturnedItemsLabel.TabIndex = 4;
@@ -83,26 +90,64 @@
             // 
             // uxReturnedItemsOutput
             // 
-            this.uxReturnedItemsOutput.Location = new System.Drawing.Point(15, 49);
+            this.uxReturnedItemsOutput.Location = new System.Drawing.Point(15, 153);
             this.uxReturnedItemsOutput.Multiline = true;
             this.uxReturnedItemsOutput.Name = "uxReturnedItemsOutput";
-            this.uxReturnedItemsOutput.Size = new System.Drawing.Size(331, 148);
+            this.uxReturnedItemsOutput.Size = new System.Drawing.Size(331, 153);
             this.uxReturnedItemsOutput.TabIndex = 5;
             // 
-            // CustomerServiceView
+            // uxQuantity
+            // 
+            this.uxQuantity.Location = new System.Drawing.Point(82, 96);
+            this.uxQuantity.Name = "uxQuantity";
+            this.uxQuantity.Size = new System.Drawing.Size(50, 20);
+            this.uxQuantity.TabIndex = 6;
+            // 
+            // uxItemNameLabel
+            // 
+            this.uxItemNameLabel.AutoSize = true;
+            this.uxItemNameLabel.Location = new System.Drawing.Point(12, 59);
+            this.uxItemNameLabel.Name = "uxItemNameLabel";
+            this.uxItemNameLabel.Size = new System.Drawing.Size(64, 13);
+            this.uxItemNameLabel.TabIndex = 8;
+            this.uxItemNameLabel.Text = "Item Name :";
+            // 
+            // uxItemName
+            // 
+            this.uxItemName.Location = new System.Drawing.Point(82, 56);
+            this.uxItemName.Name = "uxItemName";
+            this.uxItemName.Size = new System.Drawing.Size(59, 20);
+            this.uxItemName.TabIndex = 9;
+            // 
+            // uxQuantityLabel
+            // 
+            this.uxQuantityLabel.AutoSize = true;
+            this.uxQuantityLabel.Location = new System.Drawing.Point(12, 98);
+            this.uxQuantityLabel.Name = "uxQuantityLabel";
+            this.uxQuantityLabel.Size = new System.Drawing.Size(49, 13);
+            this.uxQuantityLabel.TabIndex = 10;
+            this.uxQuantityLabel.Text = "Quantity:";
+            // 
+            // CustomerServiceInputView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 209);
+            this.ClientSize = new System.Drawing.Size(363, 314);
+            this.Controls.Add(this.uxQuantityLabel);
+            this.Controls.Add(this.uxItemName);
+            this.Controls.Add(this.uxItemNameLabel);
+            this.Controls.Add(this.uxQuantity);
             this.Controls.Add(this.uxReturnedItemsOutput);
             this.Controls.Add(this.uxReturnedItemsLabel);
             this.Controls.Add(this.uxFinishReturn);
             this.Controls.Add(this.uxAddReturnButton);
             this.Controls.Add(this.uxTransactionNumLabel);
             this.Controls.Add(this.uxTransactionNum);
-            this.Name = "CustomerServiceView";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "CustomerServiceInputView";
             this.Text = "CustomerServiceView";
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +161,9 @@
         private System.Windows.Forms.Button uxFinishReturn;
         private System.Windows.Forms.Label uxReturnedItemsLabel;
         private System.Windows.Forms.TextBox uxReturnedItemsOutput;
+        private System.Windows.Forms.NumericUpDown uxQuantity;
+        private System.Windows.Forms.Label uxItemNameLabel;
+        private System.Windows.Forms.TextBox uxItemName;
+        private System.Windows.Forms.Label uxQuantityLabel;
     }
 }

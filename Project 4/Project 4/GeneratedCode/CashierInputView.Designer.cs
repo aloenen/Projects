@@ -144,16 +144,16 @@
             // 
             this.uxItemList.FormattingEnabled = true;
             this.uxItemList.HorizontalScrollbar = true;
-            this.uxItemList.Location = new System.Drawing.Point(270, 66);
+            this.uxItemList.Location = new System.Drawing.Point(267, 66);
             this.uxItemList.Name = "uxItemList";
-            this.uxItemList.Size = new System.Drawing.Size(169, 147);
+            this.uxItemList.Size = new System.Drawing.Size(182, 147);
             this.uxItemList.TabIndex = 10;
             // 
             // uxShoppingCartLabel
             // 
             this.uxShoppingCartLabel.AutoSize = true;
             this.uxShoppingCartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxShoppingCartLabel.Location = new System.Drawing.Point(291, 39);
+            this.uxShoppingCartLabel.Location = new System.Drawing.Point(294, 39);
             this.uxShoppingCartLabel.Name = "uxShoppingCartLabel";
             this.uxShoppingCartLabel.Size = new System.Drawing.Size(130, 24);
             this.uxShoppingCartLabel.TabIndex = 11;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 265);
+            this.ClientSize = new System.Drawing.Size(457, 265);
             this.Controls.Add(this.uxTransactionID);
             this.Controls.Add(this.uxTransactionLabel);
             this.Controls.Add(this.uxShoppingCartLabel);

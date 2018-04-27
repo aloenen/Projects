@@ -18,6 +18,8 @@ namespace Project_4.GeneratedCode
         {
             returnHandler = h;
             InitializeComponent();
+            uxAddReturnButton.Enabled = false;
+
         }
 
         /// <summary>
@@ -27,7 +29,20 @@ namespace Project_4.GeneratedCode
         /// <param name="e"></param>
         private void uxReturnButton_Click(object sender, EventArgs e)
         {
-            returnHandler("", 0);
+            string message = "0 items returned.";
+            while (uxQuantity.Value > 0)
+            {
+                message = returnHandler(uxItemName.Text, (int)uxTransactionNum.Value);
+            }
+            MessageBox.Show(message);
+        }
+
+     
+
+        private void uxTransactionNum_ValueChanged(object sender, EventArgs e)
+        {
+            uxAddReturnButton.Enabled = true;
+
         }
 
         /// <summary>
@@ -35,8 +50,10 @@ namespace Project_4.GeneratedCode
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void uxFinishReturn_Click(object sender, EventArgs e)
+        private void uxFinishReturn_Click_1(object sender, EventArgs e)
         {
+            uxTransactionNum.Value = 0;
+            uxAddReturnButton.Enabled = false;
 
         }
     }

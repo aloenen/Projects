@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Project_4
 {
     // Declare delagates
@@ -49,7 +49,10 @@ namespace Project_4
 
             // Set up and run application
             Application.EnableVisualStyles();
-            Application.Run(cashierView);
+            Application.Run(customerView);//customerView
+
         }
+
+
     }
 }

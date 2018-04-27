@@ -27,6 +27,7 @@ namespace Project_4.GeneratedCode
             uxItemName.Enabled = false;
             uxPrice.Enabled = false;
             uxQuantity.Enabled = false;
+            uxItemList.Items.Add(" Item          Price         Quantity");
 
         }
 
@@ -61,8 +62,11 @@ namespace Project_4.GeneratedCode
         private void uxAdd_Click(object sender, EventArgs e)
         {
             itemHandler((int)uxQuantity.Value, (float)uxPrice.Value, uxItemName.Text);
-            uxItemName.Clear();
             uxAdd.Enabled = false;
+           string price = string.Format("{0:C2}", uxPrice.Value);
+            uxItemList.Items.Add( "  "+uxItemName.Text +"          " + price + "            " + uxQuantity.Value.ToString());
+            uxItemName.Clear();
+
         }
 
     }
