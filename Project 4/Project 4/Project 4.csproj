@@ -104,6 +104,9 @@
     <Compile Include="GeneratedCode\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GeneratedCode\AddItemInputView.resx">
+      <DependentUpon>AddItemInputView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\CashierInputView.resx">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </EmbeddedResource>

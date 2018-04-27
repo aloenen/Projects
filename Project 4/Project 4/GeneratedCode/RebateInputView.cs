@@ -22,7 +22,8 @@ namespace Project_4.GeneratedCode
 
         private void uxEnterRebateButton_Click(object sender, EventArgs e)
         {
-            enterRebateHandle(); 
+            DateTime enteredDate = DateTime.Parse(uxDate.Text);
+            enterRebateHandle((int)uxTransactionNumber.Value, enteredDate); 
         }
     }
 }
