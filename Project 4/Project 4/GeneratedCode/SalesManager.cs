@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Project_4.GeneratedCode;
+using System.Windows.Forms;
 
 public class SalesManager
 {
@@ -46,20 +47,21 @@ public class SalesManager
 
     public void addItem(int quantity, float price, string name)
     {
+        Item item = new Item(name, price, quantity);
         if (currentTrans.Items.ContainsKey(name))
         {
             currentTrans.Items[name].Amount++;
         }
         else
         {
-            currentTrans.Items.Add(name, new Item(name, price, quantity));
+            currentTrans.Items.Add(name, item);
         }
-        //updateTransactionOutput
     }
 
     internal void register(ReciptOutputView.Observer o)
     {
         updateTransactionOutput = o;
+
     }
 }
 

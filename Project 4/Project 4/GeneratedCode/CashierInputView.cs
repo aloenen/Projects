@@ -53,8 +53,6 @@ namespace Project_4.GeneratedCode
             endTransaction();
         }
 
-     
-
         private void uxItemName_TextChanged(object sender, EventArgs e)
         {
             uxAdd.Enabled = true;
