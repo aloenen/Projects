@@ -45,7 +45,7 @@ namespace Project_4
 
             // Set up input views
             cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
-            customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
+            customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem, returnController.endReturn);
             rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
             genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
 
