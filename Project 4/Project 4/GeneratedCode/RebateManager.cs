@@ -13,7 +13,7 @@ using Project_4.GeneratedCode;
 public class RebateManager
 {
     public delegate void EnterRebateHandler(int id, DateTime date);
-    public delegate void GenRebateHandler(int id);
+    public delegate void GenRebateHandler();
 
     Rebate rebate = new Rebate();
 
@@ -52,9 +52,13 @@ public class RebateManager
         updateRebateOutput(valid);
 	}
 
-	public void genRebate(int id)
+	public void genRebate()
 	{
-        updateGenerateRebateOutput(id);
+        foreach(int key in dataBase.getRebates().Keys)
+        {
+            updateGenerateRebateOutput(key);
+            dataBase.getRebates().Remove(key);
+        }    
 	}
 
     internal void register(RebateOutputView.Observer run1, uxForm.Observer run2)

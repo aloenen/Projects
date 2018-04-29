@@ -47,5 +47,10 @@ public class Database : ModelI
             return null;
         }
     }
+
+    public Dictionary<int, Rebate> getRebates()
+    {
+        return rebateDB;
+    }
 }
 
