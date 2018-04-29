@@ -144,6 +144,7 @@
             this.Controls.Add(this.uxTransactionNumLabel);
             this.Controls.Add(this.uxTransactionNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "CustomerServiceInputView";
             this.Text = "CustomerServiceView";
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNum)).EndInit();

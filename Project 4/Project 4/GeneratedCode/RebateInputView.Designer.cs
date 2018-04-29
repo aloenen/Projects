@@ -121,6 +121,8 @@
             this.Controls.Add(this.uxTransactionNumber);
             this.Controls.Add(this.uxRebateAmountLabel);
             this.Controls.Add(this.uxRebateAmount);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "RebateInputView";
             this.Text = "RebateView";
             ((System.ComponentModel.ISupportInitialize)(this.uxRebateAmount)).EndInit();

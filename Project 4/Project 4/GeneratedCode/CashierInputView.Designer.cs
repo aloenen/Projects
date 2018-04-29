@@ -195,6 +195,7 @@
             this.Controls.Add(this.uxFinishTransaction);
             this.Controls.Add(this.uxNewTransaction);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "CashierInputView";
             this.Text = "CashierView";
             ((System.ComponentModel.ISupportInitialize)(this.uxQuantity)).EndInit();
