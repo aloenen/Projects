@@ -37,7 +37,7 @@ namespace Project_4.GeneratedCode
                     items += item.ToString() + "\n";
                 }
                 string total = "Total: $" + transaction.Total;
-                MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n\n" + total);
+                MessageBox.Show(i + "\n" + date + "\n\n" + items + "\n" + total);
             }
             else
             {

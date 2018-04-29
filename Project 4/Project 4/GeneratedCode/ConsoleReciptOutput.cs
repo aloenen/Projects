@@ -32,7 +32,7 @@ namespace Project_4.GeneratedCode
                     items += item.ToString() + "\n";
                 }
                 string total = "Total: $" + transaction.Total;
-                Console.WriteLine(i + "\n" + date + "\n\n" + items + "\n\n" + total);
+                Console.WriteLine("\n" + i + "\n" + date + "\n\n" + items + "\n" + total + "\n");
             }
             else
             {
