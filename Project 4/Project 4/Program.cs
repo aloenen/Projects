@@ -15,12 +15,19 @@ namespace Project_4
 
     static class Program
     {
+        public static GeneratedCode.CashierInputView cashierView;
+        public static GeneratedCode.CustomerServiceInputView customerView;
+        public static GeneratedCode.RebateInputView rebateView;
+        public static GeneratedCode.GenerateRebateInputView genRebateView;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            
+
             // Set up model
             Database dataBase = new Database();
             ModelI controllerModel = dataBase;
@@ -37,20 +44,46 @@ namespace Project_4
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
 
             // Set up input views
-            GeneratedCode.CashierInputView cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
-            GeneratedCode.CustomerServiceInputView customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
-            GeneratedCode.RebateInputView rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
-            GeneratedCode.GenerateRebateInputView genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
+            cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
+            customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem);
+            rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
+            genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
 
             // Add observers
             transactionController.register(reciptOutput.run);
             returnController.register(reciptOutput.run);
             rebateController.register(rebateOutput.run, genRebateOutput.run);
 
+            
+
             // Set up and run application
             Application.EnableVisualStyles();
-            Application.Run(customerView);//customerView
 
+            //runs forms on own threads
+            new Thread(Driver1).Start();
+            new Thread(Driver2).Start();
+            new Thread(Driver3).Start();
+            new Thread(Driver4).Start();
+
+        }
+
+        //set up treading
+        static void Driver1()
+        {      
+            Application.Run(cashierView);
+        }
+        static void Driver2()
+        {
+         
+            Application.Run(customerView);
+        }
+        static void Driver3()
+        {
+            Application.Run(rebateView);
+        }
+        static void Driver4()
+        {
+            Application.Run(genRebateView);
         }
 
 
