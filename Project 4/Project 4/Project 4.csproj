@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DB6B3CDD-25F7-42B3-8E09-8CA57672DC80}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Project_4</RootNamespace>
     <AssemblyName>Project 4</AssemblyName>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,6 +62,8 @@
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\cmdUserInterface.cs" />
+    <Compile Include="GeneratedCode\ConsoleInput.cs" />
+    <Compile Include="GeneratedCode\ConsoleOutput.cs" />
     <Compile Include="GeneratedCode\ReciptOutputView.cs">
       <SubType>Form</SubType>
     </Compile>

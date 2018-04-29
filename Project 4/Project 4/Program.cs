@@ -14,14 +14,14 @@ namespace Project_4
         public static GeneratedCode.CashierInputView cashierView;
         public static GeneratedCode.CustomerServiceInputView customerView;
         public static GeneratedCode.RebateInputView rebateView;
+        public static GeneratedCode.ConsoleInput consoleInput;
 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            
+        {  
             // Set up model
             Database dataBase = new Database();
             ModelI controllerModel = dataBase;
@@ -32,15 +32,17 @@ namespace Project_4
             ReturnsManager returnController = new ReturnsManager(controllerModel);
             RebateManager rebateController = new RebateManager(controllerModel);
 
-            // Set up output 
+            // Set up output
             GeneratedCode.ReciptOutputView reciptOutput = new GeneratedCode.ReciptOutputView(dataBase);
             GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
+            GeneratedCode.ConsoleOutput consoleOutput = new GeneratedCode.ConsoleOutput(); 
 
             // Set up input views
             cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
             customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem, returnController.endReturn);
             rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate, rebateController.genRebate);
+            consoleInput = new GeneratedCode.ConsoleInput();
 
             // Add observers
             transactionController.register(reciptOutput.run);
@@ -54,7 +56,7 @@ namespace Project_4
             new Thread(Driver1).Start();
             new Thread(Driver2).Start();
             new Thread(Driver3).Start();
-           // new Thread(Driver4).Start();
+            new Thread(Driver4).Start();
         }
 
         //set up treading
@@ -72,7 +74,7 @@ namespace Project_4
         }
         static void Driver4()
         {
-
+            consoleInput.run();
         }
     }
 }
