@@ -72,12 +72,6 @@
       <DependentUpon>CustomerServiceInputView.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Database.cs" />
-    <Compile Include="GeneratedCode\GenerateRebateInputView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GeneratedCode\GenerateRebateInputView.Designer.cs">
-      <DependentUpon>GenerateRebateInputView.cs</DependentUpon>
-    </Compile>
     <Compile Include="GeneratedCode\Item.cs" />
     <Compile Include="GeneratedCode\ModelI.cs" />
     <Compile Include="GeneratedCode\Rebate.cs" />
@@ -113,9 +107,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\CustomerServiceInputView.resx">
       <DependentUpon>CustomerServiceInputView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GeneratedCode\GenerateRebateInputView.resx">
-      <DependentUpon>GenerateRebateInputView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\GenerateRebateOutputView.resx">
       <DependentUpon>GenerateRebateOutputView.cs</DependentUpon>

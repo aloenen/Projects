@@ -35,6 +35,7 @@
             this.uxEnterRebateButton = new System.Windows.Forms.Button();
             this.uxDateLabel = new System.Windows.Forms.Label();
             this.uxDate = new System.Windows.Forms.TextBox();
+            this.uxGenerateRebates = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxRebateAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxTransactionNumber)).BeginInit();
             this.SuspendLayout();
@@ -97,11 +98,22 @@
             this.uxDate.Size = new System.Drawing.Size(76, 20);
             this.uxDate.TabIndex = 8;
             // 
+            // uxGenerateRebates
+            // 
+            this.uxGenerateRebates.Location = new System.Drawing.Point(12, 92);
+            this.uxGenerateRebates.Name = "uxGenerateRebates";
+            this.uxGenerateRebates.Size = new System.Drawing.Size(260, 23);
+            this.uxGenerateRebates.TabIndex = 9;
+            this.uxGenerateRebates.Text = "Generate Rebates";
+            this.uxGenerateRebates.UseVisualStyleBackColor = true;
+            this.uxGenerateRebates.Click += new System.EventHandler(this.uxGenerateRebates_Click);
+            // 
             // RebateInputView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 99);
+            this.ClientSize = new System.Drawing.Size(284, 123);
+            this.Controls.Add(this.uxGenerateRebates);
             this.Controls.Add(this.uxDate);
             this.Controls.Add(this.uxDateLabel);
             this.Controls.Add(this.uxEnterRebateButton);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.Button uxEnterRebateButton;
         private System.Windows.Forms.Label uxDateLabel;
         private System.Windows.Forms.TextBox uxDate;
+        private System.Windows.Forms.Button uxGenerateRebates;
     }
 }

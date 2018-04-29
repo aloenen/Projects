@@ -13,10 +13,12 @@ namespace Project_4.GeneratedCode
     public partial class RebateInputView : Form
     {
         private RebateManager.EnterRebateHandler enterRebateHandle;
+        private RebateManager.GenRebateHandler genRebateHandle;
 
-        public RebateInputView(RebateManager.EnterRebateHandler r)
+        public RebateInputView(RebateManager.EnterRebateHandler r, RebateManager.GenRebateHandler g)
         {
             enterRebateHandle = r;
+            genRebateHandle = g;
             InitializeComponent();
         }
 
@@ -24,6 +26,11 @@ namespace Project_4.GeneratedCode
         {
             DateTime enteredDate = DateTime.Parse(uxDate.Text);
             enterRebateHandle((int)uxTransactionNumber.Value, enteredDate); 
+        }
+
+        private void uxGenerateRebates_Click(object sender, EventArgs e)
+        {
+            genRebateHandle();
         }
     }
 }
