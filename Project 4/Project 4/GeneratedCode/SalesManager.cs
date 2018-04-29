@@ -22,6 +22,7 @@ public class SalesManager
     public EndTransactionHandler endHandler;
 
     ReciptOutputView.Observer updateTransactionOutput;
+    ConsoleReciptOutput.Observer updateTransactionOutput_C;
     ModelI dataBase;
     Transaction currentTrans;
 
@@ -41,9 +42,11 @@ public class SalesManager
 
     public void endTransaction()
     {
-        dataBase.addTransaction(currentTrans); //add to db once transaction has ended?
-        updateTransactionOutput(currentTrans.getID(), true);
+        dataBase.addTransaction(currentTrans); //add to db once transaction has ended
+        updateTransactionOutput?.Invoke(currentTrans.getID(), true);
+        updateTransactionOutput_C?.Invoke(currentTrans.getID(), true);
     }
+
 
     public void addItem(int quantity, float price, string name)
     {
@@ -61,7 +64,11 @@ public class SalesManager
     internal void register(ReciptOutputView.Observer o)
     {
         updateTransactionOutput = o;
+    }
 
+    internal void register(ConsoleReciptOutput.Observer o)
+    {
+        updateTransactionOutput_C = o;
     }
 }
 

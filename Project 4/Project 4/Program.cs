@@ -21,7 +21,7 @@ namespace Project_4
         /// </summary>
         [STAThread]
         static void Main()
-        {  
+        {
             // Set up model
             Database dataBase = new Database();
             ModelI controllerModel = dataBase;
@@ -29,6 +29,7 @@ namespace Project_4
 
             // Set up controllers
             SalesManager transactionController = new SalesManager(controllerModel);
+            SalesManager trasactionController_C = new SalesManager(controllerModel);
             ReturnsManager returnController = new ReturnsManager(controllerModel);
             RebateManager rebateController = new RebateManager(controllerModel);
 
@@ -36,16 +37,17 @@ namespace Project_4
             GeneratedCode.ReciptOutputView reciptOutput = new GeneratedCode.ReciptOutputView(dataBase);
             GeneratedCode.RebateOutputView rebateOutput = new GeneratedCode.RebateOutputView(dataBase);
             GeneratedCode.uxForm genRebateOutput = new GeneratedCode.uxForm(dataBase);
-            GeneratedCode.ConsoleOutput consoleOutput = new GeneratedCode.ConsoleOutput(); 
+            GeneratedCode.ConsoleReciptOutput consoleOutput = new GeneratedCode.ConsoleReciptOutput(dataBase);
 
             // Set up input views
             cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
             customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem, returnController.endReturn);
             rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate, rebateController.genRebate);
-            consoleInput = new GeneratedCode.ConsoleInput();
+            consoleInput = new GeneratedCode.ConsoleInput(trasactionController_C.transHandler, trasactionController_C.itemHandler, trasactionController_C.endTransaction);
 
             // Add observers
             transactionController.register(reciptOutput.run);
+            trasactionController_C.register(consoleOutput.run);
             returnController.register(reciptOutput.run);
             rebateController.register(rebateOutput.run, genRebateOutput.run);           
 

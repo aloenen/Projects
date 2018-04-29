@@ -63,7 +63,7 @@
     </Compile>
     <Compile Include="GeneratedCode\cmdUserInterface.cs" />
     <Compile Include="GeneratedCode\ConsoleInput.cs" />
-    <Compile Include="GeneratedCode\ConsoleOutput.cs" />
+    <Compile Include="GeneratedCode\ConsoleReciptOutput.cs" />
     <Compile Include="GeneratedCode\ReciptOutputView.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -11,7 +11,7 @@ namespace Project_4.GeneratedCode
         private SalesManager.TransactionHandler transHandler;
         private SalesManager.ItemHandler itemHandler;
         private SalesManager.EndTransactionHandler endTransaction;
-        private int id = 1;
+        private int id = 1000;
 
         public ConsoleInput(SalesManager.TransactionHandler h, SalesManager.ItemHandler i, SalesManager.EndTransactionHandler e)
         {
@@ -25,8 +25,7 @@ namespace Project_4.GeneratedCode
             {
                 Console.WriteLine("New transaction (enter)");
                 Console.ReadLine();
-                transHandler(id);
-                id++;
+                transHandler(id); id++;
                 bool transaction = true;
                 while (transaction)
                 {
