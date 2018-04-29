@@ -43,6 +43,7 @@ public class RebateManager
                 valid = true;
                 float percentage = (float)11 / 100;
                 rebate.RebateAmount = user.Total * percentage;
+                rebate.TransID = id;
                 dataBase.addRebate(rebate);
                 user.Rebate = true;
             }
