@@ -45,6 +45,11 @@
             // uxTransactionNum
             // 
             this.uxTransactionNum.Location = new System.Drawing.Point(124, 7);
+            this.uxTransactionNum.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.uxTransactionNum.Name = "uxTransactionNum";
             this.uxTransactionNum.Size = new System.Drawing.Size(50, 20);
             this.uxTransactionNum.TabIndex = 0;
