@@ -58,7 +58,6 @@
     <Compile Include="GeneratedCode\CashierInputView.Designer.cs">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\cmdUserInterface.cs" />
     <Compile Include="GeneratedCode\ReciptOutputView.cs">
       <SubType>Form</SubType>
     </Compile>
