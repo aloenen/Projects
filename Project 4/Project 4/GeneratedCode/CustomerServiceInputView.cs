@@ -60,6 +60,7 @@ namespace Project_4.GeneratedCode
             uxTransactionNum.Value = 0;
             uxAddReturnButton.Enabled = false;
             uxQuantity.Value = 0;
+            uxFinishReturn.Enabled = false;
 
         }
     }

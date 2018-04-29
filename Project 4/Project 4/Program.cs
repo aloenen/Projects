@@ -4,14 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Text;
+
 namespace Project_4
 {
-    // Declare delagates
-    //public delegate void TransactionHandler();
-    //public delegate void RetunHandler();
-    //public delegate void EnterRebateHandler();
-    //public delegate void GenRebateHandler(int id);
-    //public delegate void Observer();
 
     static class Program
     {
@@ -27,7 +23,6 @@ namespace Project_4
         static void Main()
         {
             
-
             // Set up model
             Database dataBase = new Database();
             ModelI controllerModel = dataBase;
@@ -52,9 +47,7 @@ namespace Project_4
             // Add observers
             transactionController.register(reciptOutput.run);
             returnController.register(reciptOutput.run);
-            rebateController.register(rebateOutput.run, genRebateOutput.run);
-
-            
+            rebateController.register(rebateOutput.run, genRebateOutput.run);           
 
             // Set up and run application
             Application.EnableVisualStyles();
@@ -73,8 +66,7 @@ namespace Project_4
             Application.Run(cashierView);
         }
         static void Driver2()
-        {
-         
+        {       
             Application.Run(customerView);
         }
         static void Driver3()
