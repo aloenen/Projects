@@ -14,6 +14,8 @@ public class Transaction
     private Dictionary<string, Item> items = new Dictionary<string, Item>();
     private int id;
     private float total;
+    private bool rebate;
+
     //potentially need to add a DateTime in order to get current date? Not positive yet.
 
     public float Total
@@ -27,6 +29,18 @@ public class Transaction
             }
             total = t;
             return total;
+        }
+    }
+
+    public bool Rebate
+    {
+        get
+        {
+            return rebate;
+        }
+        set
+        {
+            rebate = value;
         }
     }
 
