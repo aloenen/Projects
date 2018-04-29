@@ -14,7 +14,6 @@ namespace Project_4
         public static GeneratedCode.CashierInputView cashierView;
         public static GeneratedCode.CustomerServiceInputView customerView;
         public static GeneratedCode.RebateInputView rebateView;
-        public static GeneratedCode.GenerateRebateInputView genRebateView;
 
         /// <summary>
         /// The main entry point for the application.
@@ -41,8 +40,7 @@ namespace Project_4
             // Set up input views
             cashierView = new GeneratedCode.CashierInputView(transactionController.transHandler, transactionController.itemHandler, transactionController.endTransaction);
             customerView = new GeneratedCode.CustomerServiceInputView(returnController.returnItem, returnController.endReturn);
-            rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate);
-            genRebateView = new GeneratedCode.GenerateRebateInputView(rebateController.genRebate);
+            rebateView = new GeneratedCode.RebateInputView(rebateController.enterRebate, rebateController.genRebate);
 
             // Add observers
             transactionController.register(reciptOutput.run);
@@ -56,8 +54,7 @@ namespace Project_4
             new Thread(Driver1).Start();
             new Thread(Driver2).Start();
             new Thread(Driver3).Start();
-            new Thread(Driver4).Start();
-
+           // new Thread(Driver4).Start();
         }
 
         //set up treading
@@ -75,9 +72,7 @@ namespace Project_4
         }
         static void Driver4()
         {
-            Application.Run(genRebateView);
+
         }
-
-
     }
 }
