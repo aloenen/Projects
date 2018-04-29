@@ -28,8 +28,7 @@ public class ReturnsManager
 
 	public string returnItem(string name, int id)
 	{
-        Transaction test = new Transaction(3);
-        dataBase.addTransaction(test);//testing
+
         
         Transaction t = dataBase.getTransaction(id);
         if(t != null)

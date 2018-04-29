@@ -30,9 +30,11 @@ namespace Project_4.GeneratedCode
         private void uxReturnButton_Click(object sender, EventArgs e)
         {
             string message = "0 items returned.";
-            while (uxQuantity.Value > 0)
+            int q = (int)uxQuantity.Value;
+            while ( q > 0)
             {
                 message = returnHandler(uxItemName.Text, (int)uxTransactionNum.Value);
+                q--;
             }
             MessageBox.Show(message);
         }
@@ -54,6 +56,7 @@ namespace Project_4.GeneratedCode
         {
             uxTransactionNum.Value = 0;
             uxAddReturnButton.Enabled = false;
+            uxQuantity.Value = 0;
 
         }
     }
