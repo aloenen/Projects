@@ -29,17 +29,24 @@ namespace Project_4.GeneratedCode
                 bool transaction = true;
                 while (transaction)
                 {
-                    Console.WriteLine("Enter an (i)tem or (e)nd transaction: ");
+                    Console.Write("Enter an (i)tem or (e)nd transaction (id: " + (id - 1) + "): ");
                     string input = Console.ReadLine();
-                    if(input == "i" || input == "I")
+                    if (input == "i" || input == "I")
                     {
-                        Console.WriteLine("Item Name:");
-                        string name = Console.ReadLine();
-                        Console.WriteLine("Price: ");
-                        float price = float.Parse(Console.ReadLine());
-                        Console.WriteLine("Qty: ");
-                        int qty = int.Parse(Console.ReadLine());
-                        itemHandler(qty, price, name);
+                        try
+                        {
+                            Console.Write("Item Name:");
+                            string name = Console.ReadLine();
+                            Console.Write("Price: ");
+                            float price = float.Parse(Console.ReadLine());
+                            Console.Write("Qty: ");
+                            int qty = int.Parse(Console.ReadLine());
+                            itemHandler(qty, price, name);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Invalid Input");
+                        }
                     }
                     else if (input == "e" || input == "E")
                     {
