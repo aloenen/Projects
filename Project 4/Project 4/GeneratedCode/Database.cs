@@ -48,9 +48,21 @@ public class Database : ModelI
         }
     }
 
-    public Dictionary<int, Rebate> getRebates()
+    public int[] getKeys()
     {
-        return rebateDB;
+        int[] keys = new int[rebateDB.Count];
+        int i = 0;
+        foreach(int key in rebateDB.Keys)
+        {
+            keys[i] = key;
+            i++;
+        }
+        return keys;
+    }
+
+    public void removeRebate(int id)
+    {
+        rebateDB.Remove(id);
     }
 }
 

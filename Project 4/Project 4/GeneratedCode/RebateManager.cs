@@ -49,17 +49,19 @@ public class RebateManager
             rebate.RebateAmount = user.Total * percentage;           
         }
 
+        dataBase.addRebate(rebate);
         updateRebateOutput(valid);
 	}
 
 	public void genRebate()
 	{
-        foreach(int key in dataBase.getRebates().Keys)
+        int[] keys = dataBase.getKeys();
+        for(int i = 0; i < keys.Length; i++)
         {
-            updateGenerateRebateOutput(key);
-            dataBase.getRebates().Remove(key);
-        }    
-	}
+            updateGenerateRebateOutput(keys[i]);
+            dataBase.removeRebate(keys[i]);         
+        }
+    }
 
     internal void register(RebateOutputView.Observer run1, uxForm.Observer run2)
     {

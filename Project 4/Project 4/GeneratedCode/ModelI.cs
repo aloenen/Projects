@@ -19,6 +19,8 @@ public interface ModelI
 
     void addRebate(Rebate newR);
 
-    Dictionary<int, Rebate> getRebates();
+    int[] getKeys();
+
+    void removeRebate(int id);
 }
 
