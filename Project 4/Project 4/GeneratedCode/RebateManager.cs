@@ -38,18 +38,15 @@ public class RebateManager
         if (user == null)
         {
             valid = false;
+            
         }
         else
         {
             valid = true;
-        }
-        if (dataBase.getRebate(id) != null && valid) 
-        {
             float percentage = (float)11 / 100;
-            rebate.RebateAmount = user.Total * percentage;           
-        }
-
-        dataBase.addRebate(rebate);
+            rebate.RebateAmount = user.Total * percentage;
+            dataBase.addRebate(rebate);
+        }         
         updateRebateOutput(valid);
 	}
 
