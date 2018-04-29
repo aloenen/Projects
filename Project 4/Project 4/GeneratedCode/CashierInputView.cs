@@ -51,7 +51,12 @@ namespace Project_4.GeneratedCode
             uxQuantity.Enabled = false;
             uxNewTransaction.Enabled = true;
             uxItemName.Clear();
+            uxPrice.Value = 0;
+            uxQuantity.Value = 1;
+            uxItemList.Items.Clear();
+            uxItemList.Items.Add(" Item          Price         Quantity");
             endTransaction();
+
         }
 
         private void uxItemName_TextChanged(object sender, EventArgs e)
