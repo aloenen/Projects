@@ -40,23 +40,26 @@ public class ReturnsManager
         Transaction t = dataBase.getTransaction(id);
         if(t != null)
         {
-            if (t.Items.ContainsKey(name) == true)
+            if(t.Rebate == false)
             {
-                Item i = t.Items[name];
-                if (i.Amount > 1)
+                if (t.Items.ContainsKey(name) == true)
                 {
-                    i.Amount--;
+                    Item i = t.Items[name];
+                    if (i.Amount > 1)
+                    {
+                        i.Amount--;
+                    }
+                    else
+                    {
+                        i.Amount = 0;
+                    }
+                    return "Item returned.";
+
                 }
-                else
-                {
-                    // t.Items.Remove(name);
-                    i.Amount = 0;
-                }
-                return "Item returned.";
+                return "Item not found.";
 
             }
-            return "Item not found.";
-
+            return "Rebate Entered, return not valid.";
         }
         return "Transaction not found.";
 

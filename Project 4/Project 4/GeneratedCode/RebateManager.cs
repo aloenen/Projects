@@ -16,7 +16,7 @@ public class RebateManager
     public delegate void GenRebateHandler();
 
     Rebate rebate = new Rebate();
-
+    private DateTime deadline = new DateTime(2018, 7, 15);
     EnterRebateHandler enterRebateHandler;
     GenRebateHandler genRebateHandler;
 
@@ -33,22 +33,23 @@ public class RebateManager
 
 	public void enterRebate(int id, DateTime date)
 	{
-        Transaction user = dataBase.getTransaction(id);
-        bool valid;
-        if (user == null)
+        bool valid = false;
+
+        if (date.CompareTo(deadline) != 1)
         {
-            valid = false;
-            
+            Transaction user = dataBase.getTransaction(id);
+            if (user != null)
+            {
+                valid = true;
+                float percentage = (float)11 / 100;
+                rebate.RebateAmount = user.Total * percentage;
+                dataBase.addRebate(rebate);
+                user.Rebate = true;
+            }
+
         }
-        else
-        {
-            valid = true;
-            float percentage = (float)11 / 100;
-            rebate.RebateAmount = user.Total * percentage;
-            dataBase.addRebate(rebate);
-        }         
         updateRebateOutput(valid);
-	}
+    }
 
 	public void genRebate()
 	{
