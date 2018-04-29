@@ -13,11 +13,13 @@ namespace Project_4.GeneratedCode
     public partial class CustomerServiceInputView : Form
     {
         private ReturnsManager.ReturnHandler returnHandler;
+        private ReturnsManager.EndReturnHandler endHandler;
 
-        public CustomerServiceInputView(ReturnsManager.ReturnHandler h)
+        public CustomerServiceInputView(ReturnsManager.ReturnHandler h, ReturnsManager.EndReturnHandler e)
         {
             returnHandler = h;
             InitializeComponent();
+            endHandler = e;
             uxAddReturnButton.Enabled = false;
 
         }
@@ -54,6 +56,7 @@ namespace Project_4.GeneratedCode
         /// <param name="e"></param>
         private void uxFinishReturn_Click_1(object sender, EventArgs e)
         {
+            endHandler((int)uxTransactionNum.Value);
             uxTransactionNum.Value = 0;
             uxAddReturnButton.Enabled = false;
             uxQuantity.Value = 0;

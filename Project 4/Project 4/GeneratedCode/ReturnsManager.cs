@@ -14,6 +14,8 @@ public class ReturnsManager
 {
     public delegate string ReturnHandler(string n, int i);
 
+    public delegate void EndReturnHandler(int i);
+
     public ReturnHandler returnHandler;
 
     ReciptOutputView.Observer updateReturnsOutput;
@@ -25,6 +27,11 @@ public class ReturnsManager
         returnHandler = new ReturnHandler(returnItem);
 
     }
+    public void endReturn(int id)
+    {
+        updateReturnsOutput(id, true);
+    }
+
 
 	public string returnItem(string name, int id)
 	{
@@ -53,7 +60,6 @@ public class ReturnsManager
         }
         return "Transaction not found.";
 
-        //updateReturnsOutput
 
     }
 
