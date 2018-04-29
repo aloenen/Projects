@@ -49,19 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\AddItemInputView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GeneratedCode\AddItemInputView.Designer.cs">
-      <DependentUpon>AddItemInputView.cs</DependentUpon>
-    </Compile>
     <Compile Include="GeneratedCode\CashierInputView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneratedCode\CashierInputView.Designer.cs">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\cmdUserInterface.cs" />
     <Compile Include="GeneratedCode\ConsoleInput.cs" />
     <Compile Include="GeneratedCode\ConsoleReciptOutput.cs" />
     <Compile Include="GeneratedCode\ReciptOutputView.cs">
@@ -104,9 +97,6 @@
     <Compile Include="GeneratedCode\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GeneratedCode\AddItemInputView.resx">
-      <DependentUpon>AddItemInputView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\CashierInputView.resx">
       <DependentUpon>CashierInputView.cs</DependentUpon>
     </EmbeddedResource>
