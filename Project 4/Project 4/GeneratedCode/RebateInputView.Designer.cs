@@ -43,9 +43,24 @@
             // uxRebateAmount
             // 
             this.uxRebateAmount.Location = new System.Drawing.Point(122, 7);
+            this.uxRebateAmount.Maximum = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
+            this.uxRebateAmount.Minimum = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
             this.uxRebateAmount.Name = "uxRebateAmount";
             this.uxRebateAmount.Size = new System.Drawing.Size(54, 20);
             this.uxRebateAmount.TabIndex = 0;
+            this.uxRebateAmount.Value = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
             // 
             // uxRebateAmountLabel
             // 
