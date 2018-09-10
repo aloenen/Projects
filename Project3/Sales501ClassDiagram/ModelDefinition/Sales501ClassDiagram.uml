@@ -9704,7 +9704,7 @@
           <association
             Id="9ad6a9cd-d18c-4097-987e-c25087d9f748"
             isDerived="false"
-            sourceEndRoleName="ReturnsManager"
+            sourceEndRoleName=""
             targetEndRoleName="Observer"
             isLeaf="false"
             isAbstract="false">
@@ -9716,7 +9716,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="025d90d4-1e5e-4fc4-a62f-3cdd55e6f869"
-                  name="ReturnsManager"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -9743,7 +9742,7 @@
           <association
             Id="b8b63afb-508b-42b0-9381-90d63d76aa61"
             isDerived="false"
-            sourceEndRoleName="ReturnsManager"
+            sourceEndRoleName=""
             targetEndRoleName="Manager"
             isLeaf="false"
             isAbstract="false">
@@ -9755,7 +9754,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8b3dc58f-98f5-46b2-ab50-441f08e66538"
-                  name="ReturnsManager"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

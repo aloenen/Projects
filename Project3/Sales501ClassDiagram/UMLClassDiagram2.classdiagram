@@ -2570,11 +2570,11 @@
           </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
-          <association Id="3cb7245e-62f4-4ecd-9a7a-fe65f708247a" isDerived="false" sourceEndRoleName="ReturnsManager" targetEndRoleName="Observer" isLeaf="false" isAbstract="false">
+          <association Id="3cb7245e-62f4-4ecd-9a7a-fe65f708247a" isDerived="false" sourceEndRoleName="" targetEndRoleName="Observer" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="af70341e-4b17-491a-91b1-71e7088c1e66" LastKnownName="Observer" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="c4a644ce-d966-4e90-9207-a7263380be7c" name="ReturnsManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="c4a644ce-d966-4e90-9207-a7263380be7c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="025d90d4-1e5e-4fc4-a62f-3cdd55e6f869" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -2586,11 +2586,11 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="9ad6a9cd-d18c-4097-987e-c25087d9f748" />
           </association>
-          <association Id="429055d2-f890-416d-8b69-1ed57925d815" isDerived="false" sourceEndRoleName="ReturnsManager" targetEndRoleName="Manager" isLeaf="false" isAbstract="false">
+          <association Id="429055d2-f890-416d-8b69-1ed57925d815" isDerived="false" sourceEndRoleName="" targetEndRoleName="Manager" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="f59e2110-0f66-49ca-9e86-fe1151f55df6" LastKnownName="ModelI" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="042b247f-601a-4133-872c-20443265876f" name="ReturnsManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="042b247f-601a-4133-872c-20443265876f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="8b3dc58f-98f5-46b2-ab50-441f08e66538" />
                 </memberEnd>
               </associationHasOwnedEnds>
